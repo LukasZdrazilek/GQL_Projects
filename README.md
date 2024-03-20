@@ -1,8 +1,8 @@
 GQL_Projects - Deníček
 
-Tomáš Kyseľ
-Jakub Vágner
-Lukáš Zdražílek
+Tomáš Kyseľ, 
+Jakub Vágner, 
+Lukáš Zdražílek, 
 
 Harmonogram skupinové práce pro Projects část IS
 
