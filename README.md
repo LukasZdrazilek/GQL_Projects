@@ -1,70 +1,94 @@
-GQL_Projects - Deníček
+# GQL_Projects - Deníček
 
-Tomáš Kyseľ, 
-Jakub Vágner, 
-Lukáš Zdražílek, 
+__Tomáš Kyseľ,__ 
+__Jakub Vágner,__ 
+__Lukáš Zdražílek,__ 
+________________________________________________________________________
 
-Harmonogram skupinové práce pro Projects část IS
+## Aktuální úkoly
 
-20.3.2024 první schůze/stretnutie => Vytvoření repositáře, deníčku a harmonogramu
+1. Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx
 
-21.3.2024 druhá schůze/stretnutie => Analýza kódu
+2. Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js
 
-25.3.2024 zveřejnění harmonogramu / inicializace deníčku, sdílení repositáře
+3. Vytvořit několik karet (souborů) v src/Components/Projects ...
 
-27.3.2024 třetí schůze/stretnutie => Seznámení se s knihovnami/knižnicami
+4. Přidat do src/Components/UGSearch.jsx const Projects = ({projects})
 
-28.3.2024 čtvrtá schůze/stretnutie => Začátek kódovácí cesty
+5. Přidat do src/Components/index.js './Projects'
 
-3.4.2024 pátá schůze/stretnutie => Test lokálního dema
+6. Přidat do dist/es/index.js něco o Projects (je tam toho moc)
 
-4.4.2024 šestá schůze/stretnutie => Oprava chyb lokálního dema (víme, že budou :( )
+________________________________________________________________________
 
-10.4.2024 sedmá schůze/stretnutie => Propojení s ostatními komponenty IS
+## Harmonogram skupinové práce pro Projects část IS
 
-11.4.2024 osmá schůze/stretnutie => Přivítání Jakuba Vágnera v týmu
 
-15.4.2024 projektový den
+__20.3.2024__ první schůze/stretnutie => Vytvoření repositáře, deníčku a harmonogramu
 
-17.4.2024 devátá schůze/stretnutie => TBD
+__21.3.2024__ druhá schůze/stretnutie => Analýza kódu
 
-18.4.2024 desátá schůze/stretnutie => TBD
+__25.3.2024__ zveřejnění harmonogramu / inicializace deníčku, sdílení repositáře
 
-24.4.2024 jedenáctá schůze/stretnutie => TBD
+__27.3.2024__ třetí schůze/stretnutie => Seznámení se s knihovnami/knižnicami
 
-25.4.2024 dvanáctá schůze/stretnutie => TBD
+__28.3.2024__ čtvrtá schůze/stretnutie => Začátek kódovácí cesty
 
-1.5.2024 třináctá schůze/stretnutie => TBD
+__3.4.2024__ pátá schůze/stretnutie => Test lokálního dema
 
-2.5.2024 čtrnáctá schůze/stretnutie => TBD
+__4.4.2024__ šestá schůze/stretnutie => Oprava chyb lokálního dema (víme, že budou :( )
 
-8.5.2024 patnáctá schůze/stretnutie => TBD
+__10.4.2024__ sedmá schůze/stretnutie => Propojení s ostatními komponenty IS
 
-9.5.2024 šestnáctá schůze/stretnutie => TBD
+__11.4.2024__ osmá schůze/stretnutie => Přivítání Jakuba Vágnera v týmu
 
-10.5.2024 projektový den
+__15.4.2024__ první projektový den
 
-15.5.2024 sedmnáctá schůze/stretnutie => TBD
+<br />
 
-16.5.2024 osmnáctá schůze/stretnutie => TBD
+__17.4.2024__ devátá schůze/stretnutie => TBD
 
-22.5.2024 devatenáctá schůze/stretnutie => TBD
+__18.4.2024__ desátá schůze/stretnutie => TBD
 
-23.5.2024 dvacátá schůze/stretnutie => TBD
+__24.4.2024__ jedenáctá schůze/stretnutie => TBD
 
-29.5.2024 dvacátá-první schůze/stretnutie => TBD
+__25.4.2024__ dvanáctá schůze/stretnutie => TBD
 
-30.5.2024 dvacátá-druhá schůze/stretnutie => TBD
+__1.5.2024__ třináctá schůze/stretnutie => TBD
 
-5.6.2024 dvacátá-třetí schůze/stretnutie => TBD
+__2.5.2024__ čtrnáctá schůze/stretnutie => TBD
 
-6.6.2024 dvacátá-čtvrtá schůze/stretnutie => TBD
+__8.5.2024__ patnáctá schůze/stretnutie => TBD
 
-10.6.2024 projektový den
+__9.5.2024__ šestnáctá schůze/stretnutie => TBD
 
-12.6.2024 dvacátá-pátá schůze/stretnutie => TBD
+__10.5.2024__ druhý projektový den
 
-13.6.2024 dvacátá-šestá schůze/stretnutie => TBD
+<br />
 
-17.6.2024 uzavření projektu
+__15.5.2024__ sedmnáctá schůze/stretnutie => TBD
+
+__16.5.2024__ osmnáctá schůze/stretnutie => TBD
+
+__22.5.2024__ devatenáctá schůze/stretnutie => TBD
+
+__23.5.2024__ dvacátá schůze/stretnutie => TBD
+
+__29.5.2024__ dvacátá-první schůze/stretnutie => TBD
+
+__30.5.2024__ dvacátá-druhá schůze/stretnutie => TBD
+
+__5.6.2024__ dvacátá-třetí schůze/stretnutie => TBD
+
+__6.6.2024__ dvacátá-čtvrtá schůze/stretnutie => TBD
+
+__10.6.2024__ třetí projektový den
+
+<br />
+
+__12.6.2024__ dvacátá-pátá schůze/stretnutie => TBD
+
+__13.6.2024__ dvacátá-šestá schůze/stretnutie => TBD
+
+__17.6.2024__ uzavření projektu
 
