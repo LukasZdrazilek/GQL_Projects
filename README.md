@@ -19,6 +19,8 @@ ________________________________________________________________________
 
 6. Přidat do dist/es/index.js něco o Projects (je tam toho moc)
 
+7. Přidat projectby(id?, name?) do src/Queries/queries.json
+
 ________________________________________________________________________
 
 ## Harmonogram skupinové práce pro Projects část IS
