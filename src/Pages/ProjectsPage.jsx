@@ -4,7 +4,7 @@ import { UserLargeCard } from "../Components"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchUserByIdAsyncAction } from "../Queries"
 
-const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst uživatele", success: "Načtení uživatele se povedlo"})
+const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst projekt", success: "Načtení projektu se povedlo"})
 export const ProjectsPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
@@ -13,11 +13,11 @@ export const ProjectsPage = ()  => {
 
     if (user) {
         return (
-            <UserLargeCard user={user} />
+            <UserLargeCard user={user} />           // ProjectLargeCard?
         )
     } else {
         return (
-            <div>Nahravam uzivatele...</div>
+            <div>Nahrávám projekty...</div>
         )
     }
     
