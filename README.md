@@ -7,6 +7,8 @@ ________________________________________________________________________
 
 ## Aktuální úkoly
 
+ASAP Udělat publish
+
 1. Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx
 
 2. Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js
