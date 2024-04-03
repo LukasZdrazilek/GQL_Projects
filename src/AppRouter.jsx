@@ -33,7 +33,7 @@ export const Routes = [
       errorElement: <SearchPage />,
     },    
     {
-      path: "/projects",
+      path: "/projects/:id",                // projects/:id   pak
       element: <ProjectsPage />,            // element ProjectsPage vytvorit ??
       errorElement: <SearchPage />,
     },
