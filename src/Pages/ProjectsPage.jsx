@@ -12,7 +12,7 @@ export const ProjectsPage = ()  => {
     const [projects, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
     userPromise.then(onResolve, onReject)
 
-    if (projects) {             //      2d9dc5ca-a4a2-11ed-b9df-0242ac120003            John Newbie ID
+    if (projects) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
         return (
             // // <UserLargeCard user={user} />           // ProjectLargeCard?
             // <div>
