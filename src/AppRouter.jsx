@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import { GroupPage, UserPage, ProjectsPage} from "./Pages";       // + , ProjectsPage
 import { SearchPage } from "./Pages/SearchPage";
+import { ProjectsEditPage } from "./Pages/ProjectsEditPage";
 // import { UserPage, GroupPage } from "./Pages";
 
 export const Routes = [
@@ -33,13 +34,19 @@ export const Routes = [
       errorElement: <SearchPage />,
     },    
     {
-      path: "/projects/:id",                // projects/:id   pak
-      element: <ProjectsPage />,            // element ProjectsPage vytvorit ??
+      path: "/project/view/:id",
+      element: <ProjectsPage />,
       errorElement: <SearchPage />,
     },
+    {
+      path: "/project/edit/:id",
+      element: <ProjectsEditPage />,
+      errorElement: <SearchPage />,
+    }
+    
 ]
 
-const router = createBrowserRouter(Routes, {basename: "/ug"});
+const router = createBrowserRouter(Routes, {basename: "/ug"});    // projects pak
 // const router = createBrowserRouter(Routes);
 
 export const AppRouter = () => <RouterProvider router={router} />

@@ -6,7 +6,7 @@ import { FetchProjectByIdAsyncAction } from "../Queries/FetchProjectByIdAsyncAct
 import { ProjectLargeCard } from "../Components/Project/ProjectLargeCard"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst projekt", success: "Načtení projektu se povedlo"})
-export const ProjectsPage = ()  => {
+export const ProjectsEditPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
     const [projects, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
@@ -20,7 +20,11 @@ export const ProjectsPage = ()  => {
             //     {JSON.stringify(projects)}       // debug informace
             // </div>
 
-            <ProjectLargeCard project={projects} />
+            <ProjectLargeCard project={projects}>
+                <ProjectLargeCard project={projects}>
+                    Heureka
+                </ProjectLargeCard>
+            </ProjectLargeCard>
         )
     } else {
         return (
