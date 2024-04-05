@@ -11,7 +11,7 @@ ASAP Udělat publish
 
 1. Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx
 
-2. Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js
+~~2. Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js~~
 
 3. Vytvořit několik karet (souborů) v src/Components/Projects ...
 
@@ -36,13 +36,13 @@ __25.3.2024__ zveřejnění harmonogramu / inicializace deníčku, sdílení rep
 
 __27.3.2024__ třetí schůze/stretnutie => Seznámení se s knihovnami/knižnicami
 
-__28.3.2024__ čtvrtá schůze/stretnutie => Začátek kódovácí cesty
+__28.3.2024__ čtvrtá schůze/stretnutie => Propojení s ostatními komponenty IS
 
-__3.4.2024__ pátá schůze/stretnutie => Test lokálního dema
+__3.4.2024__ pátá schůze/stretnutie => Získání parametrů pro Projects
 
-__4.4.2024__ šestá schůze/stretnutie => Oprava chyb lokálního dema (víme, že budou :( )
+__4.4.2024__ šestá schůze/stretnutie => ***Test lokálního dema => proběhlo úspěšně***
 
-__10.4.2024__ sedmá schůze/stretnutie => Propojení s ostatními komponenty IS
+__10.4.2024__ sedmá schůze/stretnutie => Publish
 
 __11.4.2024__ osmá schůze/stretnutie => Přivítání Jakuba Vágnera v týmu
 
@@ -50,7 +50,7 @@ __15.4.2024__ první projektový den
 
 <br />
 
-__17.4.2024__ devátá schůze/stretnutie => TBD
+__17.4.2024__ devátá schůze/stretnutie => Tvorba vizuálu webu
 
 __18.4.2024__ desátá schůze/stretnutie => TBD
 
