@@ -4,6 +4,7 @@ import { UserLargeCard } from "../Components"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchProjectByIdAsyncAction } from "../Queries/FetchProjectByIdAsyncAction"
 import { ProjectLargeCard } from "../Components/Project/ProjectLargeCard"
+import { ProjectEditCard } from "../Components/Project/ProjectEditCard"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst projekt", success: "Načtení projektu se povedlo"})
 export const ProjectsEditPage = ()  => {
@@ -21,9 +22,7 @@ export const ProjectsEditPage = ()  => {
             // </div>
 
             <ProjectLargeCard project={projects}>
-                <ProjectLargeCard project={projects}>
-                    Heureka
-                </ProjectLargeCard>
+                <ProjectEditCard project={projects} />
             </ProjectLargeCard>
         )
     } else {
