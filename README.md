@@ -6,8 +6,7 @@ __Lukáš Zdražílek,__
 ________________________________________________________________________
 
 ## Aktuální úkoly
-
-ASAP Udělat publish
+~~0. Zprovoznění publish package~~
 
 1. Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx
 

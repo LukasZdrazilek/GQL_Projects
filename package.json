@@ -1,7 +1,7 @@
 {
-  "name": "@LukasZdrazilek/gql_projects",
+  "name": "@lukaszdrazilek/gql_projects",
   "private": false,
-  "version": "0.4.6",
+  "version": "0.4.7",
   "type": "module",
   "main": "dist/umd/index.js",
   "module": "dist/es/index.js",
