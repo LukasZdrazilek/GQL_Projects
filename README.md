@@ -12,15 +12,9 @@ ________________________________________________________________________
 
 ~~2. Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js~~
 
-3. Vytvořit několik karet (souborů) v src/Components/Projects ...
+~~3. Vytvořit několik karet (souborů) v src/Components/Projects ...~~
 
-4. Přidat do src/Components/UGSearch.jsx const Projects = ({projects})
-
-5. Přidat do src/Components/index.js './Projects'
-
-6. Přidat do dist/es/index.js něco o Projects (je tam toho moc)
-
-7. Přidat projectby(id?, name?) do src/Queries/queries.json
+~~4. Přidat projectby(id?, name?) do src/Queries/queries.json~~
 
 ________________________________________________________________________
 
@@ -39,9 +33,9 @@ __28.3.2024__ čtvrtá schůze/stretnutie => Propojení s ostatními komponenty 
 
 __3.4.2024__ pátá schůze/stretnutie => Získání parametrů pro Projects
 
-__4.4.2024__ šestá schůze/stretnutie => ***Test lokálního dema => proběhlo úspěšně***
+__4.4.2024__ šestá schůze/stretnutie => ***Test lokálního dema projects page => proběhlo úspěšně***
 
-__10.4.2024__ sedmá schůze/stretnutie => Publish
+__10.4.2024__ sedmá schůze/stretnutie => Přidání finances a milestones, zprovoznění je do stejného stavu jako projects (zatím bez dat)
 
 __11.4.2024__ osmá schůze/stretnutie => Přivítání Jakuba Vágnera v týmu
 
