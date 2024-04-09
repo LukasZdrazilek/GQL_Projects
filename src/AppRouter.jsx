@@ -2,9 +2,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { GroupPage, UserPage, ProjectsPage} from "./Pages";       // + , ProjectsPage
+import { GroupPage, UserPage, ProjectsPage, MilestonePage, FinancePage} from "./Pages";       // + , ProjectsPage
 import { SearchPage } from "./Pages/SearchPage";
 import { ProjectsEditPage } from "./Pages/ProjectsEditPage";
+import { MilestoneEditPage } from "./Pages/MilestoneEditPage";   
+import { FinanceEditPage } from "./Pages/FinanceEditPage";
 // import { UserPage, GroupPage } from "./Pages";
 
 export const Routes = [
@@ -42,11 +44,32 @@ export const Routes = [
       path: "/project/edit/:id",
       element: <ProjectsEditPage />,
       errorElement: <SearchPage />,
+    },
+    {
+      path: "/milestone/view/:id",
+      element: <MilestonePage />,
+      errorElement: <SearchPage />,
+    },
+    {
+      path: "/milestone/edit/:id",
+      element: <MilestoneEditPage />,
+      errorElement: <SearchPage />,
+    },
+    {
+      path: "/finance/view/:id",
+      element: <FinancePage />,
+      errorElement: <SearchPage />,
+    },
+    {
+      path: "/finance/edit/:id",
+      element: <FinanceEditPage />,
+      errorElement: <SearchPage />,
     }
+
     
 ]
 
-const router = createBrowserRouter(Routes, {basename: "/ug"});    // projects pak
+const router = createBrowserRouter(Routes, {basename: "/projects"});
 // const router = createBrowserRouter(Routes);
 
 export const AppRouter = () => <RouterProvider router={router} />

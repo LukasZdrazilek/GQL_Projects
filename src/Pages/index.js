@@ -1,3 +1,5 @@
 export * from './UserPage'
 export * from './GroupPage'
 export * from './ProjectsPage'
+export * from './MilestonePage'
+export * from './FinancePage'
