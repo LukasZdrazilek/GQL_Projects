@@ -2,7 +2,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { GroupPage, UserPage, ProjectsPage, MilestonePage, FinancePage} from "./Pages";       // + , ProjectsPage
+import { ProjectsPage, MilestonePage, FinancePage} from "./Pages";       // + , ProjectsPage
 import { SearchPage } from "./Pages/SearchPage";
 import { ProjectsEditPage } from "./Pages/ProjectsEditPage";
 import { MilestoneEditPage } from "./Pages/MilestoneEditPage";   
@@ -14,16 +14,6 @@ export const Routes = [
         path: "/",
         errorElement: <SearchPage />,
         element: <SearchPage />
-    },
-    {
-        path: "/user/:id",
-        element: <UserPage />,
-        errorElement: <SearchPage />,
-    },
-    {
-        path: "/group/:id",
-        element: <GroupPage />,
-        errorElement: <SearchPage />,
     },
     {
         path: "/search",
