@@ -36,3 +36,25 @@ const query = `query ($id: UUID!) {
   }`
   
   export const FetchFinanceByIdAsyncAction = CreateAsyncActionFromQuery(query)
+
+  /*
+  const query = `query ($id: UUID!) {
+    result:financeById(id: &id)
+    {
+      id
+      name
+      lastchange
+      amount
+      financeType
+      {
+        name
+        nameEn
+      }
+      created
+      createdby
+      {
+        name
+      }
+  }
+}`
+  */
