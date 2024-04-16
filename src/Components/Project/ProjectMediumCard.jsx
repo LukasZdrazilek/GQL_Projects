@@ -11,6 +11,15 @@ export const ProjectMediumCard = ({project}) => {
                 <Col>Název</Col>
                 <Col>{project?.name}</Col>
             </Row>
+           
+            <Row>
+                <Col>Typ</Col>
+                <Col>{project?.projectType?.name}</Col>
+            </Row>
+            <Row>
+                <Col>Tým</Col>
+                <Col>{project?.team?.name}</Col>
+            </Row>
             <Row>
                 <Col>Počátek</Col>
                 <Col>{project?.startdate}</Col>

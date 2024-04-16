@@ -25,6 +25,13 @@ export const ProjectEditCard = ({project}) => {
                     </EditableAttributeSelect>      
                 </Col>      
             </Row>
+            <Row>
+                <Col>
+                    <EditableAttributeSelect item={project} attributeName="team_id" label="Tým" asyncUpdater={UpdateProjectAsyncAction}>
+                        <option value="2d9dcd22-a4a2-11ed-b9df-0242ac120003">Uni</option>
+                    </EditableAttributeSelect>      
+                </Col>      
+            </Row>
             
         </CardCapsule>
     )
