@@ -12,12 +12,12 @@ export const FinanceMediumCard = ({finance}) => {
                 <Col>{finance?.name}</Col>
             </Row>
             <Row>
-                <Col>Počátek</Col>
-                <Col>{finance?.startdate}</Col>
+                <Col>Rozpočet</Col>
+                <Col>{finance?.amount}</Col>
             </Row>
             <Row>
-                <Col>Konec</Col>
-                <Col>{finance?.enddate}</Col>
+                <Col>Projekt</Col>
+                <Col>{finance?.project?.name}</Col>
             </Row>
         </CardCapsule>
     )

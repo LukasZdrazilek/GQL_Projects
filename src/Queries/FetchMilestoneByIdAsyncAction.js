@@ -1,39 +1,29 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
-const query = `query ($id: UUID!) {
-    result: projectById(id: $id) {
-        __typename
-        id 
-        lastchange
+const query = `query ($id: UUID!) 
+{
+    result: milestoneById(id: $id) 
+    {
+      id
+      name
+      startdate
+      enddate
+      lastchange
+      project
+      {
+        id
         name
-        startdate
-        enddate
-        created
-        team
-        {
-          id
-          name
-        }
-
-        finances
-        {
-          id
-          name
-        }
-        milestones
-        {
-          id
-          name
-        }
-    
-        projectType
-        {
-          id
-          name
-        }
-
       }
-  }`
+      previous
+      {
+        name
+      }
+      nexts
+      {
+        name
+      }
+    }
+}`
   
   export const FetchMilestoneByIdAsyncAction = CreateAsyncActionFromQuery(query)
 

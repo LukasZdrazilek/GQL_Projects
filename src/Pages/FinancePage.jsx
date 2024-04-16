@@ -11,7 +11,7 @@ export const FinancePage = ()  => {
     const [finance, userPromise] = useFreshItem({id}, FetchFinanceByIdAsyncAction)
     userPromise.then(onResolve, onReject)
 
-    if (finance) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
+    if (finance) {             //      f911230f-7e1f-4e9b-90a9-b921996ceb87            Finance ID
         return (
             // // <UserLargeCard user={user} />           // ProjectLargeCard?
             // <div>

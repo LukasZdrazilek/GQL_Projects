@@ -1,19 +1,24 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 const mutation =
 `
-mutation($id: UUID!, $lastchange: DateTime!, $name: String, $startdate: DateTime, $enddate: DateTime)
+mutation($id: UUID!, $lastchange: DateTime!, $name: String, $amount: Number, $project_id: UUID, $financeType_id: UUID)
   {
-    result: projectUpdate(project:{ id: $id, lastchange: $lastchange, name: $name, startdate: $startdate, enddate: $enddate })
+    result: financeUpdate(finance:{ id: $id, lastchange: $lastchange, name: $name, amount: $amount, 
+      projectId: $project_id, financetypeId: $financeType_id})
     {
       id
-      msg
-      result: project
+      name
+      lastchange
+      amount
+      project
       {
         id
-        lastchange
         name
-        startdate
-        enddate
+      }
+      financeType
+      {
+        id
+        name
       }
     }
   }

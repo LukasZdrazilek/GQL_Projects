@@ -3,11 +3,11 @@ const mutation =
 `
 mutation($id: UUID!, $lastchange: DateTime!, $name: String, $startdate: DateTime, $enddate: DateTime)
   {
-    result: projectUpdate(project:{ id: $id, lastchange: $lastchange, name: $name, startdate: $startdate, enddate: $enddate })
+    result: milestoneUpdate(milestone:{ id: $id, lastchange: $lastchange, name: $name, startdate: $startdate, enddate: $enddate })
     {
       id
       msg
-      result: project
+      result: milestone
       {
         id
         lastchange

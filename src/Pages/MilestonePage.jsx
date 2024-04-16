@@ -1,6 +1,5 @@
 // import { useFreshItem } from "@hrbolek/uoisfrontend-shared/src"
 import { useParams } from "react-router-dom"
-import { UserLargeCard } from "../Components"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchMilestoneByIdAsyncAction } from "../Queries/FetchMilestoneByIdAsyncAction"
 import { MilestoneLargeCard } from "../Components/Milestone/MilestoneLargeCard"
@@ -12,7 +11,7 @@ export const MilestonePage = ()  => {
     const [milestone, userPromise] = useFreshItem({id}, FetchMilestoneByIdAsyncAction)
     userPromise.then(onResolve, onReject)
 
-    if (milestone) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
+    if (milestone) {             //      d7266936-17c1-4810-88d2-079ebb864d2e            Milestone ID
         return (
             // // <UserLargeCard user={user} />           // ProjectLargeCard?
             // <div>
