@@ -6,9 +6,11 @@ __Lukáš Zdražílek,__
 ________________________________________________________________________
 
 ## Aktuální úkoly
+0. čakáme na rozkazy
+
 ~~0. Zprovoznění publish package~~
 
-1. Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx
+~~1. Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx~~
 
 ~~2. Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js~~
 
@@ -39,7 +41,7 @@ __10.4.2024__ sedmá schůze/stretnutie => Přidání finances a milestones, zpr
 
 __11.4.2024__ osmá schůze/stretnutie => Přivítání Jakuba Vágnera v týmu
 
-__15.4.2024__ první projektový den
+__15.4.2024__ první projektový den => dopadol úspešne, nevyhodili nás, zvládli sme to, nájdené nedostatky v backende, chýbajúca funkcia na dátum a floatové dátové tipy
 
 <br />
 
