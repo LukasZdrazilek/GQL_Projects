@@ -13,7 +13,7 @@ export const FinanceMediumCard = ({finance}) => {
             </Row>
             <Row>
                 <Col>Rozpočet</Col>
-                <Col>{finance?.amount}</Col>
+                <Col>{finance?.amount} Kč</Col>
             </Row>
             <Row>
                 <Col>Projekt</Col>

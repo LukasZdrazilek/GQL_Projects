@@ -13,11 +13,14 @@ export const FinanceEditCard = ({finance}) => {
                 <Col>{finance?.name}</Col>
             </Row>
             <Row>
-                <EditableAttributeText item={finance} attributeName="name" label="Název" asyncUpdater={UpdateFinanceAsyncAction} />
+                <Col>
+                    <EditableAttributeText item={finance} attributeName="name" label="Název" asyncUpdater={UpdateFinanceAsyncAction} />
+                </Col>
             </Row>
             <Row>
-                <Col>Rozpočet</Col>
-                <Col>{finance?.amount}</Col>
+                <Col>
+                    <EditableAttributeText item={finance} attributeName="amount" label="Rozpočet" asyncUpdater={UpdateFinanceAsyncAction} />
+                </Col>
             </Row>
             <Row>
                 <Col>Projekt</Col>
