@@ -24,6 +24,22 @@ export const ProjectLargeCard = ({project, children}) => {
             
         </Row>
         <br />
+        <table className="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Milestones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {project?.milestones.map((milestone, index) => (
+                    <tr key={milestone.id}>
+                        <th scope="row">{index + 1}</th>
+                        <td>{milestone.name}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
         <Row>
             <Col>
                 {/* <UserRawCard user={user}/> */}
