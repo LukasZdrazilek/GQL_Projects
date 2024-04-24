@@ -17,6 +17,7 @@ ________________________________________________________________________
 - [ ] Pridať vytváranie projektov, financií a milestones
 - [ ] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
 - [ ] touch some grass
+- [ ] ProjectEditPage sautomatizovať queri na dropboxi
 
 ________________________________________________________________________
 
