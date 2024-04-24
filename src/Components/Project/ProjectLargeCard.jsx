@@ -2,6 +2,7 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { ProjectMediumCard } from './ProjectMediumCard'
+import { ProjectTableCard } from './ProjectTableCard'
 // import { UserRolesCard } from './UserRolesCard'
 // import { UserRawCard } from './UserRawCard'
 // import { UserMediumCard } from './UserMediumCard'
@@ -23,23 +24,7 @@ export const ProjectLargeCard = ({project, children}) => {
             </Col>
             
         </Row>
-        <br />
-        <table className="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Milestones</th>
-                </tr>
-            </thead>
-            <tbody>
-                {project?.milestones.map((milestone, index) => (
-                    <tr key={milestone.id}>
-                        <th scope="row">{index + 1}</th>
-                        <td>{milestone.name}</td>
-                    </tr>
-                ))}
-            </tbody>
-        </table>
+            <ProjectTableCard project={project} />
         <Row>
             <Col>
                 {/* <UserRawCard user={user}/> */}
