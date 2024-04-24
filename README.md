@@ -6,17 +6,14 @@ __Lukáš Zdražílek,__
 ________________________________________________________________________
 
 ## Aktuální úkoly
-0. čakáme na rozkazy
 
-~~0. Zprovoznění publish package~~
-
-~~1. Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx~~
-
-~~2. Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js~~
-
-~~3. Vytvořit několik karet (souborů) v src/Components/Projects ...~~
-
-~~4. Přidat projectby(id?, name?) do src/Queries/queries.json~~
+- [x] Zprovoznění publish package
+- [x] Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx
+- [x] Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js
+- [x] Vytvořit několik karet (souborů) v src/Components/Projects ...
+- [x] Přidat projectby(id?, name?) do src/Queries/queries.json
+- [ ] Seřazení milestones podle pořadí
+- [ ] Vytvoření menu
 
 ________________________________________________________________________
 
