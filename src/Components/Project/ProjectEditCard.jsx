@@ -29,7 +29,7 @@ export const ProjectEditCard = ({project}) => {
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeText item={project} attributeName="startdate" label="Datum zahajeni" asyncUpdater={ChangedUpdateProjectAsyncAction} type="datetime-local" />
+                    <EditableAttributeText item={project} attributeName="startdate" label="Datum zahajeni" asyncUpdater={RawUpdateProjectAsyncAction} type="date" />
                 </Col>      
             </Row>
             
