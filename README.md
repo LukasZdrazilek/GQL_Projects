@@ -12,10 +12,10 @@ ________________________________________________________________________
 - [x] Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js
 - [x] Vytvořit několik karet (souborů) v src/Components/Projects ...
 - [x] Přidat projectby(id?, name?) do src/Queries/queries.json
+- [x] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
 - [ ] Seřazení milestones podle pořadí
 - [ ] Vytvoření menu
 - [ ] Pridať vytváranie projektov, financií a milestones
-- [ ] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
 - [ ] touch some grass
 - [ ] ProjectEditPage sautomatizovať queri na dropboxi
 
