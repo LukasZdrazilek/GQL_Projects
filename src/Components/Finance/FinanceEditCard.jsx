@@ -2,7 +2,7 @@
 import { CardCapsule, EditableAttributeText, EditableAttributeSelect} from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { UpdateFinanceAsyncAction } from '../../Queries/UpdateFinanceAsyncAction'
+import { RawUpdateFinanceAsyncAction, ChangedUpdateFinanceAsyncAction } from '../../Queries/UpdateFinanceAsyncAction'
 
 export const FinanceEditCard = ({finance}) => {
     return (
@@ -14,12 +14,12 @@ export const FinanceEditCard = ({finance}) => {
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeText item={finance} attributeName="name" label="Název" asyncUpdater={UpdateFinanceAsyncAction} />
+                    <EditableAttributeText item={finance} attributeName="name" label="Název" asyncUpdater={RawUpdateFinanceAsyncAction} />
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeText item={finance} attributeName="amount" label="Rozpočet" asyncUpdater={UpdateFinanceAsyncAction} />
+                    <EditableAttributeText item={finance} attributeName="amount" label="Rozpočet" asyncUpdater={ChangedUpdateFinanceAsyncAction} type="number" />
                 </Col>
             </Row>
             <Row>
@@ -28,7 +28,7 @@ export const FinanceEditCard = ({finance}) => {
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeSelect item={finance} attributeName="financeType_id" label="Typ" asyncUpdater={UpdateFinanceAsyncAction}>
+                    <EditableAttributeSelect item={finance} attributeName="financeType_id" label="Typ" asyncUpdater={RawUpdateFinanceAsyncAction}>
                         <option value="9e37059c-de2c-4112-9009-559c8b0396f1">Osobní náklady</option>
                     </EditableAttributeSelect>      
                 </Col>      

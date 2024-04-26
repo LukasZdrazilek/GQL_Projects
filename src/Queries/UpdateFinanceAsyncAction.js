@@ -23,4 +23,8 @@ mutation($id: UUID!, $lastchange: DateTime!, $name: String, $amount: Float)
   }
 `
 
-export const UpdateFinanceAsyncAction = CreateAsyncActionFromMutation(mutation)
+export const RawUpdateFinanceAsyncAction = CreateAsyncActionFromMutation(mutation)
+export const ChangedUpdateFinanceAsyncAction = (item) => {
+  const changedItem = {...item, amount: Number(item?.amount)}
+  return RawUpdateFinanceAsyncAction(changedItem)
+}
