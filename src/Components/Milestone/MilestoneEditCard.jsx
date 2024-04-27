@@ -2,7 +2,7 @@
 import { CardCapsule, EditableAttributeText, EditableAttributeSelect } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { UpdateMilestoneAsyncAction } from '../../Queries/UpdateMilestoneAsyncAction'
+import { RawUpdateMilestoneAsyncAction } from '../../Queries/UpdateMilestoneAsyncAction'
 
 export const MilestoneEditCard = ({milestone}) => {
     return (
@@ -13,7 +13,7 @@ export const MilestoneEditCard = ({milestone}) => {
                 <Col>{milestone?.name}</Col>
             </Row>
             <Row>
-                <EditableAttributeText item={milestone} attributeName="name" label="Název" asyncUpdater={UpdateMilestoneAsyncAction} />
+                <EditableAttributeText item={milestone} attributeName="name" label="Název" asyncUpdater={RawUpdateMilestoneAsyncAction} />
             </Row>
             <Row>
                 <Col>Počátek</Col>

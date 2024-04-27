@@ -2,6 +2,7 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { formatDate } from '../Misc/FormatDate'
 
 export const MilestoneMediumCard = ({milestone}) => {
     return (
@@ -13,11 +14,11 @@ export const MilestoneMediumCard = ({milestone}) => {
             </Row>
             <Row>
                 <Col>Počátek</Col>
-                <Col>{milestone?.startdate}</Col>
+                <Col>{formatDate(milestone?.startdate)}</Col>
             </Row>
             <Row>
                 <Col>Konec</Col>
-                <Col>{milestone?.enddate}</Col>
+                <Col>{formatDate(milestone?.enddate)}</Col>
             </Row>
         </CardCapsule>
     )

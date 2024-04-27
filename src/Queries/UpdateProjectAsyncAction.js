@@ -32,8 +32,3 @@ mutation($id: UUID!, $lastchange: DateTime!, $name: String,
 `
 
 export const RawUpdateProjectAsyncAction = CreateAsyncActionFromMutation(mutation)
-export const ChangedUpdateProjectAsyncAction = (item) =>
-    {
-        const changedItem = {...item, startdate: Date(item.startdate)}
-        return RawUpdateProjectAsyncAction(changedItem)
-    }

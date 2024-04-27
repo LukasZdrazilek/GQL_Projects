@@ -19,4 +19,4 @@ mutation($id: UUID!, $lastchange: DateTime!, $name: String, $startdate: DateTime
   }
 `
 
-export const UpdateMilestoneAsyncAction = CreateAsyncActionFromMutation(mutation)
+export const RawUpdateMilestoneAsyncAction = CreateAsyncActionFromMutation(mutation)

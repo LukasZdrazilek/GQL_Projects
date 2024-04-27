@@ -14,11 +14,6 @@ export const ProjectsPage = ()  => {
 
     if (projects) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
         return (
-            // // <UserLargeCard user={user} />           // ProjectLargeCard?
-            // <div>
-            //     Projekty nahrány
-            //     {JSON.stringify(projects)}       // debug informace
-            // </div>
 
             <ProjectLargeCard project={projects} />
         )
