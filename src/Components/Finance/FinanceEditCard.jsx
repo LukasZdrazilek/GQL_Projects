@@ -3,6 +3,7 @@ import { CardCapsule, EditableAttributeText, EditableAttributeSelect} from '@hrb
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { RawUpdateFinanceAsyncAction, ChangedUpdateFinanceAsyncAction } from '../../Queries/UpdateFinanceAsyncAction'
+import { FinanceEditType } from './FinanceEditType'
 
 export const FinanceEditCard = ({finance}) => {
     return (
@@ -28,9 +29,7 @@ export const FinanceEditCard = ({finance}) => {
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeSelect item={finance} attributeName="financeType_id" label="Typ" asyncUpdater={RawUpdateFinanceAsyncAction}>
-                        <option value="9e37059c-de2c-4112-9009-559c8b0396f1">Osobní náklady</option>
-                    </EditableAttributeSelect>      
+                    <FinanceEditType finance={finance} />    
                 </Col>      
             </Row>
         </CardCapsule>

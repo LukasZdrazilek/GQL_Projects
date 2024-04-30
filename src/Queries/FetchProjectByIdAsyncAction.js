@@ -14,11 +14,16 @@ const query = `query ($id: UUID!) {
           id
           name
         }
-
         finances
         {
           id
           name
+          amount
+          financeType
+          {
+            id
+            name
+          }
         }
         milestones
         {
@@ -27,13 +32,11 @@ const query = `query ($id: UUID!) {
           startdate
           enddate
         }
-    
         projectType
         {
           id
           name
         }
-
       }
   }`
   

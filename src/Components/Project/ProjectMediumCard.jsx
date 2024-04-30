@@ -29,6 +29,7 @@ export const ProjectMediumCard = ({project}) => {
                 <Col>Konec</Col>
                 <Col>{formatDate(project?.enddate)}</Col>
             </Row>
+            
         </CardCapsule>
     )
 }

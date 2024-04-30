@@ -6,7 +6,6 @@ import { RawUpdateProjectAsyncAction} from '../../Queries/UpdateProjectAsyncActi
 import { ProjectEditType } from './ProjectEditType'
 
 
-
 export const ProjectEditCard = ({project}) => {
     return (
         <CardCapsule title={"Projekt " + project?.name + " - atributy"}>
@@ -18,13 +17,6 @@ export const ProjectEditCard = ({project}) => {
             <Row>
                 <Col>
                     <ProjectEditType project={project} />   
-                </Col>      
-            </Row>
-            <Row>
-                <Col>
-                    <EditableAttributeSelect item={project} attributeName="team_id" label="Tým" asyncUpdater={RawUpdateProjectAsyncAction}>
-                        <option value="2d9dcd22-a4a2-11ed-b9df-0242ac120003">Uni</option>
-                    </EditableAttributeSelect>      
                 </Col>      
             </Row>
             <Row>
@@ -41,4 +33,3 @@ export const ProjectEditCard = ({project}) => {
         </CardCapsule>
     );
 };
-    // <ProjectEditType project={project} /> pak misto dropboxu
