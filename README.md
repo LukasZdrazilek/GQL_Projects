@@ -13,7 +13,7 @@ ________________________________________________________________________
 - [x] Vytvořit několik karet (souborů) v src/Components/Projects ...
 - [x] Přidat projectby(id?, name?) do src/Queries/queries.json
 - [x] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
-- [x] Seřazení milestones podle pořadí
+- [ ] Seřazení milestones podle pořadí
 - [ ] Dodělat view u finances a milestones
 - [ ] Vytvoření dropdown menu
 - [ ] Pridať vytváranie projektov, financií a milestones
