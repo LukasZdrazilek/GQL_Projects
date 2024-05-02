@@ -14,7 +14,8 @@ ________________________________________________________________________
 - [x] Přidat projectby(id?, name?) do src/Queries/queries.json
 - [x] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
 - [ ] Seřazení milestones podle pořadí
-- [ ] Vytvoření menu
+- [ ] Dodělat view u finances a milestones
+- [ ] Vytvoření dropdown menu
 - [ ] Pridať vytváranie projektov, financií a milestones
 - [ ] touch some grass
 - [ ] ProjectEditPage sautomatizovať queri na dropboxi
