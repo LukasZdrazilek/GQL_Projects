@@ -16,12 +16,14 @@ export const MilestoneEditCard = ({milestone}) => {
                 <EditableAttributeText item={milestone} attributeName="name" label="Název" asyncUpdater={RawUpdateMilestoneAsyncAction} />
             </Row>
             <Row>
-                <Col>Počátek</Col>
-                <Col>{milestone?.startdate}</Col>
+                <Col>
+                    <EditableAttributeText item={milestone} attributeName="startdate" label="Datum zahajeni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="date" />
+                </Col>      
             </Row>
             <Row>
-                <Col>Konec</Col>
-                <Col>{milestone?.enddate}</Col>
+                <Col>
+                    <EditableAttributeText item={milestone} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="date" />
+                </Col>      
             </Row>
         </CardCapsule>
     )

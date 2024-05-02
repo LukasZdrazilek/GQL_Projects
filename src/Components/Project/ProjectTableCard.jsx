@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { formatDate } from '../Misc/FormatDate'
 import { formatNumber } from '../Misc/FormatNumber'
+import { FinanceLink, FinanceLink_ } from '../Finance/FinanceLink'
+import { MilestoneLink, MilestoneLink_ } from '../Milestone/MilestoneLink'
 
 export const ProjectTableCard = ({project}) => {
     return (
@@ -22,9 +24,7 @@ export const ProjectTableCard = ({project}) => {
                     {project?.milestones.map((milestone, index) => (
                         <tr key={milestone.id}>
                             <td>
-                                <a href={`/projects/milestone/view/${milestone.id}`}>
-                                {milestone.name}
-                                </a>
+                                <MilestoneLink milestone={milestone} menu={true}></MilestoneLink>
                             </td>
                             <td>{formatDate(milestone.startdate)}</td>
                             <td>{formatDate(milestone.enddate)}</td>
@@ -48,9 +48,8 @@ export const ProjectTableCard = ({project}) => {
                 {project?.finances.map((finance, index) => (
                     <tr key={finance.id}>
                         <td>
-                            <a href={`/projects/finance/view/${finance.id}`}>
-                            {finance.name}
-                            </a>
+                            <FinanceLink finance={finance} menu={true}>
+                            </FinanceLink>
                         </td>
                         <td>{formatNumber(finance.amount)} Kč</td>
                         <td>
