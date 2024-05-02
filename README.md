@@ -5,6 +5,8 @@ __Jakub Vágner,__
 __Lukáš Zdražílek,__ 
 ________________________________________________________________________
 
+![Alt text](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.qkme.me%2FDT1.jpg&f=1&nofb=1&ipt=29524da4934a16ecce3113def5671ffa17ed0ca2f03b1ec6272343a198b6d0cb&ipo=images) ![alt text](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FDcXYPtOVAAAoOKa.jpg&f=1&nofb=1&ipt=0fc47f721244bc99d0a6437e702c8b96f4e700beec4126987c92975e234f23e9&ipo=images)
+
 ## Aktuální úkoly
 
 - [x] Zprovoznění publish package
@@ -13,9 +15,12 @@ ________________________________________________________________________
 - [x] Vytvořit několik karet (souborů) v src/Components/Projects ...
 - [x] Přidat projectby(id?, name?) do src/Queries/queries.json
 - [x] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
-- [ ] Seřazení milestones podle pořadí
+- [x] Vytvoření dropdown menu v project view
+- [ ] Seřazení milestones podle jména
+- [ ] Zobrazení předchozího a následujícího milníku u milestones view
+- [ ] Úprava data u milestones
+- [ ] Úprava násled. a předchoz. milníku u milestones edit
 - [ ] Dodělat view u finances a milestones
-- [ ] Vytvoření dropdown menu
 - [ ] Pridať vytváranie projektov, financií a milestones
 - [ ] touch some grass
 - [ ] ProjectEditPage sautomatizovať queri na dropboxi
