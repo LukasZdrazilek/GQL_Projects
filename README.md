@@ -6,8 +6,8 @@ __Lukáš Zdražílek,__
 ________________________________________________________________________
 
 <div style="display: flex;">
-  <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.qkme.me%2FDT1.jpg&f=1&nofb=1&ipt=29524da4934a16ecce3113def5671ffa17ed0ca2f03b1ec6272343a198b6d0cb&ipo=images" style="width: 50%">
-  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FDcXYPtOVAAAoOKa.jpg&f=1&nofb=1&ipt=0fc47f721244bc99d0a6437e702c8b96f4e700beec4126987c92975e234f23e9&ipo=images" style="width: 50%">
+  <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.qkme.me%2FDT1.jpg&f=1&nofb=1&ipt=29524da4934a16ecce3113def5671ffa17ed0ca2f03b1ec6272343a198b6d0cb&ipo=images" style="width: 30%">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FDcXYPtOVAAAoOKa.jpg&f=1&nofb=1&ipt=0fc47f721244bc99d0a6437e702c8b96f4e700beec4126987c92975e234f23e9&ipo=images" style="width: 30%">
 </div>
 
 ## Aktuální úkoly
@@ -57,19 +57,15 @@ __15.4.2024__ první projektový den => dopadol úspešne, nevyhodili nás, zvl�
 
 __17.4.2024__ devátá schůze/stretnutie => Tvorba vizuálu webu
 
-__18.4.2024__ desátá schůze/stretnutie => TBD
+_18.4.2024_ desátá schůze/stretnutie => Vytvoření FetchProjectsByAsincAction
 
-__24.4.2024__ jedenáctá schůze/stretnutie => TBD
+_24.4.2024_ jedenáctá schůze/stretnutie => Vytvoření funkce na vkládání čísel (float)
 
-__25.4.2024__ dvanáctá schůze/stretnutie => TBD
+_25.4.2024_ dvanáctá schůze/stretnutie => Vytvoření funkce na vkládání datumů
 
-__1.5.2024__ třináctá schůze/stretnutie => TBD
+_1.5.2024_ třináctá schůze/stretnutie => Automatizace type query v dropdown editu
 
-__2.5.2024__ čtrnáctá schůze/stretnutie => TBD
-
-__8.5.2024__ patnáctá schůze/stretnutie => TBD
-
-__9.5.2024__ šestnáctá schůze/stretnutie => TBD
+_2.5.2024_ čtrnáctá schůze/stretnutie => Implementace dropdown menu na view/edit u finance a milestones
 
 __10.5.2024__ druhý projektový den
 
