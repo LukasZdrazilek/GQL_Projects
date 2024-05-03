@@ -19,7 +19,46 @@ const query = `query($phrase: String!) {
         name
       }
     }
+    resultp: projectPage(where: {name: {_ilike: $phrase}}) {
+      __typename
+        id 
+        lastchange
+        name
+        startdate
+        enddate
+        created
+        team
+        {
+          id
+          name
+        }
+        finances
+        {
+          id
+          name
+          amount
+          financeType
+          {
+            id
+            name
+          }
+        }
+        milestones
+        {
+          id
+          name
+          startdate
+          enddate
+        }
+        projectType
+        {
+          id
+          name
+        }
+    }
   }`
+
+  
 
 export const FetchSearchAsyncAction = ({str}) => {
     return async (dispatch) => {
@@ -27,8 +66,8 @@ export const FetchSearchAsyncAction = ({str}) => {
 
         const data = json?.data
         if (data) {
-            const {result, resultg} = data
-            const resultall = [...result, ...resultg]
+            const {result, resultg, resultp} = data
+            const resultall = [...result, ...resultg, ...resultp]
             for(const item of resultall) {
                 dispatch(ItemActions.item_update(item))
             }

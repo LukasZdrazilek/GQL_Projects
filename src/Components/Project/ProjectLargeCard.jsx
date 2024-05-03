@@ -6,10 +6,14 @@ import { ProjectTableCard } from './ProjectTableCard'
 // import { UserRolesCard } from './UserRolesCard'
 // import { UserRawCard } from './UserRawCard'
 // import { UserMediumCard } from './UserMediumCard'
+import { ProjectLink } from './ProjectLink'
 
 export const ProjectLargeCard = ({project, children}) => {
     return (
-        <CardCapsule title={"Projekt " + project?.name}>
+        <CardCapsule title={<div>
+            <span>Projekt: </span>
+            <ProjectLink project={project} menu={true}></ProjectLink>
+        </div>}>
         <Row>
             <Col md={4}>
                 <ProjectMediumCard project={project} />

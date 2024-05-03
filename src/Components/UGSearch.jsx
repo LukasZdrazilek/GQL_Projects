@@ -6,6 +6,7 @@ import { Col, Row } from "react-bootstrap"
 import { useSelector } from "react-redux"
 import { UserLink } from "./User/UserLink"
 import { GroupLink } from "./Group"
+import { ProjectLink } from "./Project/ProjectLink"
 
 const ShowUser = ({user}) => {
     return (
@@ -25,6 +26,15 @@ const ShowGroup = ({group}) => {
     )
 }
 
+const ShowProject = ({project}) => {
+    return (
+        <>
+            <ProjectLink project={project} />
+            <br />
+        </>
+    )
+}
+
 const Nevim = ({item}) => {
     return (
         <>
@@ -36,6 +46,8 @@ const Nevim = ({item}) => {
 const LinkMap = {
     GroupGQLModel: ({item}) => <GroupLink group={item} />,
     UserGQLModel: ({item}) => <UserLink user={item} />,
+    ProjectGQLModel: ({item}) => <ProjectLink project={item} />,
+
 }
 
 const ShowResult = ({item}) => {
