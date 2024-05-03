@@ -5,10 +5,17 @@ import { FinanceMediumCard } from './FinanceMediumCard'
 // import { UserRolesCard } from './UserRolesCard'
 // import { UserRawCard } from './UserRawCard'
 // import { UserMediumCard } from './UserMediumCard'
+import { FinanceLink, FinanceLink_ } from '../Finance/FinanceLink'
+
 
 export const FinanceLargeCard = ({finance, children}) => {
     return (
-        <CardCapsule title={"Finance " + finance?.name}>
+        <CardCapsule title={
+            <div>
+                <span>Finance </span>
+                <FinanceLink finance={finance} menu={true}></FinanceLink>
+            </div>
+        }>
         <Row>
             <Col md={4}>
                 <FinanceMediumCard finance={finance} />

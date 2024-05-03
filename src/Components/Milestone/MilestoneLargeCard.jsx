@@ -5,10 +5,16 @@ import { MilestoneMediumCard } from './MilestoneMediumCard'
 // import { UserRolesCard } from './UserRolesCard'
 // import { UserRawCard } from './UserRawCard'
 // import { UserMediumCard } from './UserMediumCard'
+import { MilestoneLink } from '../Milestone/MilestoneLink'
 
 export const MilestoneLargeCard = ({milestone, children}) => {
     return (
-        <CardCapsule title={"Milestone " + milestone?.name}>
+        <CardCapsule title={
+            <div>
+                <span>Milnik </span>
+                <MilestoneLink milestone={milestone} menu={true}></MilestoneLink>
+            </div>
+        }>
         <Row>
             <Col md={4}>
                 <MilestoneMediumCard milestone={milestone} />

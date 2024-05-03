@@ -10,10 +10,6 @@ export const FinanceEditCard = ({finance}) => {
         <CardCapsule title={"Finance " + finance?.name + " - atributy"}>
             
             <Row>
-                <Col>Název</Col>
-                <Col>{finance?.name}</Col>
-            </Row>
-            <Row>
                 <Col>
                     <EditableAttributeText item={finance} attributeName="name" label="Název" asyncUpdater={RawUpdateFinanceAsyncAction} />
                 </Col>
@@ -22,10 +18,6 @@ export const FinanceEditCard = ({finance}) => {
                 <Col>
                     <EditableAttributeText item={finance} attributeName="amount" label="Rozpočet" asyncUpdater={ChangedUpdateFinanceAsyncAction} type="number" />
                 </Col>
-            </Row>
-            <Row>
-                <Col>Projekt</Col>
-                <Col>{finance?.project?.name}</Col>
             </Row>
             <Row>
                 <Col>

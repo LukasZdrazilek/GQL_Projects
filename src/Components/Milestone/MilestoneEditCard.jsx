@@ -9,20 +9,16 @@ export const MilestoneEditCard = ({milestone}) => {
         <CardCapsule title={"Milestone " + milestone?.name + " - atributy"}>
             
             <Row>
-                <Col>Název</Col>
-                <Col>{milestone?.name}</Col>
-            </Row>
-            <Row>
                 <EditableAttributeText item={milestone} attributeName="name" label="Název" asyncUpdater={RawUpdateMilestoneAsyncAction} />
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeText item={milestone} attributeName="startdate" label="Datum zahajeni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="date" />
+                    <EditableAttributeText item={milestone} attributeName="startdate" label="Datum zahajeni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
                 </Col>      
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeText item={milestone} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="date" />
+                    <EditableAttributeText item={milestone} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
                 </Col>      
             </Row>
         </CardCapsule>

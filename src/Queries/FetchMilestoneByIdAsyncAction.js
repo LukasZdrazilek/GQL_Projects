@@ -16,10 +16,12 @@ const query = `query ($id: UUID!)
       }
       previous
       {
+        id
         name
       }
       nexts
       {
+        id
         name
       }
     }
