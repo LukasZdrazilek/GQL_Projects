@@ -1,15 +1,16 @@
 import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src";
 
 export const MilestoneLink_ = ({milestone, children}) => {
     return (
-        <Link to={"/milestone/view/" + milestone?.id}>{children?children:milestone?.name}</Link>
+        <ProxyLink to={"/projects/milestone/view/" + milestone?.id}>{children?children:milestone?.name}</ProxyLink>
     )
 }
 
 const MilestoneMenuItems = {
-    "Editovat": "local:/milestone/edit",
-    "Zobrazit": "local:/milestone/view",
+    "Editovat": "local:/projects/milestone/edit",
+    "Zobrazit": "local:/projects/milestone/view",
 
 }
 
@@ -24,8 +25,8 @@ export const MilestoneLink = ({milestone, children, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item ><Link to={"/milestone/view/" + milestone?.id} >Zobrazit</Link></Dropdown.Item>
-                    <Dropdown.Item ><Link to={"/milestone/edit/" + milestone?.id} >Editovat</Link></Dropdown.Item>
+                    <Dropdown.Item ><ProxyLink to={"/projects/milestone/view/" + milestone?.id} >Zobrazit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item ><ProxyLink to={"/projects/milestone/edit/" + milestone?.id} >Editovat</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>                
             

@@ -8,50 +8,50 @@ import { ProjectsEditPage } from "./Pages/ProjectsEditPage";
 import { MilestoneEditPage } from "./Pages/MilestoneEditPage";   
 import { FinanceEditPage } from "./Pages/FinanceEditPage";
 // import { UserPage, GroupPage } from "./Pages";
-
+const prefix = "/projects"
 export const Routes = [
     {
-        path: "/",
+        path: prefix + "/",
         errorElement: <SearchPage />,
         element: <SearchPage />
     },
     {
-        path: "/search",
+        path: prefix + "/search",
         element: <SearchPage />,
         errorElement: <SearchPage />,
     },
     {
-      path: "/search/:phrase",
+      path: prefix + "/search/:phrase",
       element: <SearchPage />,
       errorElement: <SearchPage />,
     },    
     {
-      path: "/project/view/:id",
+      path: prefix + "/project/view/:id",
       element: <ProjectsPage />,
       errorElement: <SearchPage />,
     },
     {
-      path: "/project/edit/:id",
+      path: prefix + "/project/edit/:id",
       element: <ProjectsEditPage />,
       errorElement: <SearchPage />,
     },
     {
-      path: "/milestone/view/:id",
+      path: prefix + "/milestone/view/:id",
       element: <MilestonePage />,
       errorElement: <SearchPage />,
     },
     {
-      path: "/milestone/edit/:id",
+      path: prefix + "/milestone/edit/:id",
       element: <MilestoneEditPage />,
       errorElement: <SearchPage />,
     },
     {
-      path: "/finance/view/:id",
+      path: prefix + "/finance/view/:id",
       element: <FinancePage />,
       errorElement: <SearchPage />,
     },
     {
-      path: "/finance/edit/:id",
+      path: prefix + "/finance/edit/:id",
       element: <FinanceEditPage />,
       errorElement: <SearchPage />,
     }
@@ -59,7 +59,7 @@ export const Routes = [
     
 ]
 
-const router = createBrowserRouter(Routes, {basename: "/projects"});
-// const router = createBrowserRouter(Routes);
+//const router = createBrowserRouter(Routes, {basename: "/projects"});
+const router = createBrowserRouter(Routes);
 
 export const AppRouter = () => <RouterProvider router={router} />

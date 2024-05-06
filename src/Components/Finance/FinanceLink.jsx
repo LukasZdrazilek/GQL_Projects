@@ -1,9 +1,10 @@
 import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src";
 
 export const FinanceLink_ = ({finance, children}) => {
     return (
-        <Link to={"/finance/view/" + finance?.id}>{children?children:finance?.name}</Link>
+        <ProxyLink to={"/projects/finance/view/" + finance?.id}>{children?children:finance?.name}</ProxyLink>
     )
 }
 
@@ -24,8 +25,8 @@ export const FinanceLink = ({finance, children, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item ><Link to={"/finance/view/" + finance?.id} >Zobrazit</Link></Dropdown.Item>
-                    <Dropdown.Item ><Link to={"/finance/edit/" + finance?.id} >Editovat</Link></Dropdown.Item>
+                    <Dropdown.Item ><ProxyLink to={"/projects/finance/view/" + finance?.id} >Zobrazit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item ><ProxyLink to={"/projects/finance/edit/" + finance?.id} >Editovat</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>                
             
