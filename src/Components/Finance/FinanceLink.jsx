@@ -1,6 +1,7 @@
 import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 export const FinanceLink_ = ({finance, children}) => {
     return (
         <Link to={"/finance/view/" + finance?.id}>{children?children:finance?.name}</Link>
