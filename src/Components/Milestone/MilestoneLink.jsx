@@ -7,12 +7,6 @@ export const MilestoneLink_ = ({milestone, children}) => {
     )
 }
 
-const MilestoneMenuItems = {
-    "Editovat": "local:/milestone/edit",
-    "Zobrazit": "local:/milestone/view",
-
-}
-
 export const MilestoneLink = ({milestone, children, menu=true}) => {
     if (menu) {
         return (
@@ -34,6 +28,28 @@ export const MilestoneLink = ({milestone, children, menu=true}) => {
     } else {
         return (
             <MilestoneLink_ milestone={milestone}>{children}</MilestoneLink_>
+        )
+    }
+}
+
+export const MilestoneCreateLink = ({project, menu=true}) => {
+    if (menu) {
+        return (
+            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+                Milníky pro {project?.name}
+                <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <Dropdown.Item ><Link to={"/milestone/create"} >Vytvořit</Link></Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+
+
+        )
+    } else {
+        return (
+            "error"
         )
     }
 }

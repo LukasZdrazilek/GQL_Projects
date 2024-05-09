@@ -1,9 +1,9 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 const mutation =
 `
-mutation($id: UUID!, $lastchange: DateTime!, $name: String, $startdate: DateTime, $enddate: DateTime, previous: $previous, nexts: $nexts)
+mutation($id: UUID!, $lastchange: DateTime!, $name: String, $startdate: DateTime, $enddate: DateTime,)
   {
-    result: milestoneUpdate(milestone:{ id: $id, lastchange: $lastchange, name: $name, startdate: $startdate, enddate: $enddate, previous: $previous, nexts: $nexts })
+    result: milestoneUpdate(milestone:{ id: $id, lastchange: $lastchange, name: $name, startdate: $startdate, enddate: $enddate })
     {
       id
       msg
@@ -14,8 +14,6 @@ mutation($id: UUID!, $lastchange: DateTime!, $name: String, $startdate: DateTime
         name
         startdate
         enddate
-        previous
-        nexts
       }
     }
   }

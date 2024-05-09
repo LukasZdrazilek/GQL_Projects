@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import { CardCapsule, EditableAttributeText, EditableAttributeSelect } from '@hrbolek/uoisfrontend-shared/src'
+import { CardCapsule, EditableAttributeText } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { RawUpdateProjectAsyncAction} from '../../Queries/UpdateProjectAsyncAction'
 import { ProjectEditType } from './ProjectEditType'
+import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
 
 
 export const ProjectEditCard = ({project}) => {
@@ -28,6 +29,11 @@ export const ProjectEditCard = ({project}) => {
                 <Col>
                     <EditableAttributeText item={project} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateProjectAsyncAction} type="datetime-local" />
                 </Col>      
+            </Row>
+            <Row>
+                <Col>
+                    <ProjectEditGroup project={project} />
+                </Col>
             </Row>
             
         </CardCapsule>

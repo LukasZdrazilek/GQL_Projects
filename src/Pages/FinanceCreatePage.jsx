@@ -1,1 +1,5 @@
-<h1>penízky penízky penízky</h1>
+export const FinanceCreatePage = () => {
+    return (
+        <h1>Novy finance</h1>
+    )
+}
