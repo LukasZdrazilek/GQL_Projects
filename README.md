@@ -20,10 +20,10 @@ ________________________________________________________________________
 - [x] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
 - [x] Vytvoření dropdown menu v project view
 - [ ] Seřazení milestones podle jména
-- [ ] Zobrazení předchozího a následujícího milníku u milestones view
-- [ ] Úprava data u milestones
+- [x] Zobrazení předchozího a následujícího milníku u milestones view
+- [x] Úprava data u milestones
 - [ ] Úprava násled. a předchoz. milníku u milestones edit
-- [ ] Dodělat view u finances a milestones
+- [x] Dodělat view u finances a milestones
 - [ ] Pridať vytváranie projektov, financií a milestones
 - [ ] touch some grass
 - [ ] ProjectEditPage sautomatizovať queri na dropboxi
