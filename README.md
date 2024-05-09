@@ -19,14 +19,17 @@ ________________________________________________________________________
 - [x] Přidat projectby(id?, name?) do src/Queries/queries.json
 - [x] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
 - [x] Vytvoření dropdown menu v project view
-- [ ] Seřazení milestones podle jména
+- [ ] Seřazování u milníků a financí
 - [x] Zobrazení předchozího a následujícího milníku u milestones view
 - [x] Úprava data u milestones
 - [ ] Úprava násled. a předchoz. milníku u milestones edit
 - [x] Dodělat view u finances a milestones
+- [x] Vytvořeny queries na vytváření projektů, financí a milníků
+- [ ] Roztřídit queries do složek podle zaměření (Project/, Finance/, Milestone/, ...)
 - [ ] Pridať vytváranie projektov, financií a milestones
 - [ ] touch some grass
-- [ ] ProjectEditPage sautomatizovať queri na dropboxi
+- [x] ProjectEditPage sautomatizovať queri na dropboxi
+- [ ] Předělat EditTypes aby brali ID externě - odstranit hardcode id
 
 ________________________________________________________________________
 
