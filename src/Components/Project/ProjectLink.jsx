@@ -1,15 +1,16 @@
 import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src";
 
 export const ProjectLink_ = ({project, children}) => {
     return (
-        <Link to={"/project/view/" + project?.id}>{children?children:project?.name}</Link>
+        <ProxyLink to={"/projects/project/view/" + project?.id}>{children?children:project?.name}</ProxyLink>
     )
 }
 
 const ProjectMenuItems = {
-    "Editovat": "local:/project/edit",
-    "Zobrazit": "local:/project/view",
+    "Editovat": "local:/projects/project/edit",
+    "Zobrazit": "local:/projects/project/view",
 
 }
 
@@ -24,8 +25,8 @@ export const ProjectLink = ({project, children, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item ><Link to={"/project/view/" + project?.id} >Zobrazit</Link></Dropdown.Item>
-                    <Dropdown.Item ><Link to={"/project/edit/" + project?.id} >Editovat</Link></Dropdown.Item>
+                    <Dropdown.Item as={"div"} ><ProxyLink to={"/projects/project/view/" + project?.id} >Zobrazit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/edit/" + project?.id} >Editovat</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>                
             
