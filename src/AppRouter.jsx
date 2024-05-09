@@ -14,14 +14,14 @@ import { FinanceCreatePage } from "./Pages/FinanceCreatePage";
 const prefix = "/projects"
 export const Routes = [
     {
-        path: prefix + "/",
-        errorElement: <SearchPage />,
-        element: <SearchPage />
+      path: "/",
+      errorElement: <SearchPage />,
+      element: <SearchPage />
     },
     {
-        path: prefix + "/search",
-        element: <SearchPage />,
-        errorElement: <SearchPage />,
+      path: "/search",
+      element: <SearchPage />,
+      errorElement: <SearchPage />,
     },
     {
       path: prefix + "/search/:phrase",
@@ -29,9 +29,9 @@ export const Routes = [
       errorElement: <SearchPage />,
     },
     {
-        path: "/project/create",
-        element: <ProjectsCreatePage />,
-        errorElement: <SearchPage />
+      path: prefix + "/project/create",
+      element: <ProjectsCreatePage />,
+      errorElement: <SearchPage />
     },
     {
       path: prefix + "/project/view/:id",
@@ -44,12 +44,11 @@ export const Routes = [
       errorElement: <SearchPage />,
     },
     {
-        path: "/milestone/create",
-        element: <MilestoneCreatePage />,
-        errorElement: <SearchPage />,
+      path: prefix + "/milestone/create",
+      element: <MilestoneCreatePage />,
+      errorElement: <SearchPage />,
     },
     {
-      path: "/milestone/view/:id",
       path: prefix + "/milestone/view/:id",
       element: <MilestonePage />,
       errorElement: <SearchPage />,
@@ -60,12 +59,11 @@ export const Routes = [
       errorElement: <SearchPage />,
     },
     {
-        path: "/finance/create",
-        element: <FinanceCreatePage />,
-        errorElement: <SearchPage />,
+      path: prefix + "/finance/create",
+      element: <FinanceCreatePage />,
+      errorElement: <SearchPage />,
     },
     {
-      path: "/finance/view/:id",
       path: prefix + "/finance/view/:id",
       element: <FinancePage />,
       errorElement: <SearchPage />,
