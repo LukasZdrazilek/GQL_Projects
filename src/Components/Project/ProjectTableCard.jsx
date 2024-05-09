@@ -1,16 +1,14 @@
 /* eslint-disable react/prop-types */
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import { formatDate } from '../Misc/FormatDate'
 import { formatNumber } from '../Misc/FormatNumber'
-import { FinanceLink, FinanceLink_ } from '../Finance/FinanceLink'
-import { MilestoneLink, MilestoneLink_ } from '../Milestone/MilestoneLink'
+import { FinanceLink, FinanceCreateLink} from '../Finance/FinanceLink'
+import { MilestoneLink, MilestoneCreateLink} from '../Milestone/MilestoneLink'
 
 export const ProjectTableCard = ({project}) => {
     return (
         <div>
-            <CardCapsule title={"Milníky pro " + project?.name}>
+            <CardCapsule title={<MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink>}>
                 
                 <table className="table">
                 <thead>
@@ -21,7 +19,7 @@ export const ProjectTableCard = ({project}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {project?.milestones.map((milestone, index) => (
+                    {project?.milestones.map((milestone) => (
                         <tr key={milestone.id}>
                             <td>
                                 <MilestoneLink milestone={milestone} menu={true}></MilestoneLink>
@@ -34,7 +32,7 @@ export const ProjectTableCard = ({project}) => {
             </table>
             </CardCapsule>
 
-            <CardCapsule title={"Finance pro " + project?.name}>
+            <CardCapsule title={<FinanceCreateLink project={project} menu={true}></FinanceCreateLink>}>
                         
             <table className="table">
             <thead>
@@ -45,7 +43,7 @@ export const ProjectTableCard = ({project}) => {
                 </tr>
             </thead>
             <tbody>
-                {project?.finances.map((finance, index) => (
+                {project?.finances.map((finance) => (
                     <tr key={finance.id}>
                         <td>
                             <FinanceLink finance={finance} menu={true}>

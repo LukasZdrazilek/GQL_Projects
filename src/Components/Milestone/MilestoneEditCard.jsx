@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
-import { CardCapsule, EditableAttributeText, EditableAttributeSelect } from '@hrbolek/uoisfrontend-shared/src'
+import { CardCapsule, EditableAttributeText } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { RawUpdateMilestoneAsyncAction } from '../../Queries/UpdateMilestoneAsyncAction'
+import { MilestoneEditPrevious, MilestoneEditNext } from "./MilestoneEditMilestones.jsx";
 
 export const MilestoneEditCard = ({milestone}) => {
     return (
@@ -21,6 +22,17 @@ export const MilestoneEditCard = ({milestone}) => {
                     <EditableAttributeText item={milestone} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
                 </Col>      
             </Row>
+            {/*I case of reworked query*/}
+            {/*<Row>*/}
+            {/*    <Col>*/}
+            {/*        <MilestoneEditPrevious milestone={milestone}></MilestoneEditPrevious>*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
+            {/*<Row>*/}
+            {/*    <Col>*/}
+            {/*        <MilestoneEditNext milestone={milestone}></MilestoneEditNext>*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
         </CardCapsule>
     )
 }

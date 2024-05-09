@@ -13,6 +13,10 @@ const query = `query ($id: UUID!)
       {
         id
         name
+        milestones {
+        id
+        name
+        }
       }
       previous
       {

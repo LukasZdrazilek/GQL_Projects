@@ -7,6 +7,9 @@ import { SearchPage } from "./Pages/SearchPage";
 import { ProjectsEditPage } from "./Pages/ProjectsEditPage";
 import { MilestoneEditPage } from "./Pages/MilestoneEditPage";   
 import { FinanceEditPage } from "./Pages/FinanceEditPage";
+import { ProjectsCreatePage} from "./Pages/ProjectsCreatePage.jsx";
+import { MilestoneCreatePage} from "./Pages/MilestoneCreatePage.jsx";
+import { FinanceCreatePage } from "./Pages/FinanceCreatePage";
 // import { UserPage, GroupPage } from "./Pages";
 const prefix = "/projects"
 export const Routes = [
@@ -24,7 +27,12 @@ export const Routes = [
       path: prefix + "/search/:phrase",
       element: <SearchPage />,
       errorElement: <SearchPage />,
-    },    
+    },
+    {
+        path: "/project/create",
+        element: <ProjectsCreatePage />,
+        errorElement: <SearchPage />
+    },
     {
       path: prefix + "/project/view/:id",
       element: <ProjectsPage />,
@@ -36,6 +44,12 @@ export const Routes = [
       errorElement: <SearchPage />,
     },
     {
+        path: "/milestone/create",
+        element: <MilestoneCreatePage />,
+        errorElement: <SearchPage />,
+    },
+    {
+      path: "/milestone/view/:id",
       path: prefix + "/milestone/view/:id",
       element: <MilestonePage />,
       errorElement: <SearchPage />,
@@ -46,6 +60,12 @@ export const Routes = [
       errorElement: <SearchPage />,
     },
     {
+        path: "/finance/create",
+        element: <FinanceCreatePage />,
+        errorElement: <SearchPage />,
+    },
+    {
+      path: "/finance/view/:id",
       path: prefix + "/finance/view/:id",
       element: <FinancePage />,
       errorElement: <SearchPage />,

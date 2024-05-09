@@ -1,4 +1,4 @@
-import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
+  import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
 const query = `{
     result: projectTypePage(limit: 100)
