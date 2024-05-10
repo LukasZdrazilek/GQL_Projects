@@ -27,8 +27,8 @@ export const FinanceLink = ({finance, children, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item ><ProxyLink to={"/projects/finance/view/" + finance?.id} >Zobrazit</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item ><ProxyLink to={"/projects/finance/edit/" + finance?.id} >Editovat</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/finance/view/" + finance?.id} >Zobrazit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/finance/edit/" + finance?.id} >Editovat</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>                
             
