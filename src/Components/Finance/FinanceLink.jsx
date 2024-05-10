@@ -1,19 +1,11 @@
 import { Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import {MilestoneLink_} from "../Milestone/MilestoneLink.jsx";
-import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src";
+import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
 
 // eslint-disable-next-line react/prop-types
 export const FinanceLink_ = ({finance, children}) => {
     return (
         <ProxyLink to={"/projects/finance/view/" + finance?.id}>{children?children:finance?.name}</ProxyLink>
     )
-}
-
-const FinanceMenuItems = {
-    "Editovat": "local:/finance/edit",
-    "Zobrazit": "local:/finance/view",
-
 }
 
 export const FinanceLink = ({finance, children, menu=true}) => {

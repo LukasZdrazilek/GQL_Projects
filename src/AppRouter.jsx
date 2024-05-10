@@ -10,7 +10,9 @@ import { FinanceEditPage } from "./Pages/FinanceEditPage";
 import { ProjectsCreatePage} from "./Pages/ProjectsCreatePage.jsx";
 import { MilestoneCreatePage} from "./Pages/MilestoneCreatePage.jsx";
 import { FinanceCreatePage } from "./Pages/FinanceCreatePage";
+import { ProjectsViewPage} from "./Pages/ProjectsViewPage.jsx";
 // import { UserPage, GroupPage } from "./Pages";
+
 const prefix = "/projects"
 export const Routes = [
     {
@@ -32,6 +34,11 @@ export const Routes = [
       path: prefix + "/project/create",
       element: <ProjectsCreatePage />,
       errorElement: <SearchPage />
+    },
+    {
+        path: prefix + "/project/view",
+        element: <ProjectsViewPage />,
+        errorElement: <SearchPage />,
     },
     {
       path: prefix + "/project/view/:id",
