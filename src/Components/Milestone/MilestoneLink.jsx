@@ -48,7 +48,7 @@ export const MilestoneCreateLink = ({project, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item ><Link to={"/milestone/create"} >Vytvořit</Link></Dropdown.Item>
+                    <Dropdown.Item ><ProxyLink to={"/projects/milestone/create"} >Vytvořit</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 

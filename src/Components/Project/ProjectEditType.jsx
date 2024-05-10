@@ -4,7 +4,7 @@ import { FetchProjectTypesAsyncAction } from '../../Queries/FetchProjectTypesAsy
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';
 
-const id = "43dd2ff1-5c17-42a5-ba36-8b30e2a243bb"
+const id = ""
 export const ProjectEditType = ({project}) => {
     const [projecttypes, projecttypesPromise] = useFreshItem({id}, FetchProjectTypesAsyncAction)
     const [projecttypesdata, setThem] = useState([])
