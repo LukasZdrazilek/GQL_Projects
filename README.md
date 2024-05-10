@@ -22,7 +22,7 @@ ________________________________________________________________________
 - [ ] Seřazování u milníků a financí
 - [x] Zobrazení předchozího a následujícího milníku u milestones view
 - [x] Úprava data u milestones
-- [ ] ~~Úprava násled. a předchoz. milníku u milestones edit~~ (Nelze - chybí query)
+- [ ] Úprava násled. a předchoz. milníku u milestones edit viz MilestoneLinkAdd query
 - [x] Dodělat view u finances a milestones
 - [x] Vytvořeny queries na vytváření projektů, financí a milníků
 - [ ] Roztřídit queries do složek podle zaměření (Project/, Finance/, Milestone/, ...)
@@ -30,6 +30,9 @@ ________________________________________________________________________
 - [ ] touch some grass
 - [x] ProjectEditPage sautomatizovať queri na dropboxi
 - [ ] Předělat EditTypes aby brali ID externě - odstranit hardcode id
+- [ ] Přidání milestone a finance view page
+- [ ] Přidání odkazu do dropdownu
+- [ ] Odstranit pravý MediumCard
 
 ________________________________________________________________________
 
