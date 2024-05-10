@@ -1,17 +1,10 @@
 import { Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src";
+import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
 
 export const ProjectLink_ = ({project, children}) => {
     return (
         <ProxyLink to={"/projects/project/view/" + project?.id}>{children?children:project?.name}</ProxyLink>
     )
-}
-
-const ProjectMenuItems = {
-    "Editovat": "local:/projects/project/edit",
-    "Zobrazit": "local:/projects/project/view",
-
 }
 
 export const ProjectLink = ({project, children, menu=true}) => {
@@ -35,6 +28,28 @@ export const ProjectLink = ({project, children, menu=true}) => {
     } else {
         return (
             <ProjectLink_ project={project}>{children}</ProjectLink_>
+        )
+    }
+}
+
+export const ProjectCreateLink = ({menu=true}) => {
+    if (menu) {
+        return (
+            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+                Projekty:
+                <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <Dropdown.Item as={"div"} ><ProxyLink to={"/projects/project/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+
+
+        )
+    } else {
+        return (
+            <div>Error</div>
         )
     }
 }

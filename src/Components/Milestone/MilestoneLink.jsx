@@ -1,6 +1,5 @@
 import { Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src";
+import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
 
 export const MilestoneLink_ = ({milestone, children}) => {
     return (
@@ -9,11 +8,6 @@ export const MilestoneLink_ = ({milestone, children}) => {
 }
 
 
-const MilestoneMenuItems = {
-    "Editovat": "local:/projects/milestone/edit",
-    "Zobrazit": "local:/projects/milestone/view",
-
-}
 export const MilestoneLink = ({milestone, children, menu=true}) => {
     if (menu) {
         return (
