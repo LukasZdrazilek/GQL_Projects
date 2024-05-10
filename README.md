@@ -22,7 +22,7 @@ ________________________________________________________________________
 - [ ] Seřazování u milníků a financí
 - [x] Zobrazení předchozího a následujícího milníku u milestones view
 - [x] Úprava data u milestones
-- [ ] Úprava násled. a předchoz. milníku u milestones edit
+- [ ] ~~Úprava násled. a předchoz. milníku u milestones edit~~ (Nelze - chybí query)
 - [x] Dodělat view u finances a milestones
 - [x] Vytvořeny queries na vytváření projektů, financí a milníků
 - [ ] Roztřídit queries do složek podle zaměření (Project/, Finance/, Milestone/, ...)
