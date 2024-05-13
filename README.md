@@ -19,7 +19,7 @@ ________________________________________________________________________
 - [x] Přidat projectby(id?, name?) do src/Queries/queries.json
 - [x] Skúsiť vytvoriť funkcie na vkladanie floatov/dátumov
 - [x] Vytvoření dropdown menu v project view
-- [ ] Seřazování u milníků a financí
+- [x] Seřazování u milníků a financí a projektů
 - [x] Zobrazení předchozího a následujícího milníku u milestones view
 - [x] Úprava data u milestones
 - [ ] Úprava násled. a předchoz. milníku u milestones edit viz MilestoneLinkAdd query
