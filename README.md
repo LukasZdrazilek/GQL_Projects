@@ -29,10 +29,10 @@ ________________________________________________________________________
 - [ ] Pridať vytváranie projektov, financií a milestones
 - [ ] touch some grass
 - [x] ProjectEditPage sautomatizovať queri na dropboxi
-- [ ] Předělat EditTypes aby brali ID externě - odstranit hardcode id
-- [ ] Přidání milestone a finance view page
-- [ ] Přidání odkazu do dropdownu
-- [ ] Odstranit pravý MediumCard
+- [x] Přidání milestone a finance view page
+- [x] Přidání odkazu do dropdownu
+- [x] Odstranit pravý MediumCard
+- [ ] Udělat JSOC komentáře
 
 ________________________________________________________________________
 
