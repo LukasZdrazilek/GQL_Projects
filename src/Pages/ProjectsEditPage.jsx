@@ -2,7 +2,7 @@
 import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchProjectByIdAsyncAction } from "../Queries/FetchProjectByIdAsyncAction"
-import { ProjectLargeCard } from "../Components/Project/ProjectLargeCard"
+import { ProjectEditLargeCard } from "../Components/Project/ProjectLargeCard"
 import { ProjectEditCard } from "../Components/Project/ProjectEditCard"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst projekt", success: "Načtení projektu se povedlo"})
@@ -20,9 +20,9 @@ export const ProjectsEditPage = ()  => {
             //     {JSON.stringify(projects)}       // debug informace
             // </div>
 
-            <ProjectLargeCard project={projects}>
+            <ProjectEditLargeCard project={projects}>
                 <ProjectEditCard project={projects} />
-            </ProjectLargeCard>
+            </ProjectEditLargeCard>
         )
     } else {
         return (

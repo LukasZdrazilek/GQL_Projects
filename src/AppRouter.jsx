@@ -11,6 +11,8 @@ import { ProjectsCreatePage} from "./Pages/ProjectsCreatePage.jsx";
 import { MilestoneCreatePage} from "./Pages/MilestoneCreatePage.jsx";
 import { FinanceCreatePage } from "./Pages/FinanceCreatePage";
 import { ProjectsViewPage} from "./Pages/ProjectsViewPage.jsx";
+import { MilestonesTablePage} from "./Pages/MilestonesTablePage.jsx";
+import { FinancesTablePage } from "./Pages/FinanceTablePage.jsx";
 // import { UserPage, GroupPage } from "./Pages";
 
 const prefix = "/projects"
@@ -49,6 +51,16 @@ export const Routes = [
       path: prefix + "/project/edit/:id",
       element: <ProjectsEditPage />,
       errorElement: <SearchPage />,
+    },
+    {
+        path: prefix + "/project/milestones/:id",
+        element: <MilestonesTablePage />,
+        errorElement: <SearchPage />,
+    },
+    {
+        path: prefix + "/project/finances/:id",
+        element: <FinancesTablePage />,
+        errorElement: <SearchPage />,
     },
     {
       path: prefix + "/milestone/create",
