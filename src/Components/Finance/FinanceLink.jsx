@@ -33,16 +33,24 @@ export const FinanceLink = ({finance, children, menu=true}) => {
     }
 }
 
+export const FinanceCreateLink_ = ({project, children}) => {
+    return (
+        <ProxyLink to={"/projects/project/finances/" + project?.id}>Finance pro {project?.name}</ProxyLink>
+    )
+}
+
 export const FinanceCreateLink = ({project, menu=true}) => {
     if (menu) {
         return (
             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
-                Finance pro {project?.name}
+                <FinanceCreateLink_ project={project}>
+                </FinanceCreateLink_>
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
                     <Dropdown.Item ><ProxyLink to={"/projects/finance/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item ><ProxyLink to={"/projects/project/finances/" + project?.id} >Zobrazit</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 
@@ -50,7 +58,7 @@ export const FinanceCreateLink = ({project, menu=true}) => {
         )
     } else {
         return (
-            "error"
+            <FinanceLink_ project={project}>{children}</FinanceLink_>
         )
     }
 }

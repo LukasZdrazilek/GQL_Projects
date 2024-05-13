@@ -33,16 +33,24 @@ export const MilestoneLink = ({milestone, children, menu=true}) => {
     }
 }
 
+export const MilestoneCreateLink_ = ({project, children}) => {
+    return (
+        <ProxyLink to={"/projects/project/milestones/" + project?.id}>Milníky pro {project?.name}</ProxyLink>
+    )
+}
+
 export const MilestoneCreateLink = ({project, menu=true}) => {
     if (menu) {
         return (
             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
-                Milníky pro {project?.name}
+                <MilestoneCreateLink_ project={project}>
+                </MilestoneCreateLink_>
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/milestone/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/milestones/" + project?.id} >Zobrazit</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 
@@ -50,7 +58,7 @@ export const MilestoneCreateLink = ({project, menu=true}) => {
         )
     } else {
         return (
-            "error"
+            <MilestoneLink_ project={project}>{children}</MilestoneLink_>
         )
     }
 }
