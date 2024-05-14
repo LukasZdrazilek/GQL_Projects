@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { ProjectsViewCard} from "../Components/Project/ProjectsViewCard.jsx";
-import { FetchProjectsAsyncAction} from "../Queries/FetchProjectsAsynsAction.js";
+import { FetchProjectsAsyncAction} from "../Queries/Project/FetchProjectsAsynsAction.js";
 import {useFreshItem} from "@hrbolek/uoisfrontend-shared/src";
 
 const id = ""

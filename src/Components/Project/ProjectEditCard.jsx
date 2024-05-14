@@ -2,7 +2,7 @@
 import { CardCapsule, EditableAttributeText } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { RawUpdateProjectAsyncAction} from '../../Queries/UpdateProjectAsyncAction'
+import { RawUpdateProjectAsyncAction} from '../../Queries/Project/UpdateProjectAsyncAction'
 import { ProjectEditType } from './ProjectEditType'
 import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
 

@@ -1,5 +1,5 @@
 import {EditableAttributeSelect } from '@hrbolek/uoisfrontend-shared/src';
-import {RawUpdateProjectAsyncAction } from '../../Queries/UpdateProjectAsyncAction'
+import {RawUpdateProjectAsyncAction } from '../../Queries/Project/UpdateProjectAsyncAction'
 import { FetchGroupsAsyncAction} from "../../Queries/FetchGroupsAsyncAction.js";
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';

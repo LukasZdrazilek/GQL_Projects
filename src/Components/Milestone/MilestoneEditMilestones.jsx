@@ -1,6 +1,6 @@
 import {EditableAttributeSelect } from '@hrbolek/uoisfrontend-shared/src';
-import { RawUpdateMilestoneAsyncAction} from "../../Queries/UpdateMilestoneAsyncAction.js";
-import { FetchProjectMilestonesAsyncAction} from "../../Queries/FetchProjectMilestonesAsyncAction.js";
+import { RawUpdateMilestoneAsyncAction} from "../../Queries/Milestone/UpdateMilestoneAsyncAction.js";
+import { FetchProjectMilestonesAsyncAction} from "../../Queries/Project/FetchProjectMilestonesAsyncAction.js";
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';
 

@@ -2,7 +2,7 @@
 import { CardCapsule, EditableAttributeText } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { RawUpdateMilestoneAsyncAction } from '../../Queries/UpdateMilestoneAsyncAction'
+import { RawUpdateMilestoneAsyncAction } from '../../Queries/Milestone/UpdateMilestoneAsyncAction'
 import { MilestoneEditPrevious, MilestoneEditNext } from "./MilestoneEditMilestones.jsx";
 
 export const MilestoneEditCard = ({milestone}) => {

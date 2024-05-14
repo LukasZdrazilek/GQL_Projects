@@ -2,7 +2,7 @@
 import { useParams } from "react-router-dom"
 import { UserLargeCard } from "../Components"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
-import { FetchMilestoneByIdAsyncAction } from "../Queries/FetchMilestoneByIdAsyncAction"
+import { FetchMilestoneByIdAsyncAction } from "../Queries/Milestone/FetchMilestoneByIdAsyncAction"
 import { MilestoneLargeCard } from "../Components/Milestone/MilestoneLargeCard"
 import { MilestoneEditCard } from "../Components/Milestone/MilestoneEditCard"
 

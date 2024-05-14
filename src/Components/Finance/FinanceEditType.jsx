@@ -1,6 +1,6 @@
 import {EditableAttributeSelect } from '@hrbolek/uoisfrontend-shared/src';
-import {RawUpdateFinanceAsyncAction } from '../../Queries/UpdateFinanceAsyncAction'
-import { FetchFinanceTypesAsyncAction } from '../../Queries/FetchFinanceTypesAsyncAction';
+import {RawUpdateFinanceAsyncAction } from '../../Queries/Finance/UpdateFinanceAsyncAction'
+import { FetchFinanceTypesAsyncAction } from '../../Queries/Finance/FetchFinanceTypesAsyncAction';
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';
 

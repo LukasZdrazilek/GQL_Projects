@@ -1,7 +1,7 @@
 // import { useFreshItem } from "@hrbolek/uoisfrontend-shared/src"
 import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
-import { FetchProjectByIdAsyncAction } from "../Queries/FetchProjectByIdAsyncAction"
+import { FetchProjectByIdAsyncAction } from "../Queries/Project/FetchProjectByIdAsyncAction"
 import { ProjectEditLargeCard } from "../Components/Project/ProjectLargeCard"
 import { ProjectEditCard } from "../Components/Project/ProjectEditCard"
 

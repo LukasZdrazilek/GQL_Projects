@@ -2,7 +2,7 @@
 import { CardCapsule, EditableAttributeText, EditableAttributeSelect} from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { RawUpdateFinanceAsyncAction, ChangedUpdateFinanceAsyncAction } from '../../Queries/UpdateFinanceAsyncAction'
+import { RawUpdateFinanceAsyncAction, ChangedUpdateFinanceAsyncAction } from '../../Queries/Finance/UpdateFinanceAsyncAction'
 import { FinanceEditType } from './FinanceEditType'
 
 export const FinanceEditCard = ({finance}) => {
