@@ -25,7 +25,7 @@ ________________________________________________________________________
 - [ ] Úprava násled. a předchoz. milníku u milestones edit viz MilestoneLinkAdd query
 - [x] Dodělat view u finances a milestones
 - [x] Vytvořeny queries na vytváření projektů, financí a milníků
-- [ ] Roztřídit queries do složek podle zaměření (Project/, Finance/, Milestone/, ...)
+- [x] Roztřídit queries do složek podle zaměření (Project/, Finance/, Milestone/, ...)
 - [ ] Pridať vytváranie projektov, financií a milestones
 - [ ] touch some grass
 - [x] ProjectEditPage sautomatizovať queri na dropboxi
