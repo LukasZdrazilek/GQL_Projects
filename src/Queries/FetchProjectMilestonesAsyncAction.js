@@ -10,6 +10,16 @@ const query = `query($id: UUID!)
       {
         id
         name
+        previous
+        {
+          id
+          name
+        }
+        nexts
+        {
+          id
+          name
+        }
       }
     }
   }
