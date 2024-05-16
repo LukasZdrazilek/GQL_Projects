@@ -49,8 +49,8 @@ export const FinanceCreateLink = ({project, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item ><ProxyLink to={"/projects/finance/create"} >Vytvořit</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item ><ProxyLink to={"/projects/project/finances/" + project?.id} >Zobrazit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/finance/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/finances/" + project?.id} >Zobrazit</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 

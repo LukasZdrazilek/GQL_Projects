@@ -44,4 +44,3 @@ export const ProjectsViewCard = ({projects}) => {
         </CardCapsule>
     )
 }
-

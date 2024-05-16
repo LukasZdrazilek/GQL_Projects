@@ -124,4 +124,3 @@ export const ProjectFinancesTableCard = ({project}) => {
         </CardCapsule>
     );
 }
-
