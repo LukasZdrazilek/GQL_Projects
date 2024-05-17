@@ -24,19 +24,8 @@ export const FinanceLargeCard = ({finance, children}) => {
             <Col md={4}>
                 {children}
             </Col>
-            <Col md={4}>        
-                <FinanceMediumCard finance={finance} />                            
-                {/* <UserRolesCard user={user}/> */}
-            </Col>
-            
         </Row>
         <br />
-        <Row>
-            <Col>
-                {/* <UserRawCard user={user}/> */}
-                {JSON.stringify(finance)}
-            </Col>
-        </Row>
     </CardCapsule>
 
     )

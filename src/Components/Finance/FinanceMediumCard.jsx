@@ -29,7 +29,7 @@ export const FinanceMediumCard = ({finance}) => {
                 <Col><ProjectLink project={finance?.project} menu={true}></ProjectLink></Col>
             </Row>
             <Row>
-                <Col>Posledni zmena</Col>
+                <Col>Poslední změna</Col>
                 <Col>{formatDate(finance?.lastchange)}</Col>
             </Row>
             <Row>
