@@ -77,15 +77,15 @@ __10.5.2024__ druhý projektový den
 
 <br />
 
-__15.5.2024__ sedmnáctá schůze/stretnutie => TBD
+__15.5.2024__ sedmnáctá schůze/stretnutie => Přidání page na zobrazení všech projektů
 
-__16.5.2024__ osmnáctá schůze/stretnutie => TBD
+__16.5.2024__ osmnáctá schůze/stretnutie => Update finance a milestone link na novou URL strukturu
 
-__22.5.2024__ devatenáctá schůze/stretnutie => TBD
+__22.5.2024__ devatenáctá schůze/stretnutie => Práce na milestone next a previous funkci #1
 
-__23.5.2024__ dvacátá schůze/stretnutie => TBD
+__23.5.2024__ dvacátá schůze/stretnutie => Práce na milestone next a previous funkci #2
 
-__29.5.2024__ dvacátá-první schůze/stretnutie => TBD
+__29.5.2024__ dvacátá-první schůze/stretnutie => Přidání funkce na sort tabulek dle datumu/názvu
 
 __30.5.2024__ dvacátá-druhá schůze/stretnutie => TBD
 
