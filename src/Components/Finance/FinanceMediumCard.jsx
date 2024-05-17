@@ -3,7 +3,8 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { formatDate } from '../Misc/FormatDate'
-import { FinanceLink, FinanceLink_ } from '../Finance/FinanceLink'
+import { formatNumber } from "../Misc/FormatNumber.jsx";
+import { FinanceLink } from '../Finance/FinanceLink'
 import { ProjectLink } from '../Project/ProjectLink'
 
 
@@ -11,7 +12,7 @@ export const FinanceMediumCard = ({finance}) => {
     return (
         <CardCapsule title={
             <div>
-                <span>Finance </span>
+                <span>Finance: </span>
                 <FinanceLink finance={finance} menu={true}></FinanceLink>
             </div>
         }>
@@ -22,14 +23,14 @@ export const FinanceMediumCard = ({finance}) => {
             </Row>
             <Row>
                 <Col>Rozpočet</Col>
-                <Col>{finance?.amount} Kč</Col>
+                <Col>{formatNumber(finance?.amount)} Kč</Col>
             </Row>
             <Row>
                 <Col>Projekt</Col>
                 <Col><ProjectLink project={finance?.project} menu={true}></ProjectLink></Col>
             </Row>
             <Row>
-                <Col>Posledni zmena</Col>
+                <Col>Poslední změna</Col>
                 <Col>{formatDate(finance?.lastchange)}</Col>
             </Row>
             <Row>

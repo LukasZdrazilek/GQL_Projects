@@ -16,6 +16,8 @@ const query = `query ($id: UUID!)
         milestones {
         id
         name
+        startdate
+        enddate
         }
       }
       previous

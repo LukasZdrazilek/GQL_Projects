@@ -10,12 +10,12 @@ export const MilestoneMediumCard = ({milestone}) => {
     return (
         <CardCapsule title={
             <div>
-                <span>Milnik </span>
+                <span>Milník:  </span>
                 <MilestoneLink milestone={milestone} menu={true}></MilestoneLink>
             </div>
         }>
             <Row>
-                <Col>Nazev</Col>
+                <Col>Název</Col>
                 <Col>{milestone?.name}</Col>
             </Row>
             <Row>
@@ -31,7 +31,7 @@ export const MilestoneMediumCard = ({milestone}) => {
                 <Col>{formatDate(milestone?.enddate)}</Col>
             </Row>
             <Row>
-                <Col>Predchazejici</Col>
+                <Col>Předcházející</Col>
                 <Col>
                     <table>
                         <tbody>
@@ -45,7 +45,7 @@ export const MilestoneMediumCard = ({milestone}) => {
                 </Col>
             </Row>
             <Row>
-                <Col>Nasledujici</Col>
+                <Col>Následující</Col>
                 <Col>
                     <table>
                         <tbody>

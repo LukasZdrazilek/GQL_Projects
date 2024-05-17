@@ -12,6 +12,17 @@ const query = `query ($id: UUID!)
       {
         id
         name
+        finances
+        {
+        id
+          name
+          amount
+          financeType
+          {
+            id
+            name
+          }
+        }
       }
       financeType
       {
