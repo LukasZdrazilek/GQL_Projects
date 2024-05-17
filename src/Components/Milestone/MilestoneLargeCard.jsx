@@ -2,14 +2,16 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { MilestoneMediumCard } from './MilestoneMediumCard'
+import { ProjectLink } from "../Project/ProjectLink.jsx";
+import { ProjectMilestonesTableCard } from "../Project/ProjectTableCard.jsx";
 import { MilestoneLink } from '../Milestone/MilestoneLink'
 
 export const MilestoneLargeCard = ({milestone, children}) => {
     return (
         <CardCapsule title={
             <div>
-                <span>Milnik </span>
-                <MilestoneLink milestone={milestone} menu={true}></MilestoneLink>
+                <span>Projekt: </span>
+                <ProjectLink project={milestone?.project} menu={true}></ProjectLink>
             </div>
         }>
         <Row>
@@ -19,6 +21,9 @@ export const MilestoneLargeCard = ({milestone, children}) => {
             </Col>
             <Col md={4}>
                 {children}
+            </Col>
+            <Col md={4}>
+                <ProjectMilestonesTableCard project={milestone?.project} />
             </Col>
         </Row>
         <br />
