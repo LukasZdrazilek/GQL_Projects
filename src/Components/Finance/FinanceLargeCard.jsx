@@ -25,6 +25,8 @@ export const FinanceLargeCard = ({finance, children}) => {
                 <ProjectFinancesTableCard project={finance?.project} />
             </Col>
         </Row>
+        </Row>
+        <br />
     </CardCapsule>
 
     )
