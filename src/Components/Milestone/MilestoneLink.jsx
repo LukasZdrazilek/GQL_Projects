@@ -51,8 +51,9 @@ export const MilestoneCreateLink = ({project, menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/milestone/create"} >Vytvořit</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/milestones/" + project?.id} >Zobrazit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/milestones/" + project?.id} >Zobrazit milníky</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/milestones/link/" + project?.id} >Editovat milníky</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/milestone/create"} >Vytvořit milník</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 

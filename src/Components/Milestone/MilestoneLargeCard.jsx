@@ -31,3 +31,18 @@ export const MilestoneLargeCard = ({milestone, children}) => {
 
     )
 }
+
+export const MilestonesLinkLargeCard = ({project, children}) => {
+    return (
+        <CardCapsule title={
+            <div>
+                <span>Projekt: </span>
+                <ProjectLink project={project} menu={true}></ProjectLink>
+            </div>
+        }>
+            <Row>
+
+            </Row>
+        </CardCapsule>
+    )
+}
