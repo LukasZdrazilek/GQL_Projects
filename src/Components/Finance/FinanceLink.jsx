@@ -9,6 +9,7 @@ export const FinanceLink_ = ({finance, children}) => {
 }
 
 export const FinanceLink = ({finance, children, menu=true}) => {
+    console.log(JSON.stringify(finance))
     if (menu) {
         return (
             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
