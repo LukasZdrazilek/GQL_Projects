@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col'
 import { MilestoneMediumCard } from './MilestoneMediumCard'
 import { ProjectLink } from "../Project/ProjectLink.jsx";
 import { ProjectMilestonesTableCard } from "../Project/ProjectTableCard.jsx";
+import { MilestoneLink } from '../Milestone/MilestoneLink'
 
 export const MilestoneLargeCard = ({milestone, children}) => {
     return (
