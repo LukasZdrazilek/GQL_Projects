@@ -22,7 +22,7 @@ export const ProjectLink = ({project, children, menu=true}) => {
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/edit/" + project?.id} >Editovat</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/milestones/" + project?.id} >Zobrazit milníky</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/finances/" + project?.id} >Zobrazit finance</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/view"} >Zobrazit projekty</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/view"} >Zobrazit projekty</ProxyLink></Dropdown.Item>
 
 
                 </Dropdown.Menu>
@@ -47,6 +47,7 @@ export const ProjectCreateLink = ({menu=true}) => {
 
                 <Dropdown.Menu>
                     <Dropdown.Item as={"div"} ><ProxyLink to={"/projects/project/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"} ><ProxyLink to={"/projects/edit"} >Editovat projekty</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 

@@ -2,11 +2,11 @@ import React from 'react';
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { ProjectLink, ProjectCreateLink } from './ProjectLink.jsx';
+import { ProjectLink, ProjectCreateLink } from '../Project/ProjectLink.jsx';
 import { formatDate } from '../Misc/FormatDate.jsx';
 import { SortableTable } from '../Misc/SortableTable.jsx'; // Assuming you have the SortableTable component
 
-export const ProjectsViewCard = ({projects}) => {
+export const ProjectsTableCard = ({projects}) => {
     const columns = [
         { key: 'name', label: 'Projekt' },
         { key: 'projectType.name', label: 'Typ' },
@@ -22,7 +22,7 @@ export const ProjectsViewCard = ({projects}) => {
         } else if (columnKey === 'projectType.name') {
             return project.projectType.name;
         } else if (columnKey === 'group.name') {
-            return project.group.name;
+            return project.group?.name;
         } else {
             return ''; // Handle other columns if needed
         }

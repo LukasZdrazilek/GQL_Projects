@@ -26,7 +26,7 @@ export const ProjectMediumCard = ({project}) => {
             </Row>
             <Row>
                 <Col>Tým</Col>
-                <Col>{project?.team?.name}</Col>
+                <Col>{project?.group?.name}</Col>
             </Row>
             <Row>
                 <Col>Počátek</Col>

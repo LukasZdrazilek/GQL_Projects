@@ -13,7 +13,7 @@ ________________________________________________________________________
 ## Aktuální úkoly
 
 - [x] Zprovoznění publish package
-- [x] Vytvořit ProjectsPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectsPage.jsx
+- [x] Vytvořit ProjectPage.jsx - reálná první stránka Projects, url funguje - src/Pages/ProjectPage.jsx
 - [x] Vytvořit FetchProjectByIdAsyncAction.js - obsahuje seznam tříd, které budeme v Projects používat + jejich položky - src/Queries/FetchProjectByIdAsyncAction.js
 - [x] Vytvořit několik karet (souborů) v src/Components/Projects ...
 - [x] Přidat projectby(id?, name?) do src/Queries/queries.json

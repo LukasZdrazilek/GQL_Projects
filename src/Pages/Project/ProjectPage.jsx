@@ -1,11 +1,11 @@
 // import { useFreshItem } from "@hrbolek/uoisfrontend-shared/src"
 import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
-import { FetchProjectByIdAsyncAction } from "../Queries/Project/FetchProjectByIdAsyncAction"
-import { ProjectLargeCard } from "../Components/Project/ProjectLargeCard"
+import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectByIdAsyncAction.js"
+import { ProjectLargeCard } from "../../Components/Project/ProjectLargeCard.jsx"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst projekt", success: "Načtení projektu se povedlo"})
-export const ProjectsPage = ()  => {
+export const ProjectPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
     const [projects, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)

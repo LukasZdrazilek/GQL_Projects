@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { formatDate } from '../Misc/FormatDate'
 import { formatNumber } from "../Misc/FormatNumber.jsx";
-import { FinanceLink } from '../Finance/FinanceLink'
+import { FinanceLink } from './FinanceLink.jsx'
 import { ProjectLink } from '../Project/ProjectLink'
 
 

@@ -9,7 +9,7 @@ import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
 
 export const ProjectEditCard = ({project}) => {
     return (
-        <CardCapsule title={"Projekt " + project?.name + " - atributy"}>
+        <CardCapsule title={"Projekt: " + project?.name + " - atributy"}>
             <Row>
                 <Col>
                     <EditableAttributeText item={project} attributeName="name" label="Název" asyncUpdater={RawUpdateProjectAsyncAction} />
@@ -22,6 +22,11 @@ export const ProjectEditCard = ({project}) => {
             </Row>
             <Row>
                 <Col>
+                    <ProjectEditGroup project={project} />
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <EditableAttributeText item={project} attributeName="startdate" label="Datum zahajeni" asyncUpdater={RawUpdateProjectAsyncAction} type="datetime-local" />
                 </Col>      
             </Row>
@@ -29,11 +34,6 @@ export const ProjectEditCard = ({project}) => {
                 <Col>
                     <EditableAttributeText item={project} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateProjectAsyncAction} type="datetime-local" />
                 </Col>      
-            </Row>
-            <Row>
-                <Col>
-                    <ProjectEditGroup project={project} />
-                </Col>
             </Row>
             
         </CardCapsule>
