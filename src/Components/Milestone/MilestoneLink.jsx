@@ -22,7 +22,6 @@ export const MilestoneLink = ({milestone, children, menu=true}) => {
                     <Dropdown.Item as="div"><ProxyLink to={"/projects/milestone/view/" + milestone?.id} >Zobrazit</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as="div"><ProxyLink to={"/projects/milestone/edit/" + milestone?.id} >Editovat</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as="div"><ProxyLink to={"/projects/project/milestones/" + milestone?.project?.id} >Zobrazit milníky</ProxyLink></Dropdown.Item>
-
                 </Dropdown.Menu>
             </Dropdown>                
             

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchProjectByIdAsyncAction } from "../Queries/Project/FetchProjectByIdAsyncAction"
-import { MilestonesLinkLargeCard } from "../Components/Milestone/MilestoneLargeCard.jsx";
+import { MilestonesLinkLargeCard } from "../Components/Milestone/MilestonesLinkLargeCard.jsx";
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milníky", success: "Načtení milníků se povedlo"})
 export const MilestonesLinkPage = ()  => {

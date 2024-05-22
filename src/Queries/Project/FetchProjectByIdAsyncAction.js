@@ -24,6 +24,11 @@ const query = `query ($id: UUID!) {
             id
             name
           }
+          project
+          {
+          id
+          name
+          }
         }
         milestones
         {
@@ -31,6 +36,11 @@ const query = `query ($id: UUID!) {
           name
           startdate
           enddate
+          project
+          {
+          id
+          name
+          }
         }
         projectType
         {
