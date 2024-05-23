@@ -1,10 +1,10 @@
 import { useState } from "react"
-import { ProjectsViewCard} from "../Components/Project/ProjectsViewCard.jsx";
-import { FetchProjectsAsyncAction} from "../Queries/Project/FetchProjectsAsynsAction.js";
-import {useFreshItem} from "@hrbolek/uoisfrontend-shared/src";
+import { ProjectsTableEditCard } from "../../Components/ProjectsTable/ProjectsTableEditCard.jsx";
+import { FetchProjectsAsyncAction} from "../../Queries/Project/FetchProjectsAsynsAction.js";
+import {useFreshItem } from "@hrbolek/uoisfrontend-shared/src";
 
 const id = ""
-export const ProjectsViewPage = () => {
+export const ProjectsTableEditPage = () => {
     const [projecttypes, projecttypesPromise] = useFreshItem({id}, FetchProjectsAsyncAction)
     const [projecttypesdata, setThem] = useState([])
     projecttypesPromise.then(json =>
@@ -20,7 +20,7 @@ export const ProjectsViewPage = () => {
 
     if (projecttypesdata) {
         return (
-            <ProjectsViewCard projects={projecttypesdata}></ProjectsViewCard>
+            <ProjectsTableEditCard projects={projecttypesdata}></ProjectsTableEditCard>
         )
     } else {
         return (

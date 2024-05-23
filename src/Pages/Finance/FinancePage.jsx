@@ -1,8 +1,8 @@
 // import { useFreshItem } from "@hrbolek/uoisfrontend-shared/src"
 import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
-import { FetchFinanceByIdAsyncAction } from "../Queries/Finance/FetchFinanceByIdAsyncAction"
-import { FinanceLargeCard } from "../Components/Finance/FinanceLargeCard"
+import { FetchFinanceByIdAsyncAction } from "../../Queries/Finance/FetchFinanceByIdAsyncAction.js"
+import { FinanceLargeCard } from "../../Components/Finance/FinanceLargeCard.jsx"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst finance", success: "Načtení financí se povedlo"})
 export const FinancePage = ()  => {

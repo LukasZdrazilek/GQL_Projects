@@ -1,8 +1,8 @@
 // import { useFreshItem } from "@hrbolek/uoisfrontend-shared/src"
 import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
-import { FetchMilestoneByIdAsyncAction } from "../Queries/Milestone/FetchMilestoneByIdAsyncAction"
-import { MilestoneLargeCard } from "../Components/Milestone/MilestoneLargeCard"
+import { FetchMilestoneByIdAsyncAction } from "../../Queries/Milestone/FetchMilestoneByIdAsyncAction.js"
+import { MilestoneLargeCard } from "../../Components/Milestone/MilestoneLargeCard.jsx"
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milestone", success: "Načtení milestonu se povedlo"})
 export const MilestonePage = ()  => {

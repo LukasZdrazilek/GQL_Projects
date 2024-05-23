@@ -2,18 +2,17 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { ProjectsPage, MilestonePage, FinancePage} from "./Pages";       // + , ProjectsPage
+import { ProjectPage, MilestonePage, FinancePage} from "./Pages";       // + , ProjectPage
 import { SearchPage } from "./Pages/SearchPage";
-import { ProjectsEditPage } from "./Pages/ProjectsEditPage";
-import { MilestoneEditPage } from "./Pages/MilestoneEditPage";   
-import { FinanceEditPage } from "./Pages/FinanceEditPage";
-import { ProjectsCreatePage} from "./Pages/ProjectsCreatePage.jsx";
-import { MilestoneCreatePage} from "./Pages/MilestoneCreatePage.jsx";
-import { FinanceCreatePage } from "./Pages/FinanceCreatePage";
-import { ProjectsViewPage} from "./Pages/ProjectsViewPage.jsx";
-import { MilestonesTablePage} from "./Pages/MilestonesTablePage.jsx";
-import { FinancesTablePage } from "./Pages/FinanceTablePage.jsx";
-import { MilestonesLinkPage } from "./Pages/MilestonesLinkPage.jsx";
+import { ProjectEditPage } from "./Pages/Project/ProjectEditPage.jsx";
+import { MilestoneEditPage } from "./Pages/Milestone/MilestoneEditPage.jsx";
+import { FinanceEditPage } from "./Pages/Finance/FinanceEditPage.jsx";
+import { ProjectsTablePage} from "./Pages/ProjectsTable/ProjectsTablePage.jsx";
+import { MilestonesTablePage} from "./Pages/MilestonesTable/MilestonesTablePage.jsx";
+import { FinancesTablePage } from "./Pages/FinancesTable/FinancesTablePage.jsx";
+import { MilestonesTableEditPage } from "./Pages/MilestonesTable/MilestonesTableEditPage.jsx";
+import { ProjectsTableEditPage} from "./Pages/ProjectsTable/ProjectsTableEditPage.jsx";
+import { FinancesTableEditPage } from "./Pages/FinancesTable/FinancesTableEditPage.jsx";
 // import { UserPage, GroupPage } from "./Pages";
 
 const prefix = "/projects"
@@ -34,23 +33,23 @@ export const Routes = [
       errorElement: <SearchPage />,
     },
     {
-      path: prefix + "/project/create",
-      element: <ProjectsCreatePage />,
-      errorElement: <SearchPage />
+        path: prefix + "/view",
+        element: <ProjectsTablePage />,
+        errorElement: <SearchPage />,
     },
     {
-        path: prefix + "/project/view",
-        element: <ProjectsViewPage />,
+        path: prefix + "/edit",
+        element: <ProjectsTableEditPage />,
         errorElement: <SearchPage />,
     },
     {
       path: prefix + "/project/view/:id",
-      element: <ProjectsPage />,
+      element: <ProjectPage />,
       errorElement: <SearchPage />,
     },
     {
       path: prefix + "/project/edit/:id",
-      element: <ProjectsEditPage />,
+      element: <ProjectEditPage />,
       errorElement: <SearchPage />,
     },
     {
@@ -60,7 +59,7 @@ export const Routes = [
     },
     {
         path: prefix + "/project/milestones/link/:id",
-        element: <MilestonesLinkPage />,
+        element: <MilestonesTableEditPage />,
         errorElement: <SearchPage />,
     },
     {
@@ -69,9 +68,9 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
-      path: prefix + "/milestone/create",
-      element: <MilestoneCreatePage />,
-      errorElement: <SearchPage />,
+        path: prefix + "/project/finances/edit/:id",
+        element: <FinancesTableEditPage />,
+        errorElement: <SearchPage />,
     },
     {
       path: prefix + "/milestone/view/:id",
@@ -81,11 +80,6 @@ export const Routes = [
     {
       path: prefix + "/milestone/edit/:id",
       element: <MilestoneEditPage />,
-      errorElement: <SearchPage />,
-    },
-    {
-      path: prefix + "/finance/create",
-      element: <FinanceCreatePage />,
       errorElement: <SearchPage />,
     },
     {

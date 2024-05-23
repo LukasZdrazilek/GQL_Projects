@@ -53,6 +53,7 @@ export const FinanceCreateLink = ({project, menu=true}) => {
                 <Dropdown.Menu>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/finances/" + project?.id} >Zobrazit finance</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/finance/create"} >Vytvořit finance</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/finances/edit/" + project?.id} >Editovat finance</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 

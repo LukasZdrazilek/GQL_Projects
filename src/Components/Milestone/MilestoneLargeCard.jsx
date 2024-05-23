@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { MilestoneMediumCard } from './MilestoneMediumCard'
 import { ProjectLink } from "../Project/ProjectLink.jsx";
-import { ProjectMilestonesTableCard } from "../Project/ProjectTableCard.jsx";
+import { MilestonesTableCard } from "../MilestonesTable/MilestonesTableCard.jsx"
 
 export const MilestoneLargeCard = ({milestone, children}) => {
     return (
@@ -22,7 +22,7 @@ export const MilestoneLargeCard = ({milestone, children}) => {
                 {children}
             </Col>
             <Col md={4}>
-                <ProjectMilestonesTableCard project={milestone?.project} />
+                <MilestonesTableCard project={milestone?.project} />
             </Col>
         </Row>
         <br />
