@@ -1,5 +1,7 @@
 import { Dropdown } from "react-bootstrap";
 import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
+import { CreateProjectAsyncAction } from "../../Queries/Project/CreateProjectAsyncAction.js";
+import { onClickHandler } from "../Misc/onClickHandler.jsx";
 
 export const ProjectLink_ = ({project, children}) => {
     return (
@@ -38,6 +40,12 @@ export const ProjectLink = ({project, children, menu=true}) => {
 }
 
 export const ProjectCreateLink = ({menu=true}) => {
+    const data = {
+        "projectType_id" : "a825d8e1-2e60-4884-afdb-25642db581d8",
+        "name" : "Nový projekt"
+    }
+    const onClick = onClickHandler(data, CreateProjectAsyncAction);
+
     if (menu) {
         return (
             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
@@ -46,8 +54,8 @@ export const ProjectCreateLink = ({menu=true}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item as={"div"} ><ProxyLink to={"/projects/project/create"} >Vytvořit</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"} ><ProxyLink to={"/projects/edit"} >Editovat projekty</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"} onClick={onClick} ><ProxyLink to={"#"} >Vytvořit projekt</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 

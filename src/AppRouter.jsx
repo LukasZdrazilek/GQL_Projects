@@ -58,7 +58,7 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
-        path: prefix + "/project/milestones/link/:id",
+        path: prefix + "/project/milestones/edit/:id",
         element: <MilestonesTableEditPage />,
         errorElement: <SearchPage />,
     },

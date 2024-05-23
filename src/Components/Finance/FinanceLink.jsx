@@ -1,7 +1,8 @@
 import { Dropdown } from "react-bootstrap";
 import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
+import { onClickHandler } from "../Misc/onClickHandler.jsx";
+import {CreateFinanceAsyncAction} from "../../Queries/Finance/CreateFinanceAsyncAction.js";
 
-// eslint-disable-next-line react/prop-types
 export const FinanceLink_ = ({finance, children}) => {
     return (
         <ProxyLink to={"/projects/finance/view/" + finance?.id}>{children?children:finance?.name}</ProxyLink>
@@ -42,6 +43,13 @@ export const FinanceCreateLink_ = ({project, children}) => {
 }
 
 export const FinanceCreateLink = ({project, menu=true}) => {
+    const data = {
+        "project_id" : project.id,
+        "name" : "Nové finance",
+        "financeType_id" : "9e37059c-de2c-4112-9009-559c8b0396f1"
+    }
+    const onClick = onClickHandler(data, CreateFinanceAsyncAction);
+
     if (menu) {
         return (
             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
@@ -52,8 +60,8 @@ export const FinanceCreateLink = ({project, menu=true}) => {
 
                 <Dropdown.Menu>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/finances/" + project?.id} >Zobrazit finance</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/finance/create"} >Vytvořit finance</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/finances/edit/" + project?.id} >Editovat finance</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"} onClick={onClick}><ProxyLink to={"#"}>Vytvořit finance</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 

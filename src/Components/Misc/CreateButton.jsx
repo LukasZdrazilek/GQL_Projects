@@ -1,5 +1,7 @@
 import { CreateAsyncQueryValidator } from "@hrbolek/uoisfrontend-shared/src/Store/index.js";
 import { useDispatch } from "react-redux";
+import { PlusLg } from "react-bootstrap-icons";
+import { onClickHandler } from "./onClickHandler.jsx";
 
 /**
  * This is Create Button. Function is expecting two arguments: data and asyncCreator
@@ -30,19 +32,26 @@ import { useDispatch } from "react-redux";
  *
  */
 
-const validator = CreateAsyncQueryValidator({error: "Něco se nepovedlo", success: "Objekt vytvořen"})
+// const validator = CreateAsyncQueryValidator({error: "Něco se nepovedlo", success: "Objekt vytvořen"})
+//
+// export const CreateButton = ({data, asyncCreator}) => {
+//     const dispatch = useDispatch()
+//     const onClick = () => {
+//         const [onResolve, onReject] = validator(dispatch)
+//         const action = asyncCreator(data)
+//         dispatch(action).then(() => {
+//             onResolve();
+//             window.location.reload();
+//         }, onReject);
+//     }
+//     return (
+//         <button className="btn form-control btn-outline-success" onClick={onClick}><PlusLg /></button>
+//     )
+// }
 
-export const CreateButton = ({data, asyncCreator}) => {
-    const dispatch = useDispatch()
-    const [onResolve, onReject] = validator(dispatch)
-    const onClick = () => {
-        const action = asyncCreator(data)
-        dispatch(action).then(() => {
-            onResolve();
-            window.location.reload();
-        }, onReject);
-    }
+export const CreateButton = ({ data, asyncCreator}) => {
+    const onClick = onClickHandler(data, asyncCreator);
     return (
-        <button className="btn btn-success form-control" onClick={onClick}>+</button>
+        <button className="btn form-control btn-outline-success" onClick={onClick}><PlusLg/></button>
     )
 }

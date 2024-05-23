@@ -24,7 +24,7 @@ export const FinancesTableCard = ({project}) => {
         <CardCapsule title={<FinanceCreateLink project={project} menu={true}></FinanceCreateLink>}>
         <SortableTable
             columns={columns}
-            data={project?.finances.slice(0, 5)}
+            data={project?.finances}
             renderRow={renderRow}
         />
         </CardCapsule>
