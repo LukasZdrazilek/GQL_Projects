@@ -1,5 +1,7 @@
 import { Dropdown } from "react-bootstrap";
 import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
+import { CreateMilestoneAsyncAction } from "../../Queries/Milestone/CreateMilestoneAsyncAction.js";
+import {onClickHandler} from "../Misc/onClickHandler.jsx";
 
 export const MilestoneLink_ = ({milestone, children}) => {
     return (
@@ -41,6 +43,12 @@ export const MilestoneCreateLink_ = ({project, children}) => {
 }
 
 export const MilestoneCreateLink = ({project, menu=true}) => {
+    const data = {
+        "project_id": project?.id,
+        "name": "Nový milník"
+    }
+    const onClick = onClickHandler(data, CreateMilestoneAsyncAction);
+
     if (menu) {
         return (
             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
@@ -51,8 +59,9 @@ export const MilestoneCreateLink = ({project, menu=true}) => {
 
                 <Dropdown.Menu>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/milestones/" + project?.id} >Zobrazit milníky</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/milestones/link/" + project?.id} >Editovat milníky</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/milestone/create"} >Vytvořit milník</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/projects/project/milestones/edit/" + project?.id} >Editovat milníky</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"} onClick={onClick}><ProxyLink to={"#"} >Vytvořit milník</ProxyLink></Dropdown.Item>
+
                 </Dropdown.Menu>
             </Dropdown>
 
