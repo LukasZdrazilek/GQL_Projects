@@ -26,7 +26,7 @@ ________________________________________________________________________
 - [x] Dodělat view u finances a milestones
 - [x] Vytvořeny queries na vytváření projektů, financí a milníků
 - [x] Roztřídit queries do složek podle zaměření (Project/, Finance/, Milestone/, ...)
-- [ ] Pridať vytváranie projektov, financií a milestones
+- [x] Pridať vytváranie projektov, financií a milestones
 - [ ] touch some grass
 - [x] ProjectEditPage sautomatizovať queri na dropboxi
 - [x] Přidání milestone a finance view page
