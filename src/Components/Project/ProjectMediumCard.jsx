@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { formatDate } from '../Misc/FormatDate'
 import { ProjectLink } from './ProjectLink'
+import { formatDateTime } from "../Misc/FormatDateTime.jsx";
+import { GroupLink } from "../Group/index.js";
 
 export const ProjectMediumCard = ({project}) => {
     return (
@@ -26,7 +28,11 @@ export const ProjectMediumCard = ({project}) => {
             </Row>
             <Row>
                 <Col>Tým</Col>
-                <Col>{project?.group?.name}</Col>
+                <Col><GroupLink group={project.group} menu={true} /></Col>
+            </Row>
+            <Row>
+                <Col>Vytvořeno</Col>
+                <Col>{formatDate(project?.created)}</Col>
             </Row>
             <Row>
                 <Col>Počátek</Col>
@@ -35,6 +41,10 @@ export const ProjectMediumCard = ({project}) => {
             <Row>
                 <Col>Konec</Col>
                 <Col>{formatDate(project?.enddate)}</Col>
+            </Row>
+            <Row>
+                <Col>Poslední změna</Col>
+                <Col>{formatDateTime(project?.lastchange)} UTC</Col>
             </Row>
             
         </CardCapsule>
