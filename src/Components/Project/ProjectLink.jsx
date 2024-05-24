@@ -12,7 +12,7 @@ export const ProjectLink_ = ({project, children}) => {
 export const ProjectLink = ({project, children, menu=true}) => {
     if (menu) {
         return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+            <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 <ProjectLink_ project={project}>
                     {children}
                 </ProjectLink_>
@@ -48,7 +48,7 @@ export const ProjectCreateLink = ({menu=true}) => {
 
     if (menu) {
         return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+            <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 Projekty:
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
                 </Dropdown.Toggle>

@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { RawUpdateMilestoneAsyncAction } from '../../Queries/Milestone/UpdateMilestoneAsyncAction'
 import { DeleteButton } from '../Misc/DeleteButton'
+import { MilestoneLink } from "./MilestoneLink.jsx";
 
 export const MilestoneEditCard = ({milestone}) => {
 
@@ -18,8 +19,8 @@ export const MilestoneEditCard = ({milestone}) => {
     };
 
     return (
-        <CardCapsule title={"Milestone " + milestone?.name + " - atributy"}>
-            
+        <CardCapsule title={<>Milník: <MilestoneLink milestone={milestone} menu={true} /></>}>
+
             <Row>
                 <EditableAttributeText item={milestone} attributeName="name" label="Název" asyncUpdater={RawUpdateMilestoneAsyncAction} />
             </Row>

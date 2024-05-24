@@ -29,7 +29,7 @@ export const FinancesTableEditCard = ({project}) => {
 
     return (
         <div className="form-floating">
-        <CardCapsule title={<FinanceCreateLink project={project} menu={true}></FinanceCreateLink>}>
+        <CardCapsule title={<>Finance pro: <FinanceCreateLink project={project} menu={true}></FinanceCreateLink></>}>
             <SortableTable
                 columns={columns}
                 data={project?.finances}

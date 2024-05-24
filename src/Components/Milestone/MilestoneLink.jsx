@@ -13,7 +13,7 @@ export const MilestoneLink_ = ({milestone, children}) => {
 export const MilestoneLink = ({milestone, children, menu=true}) => {
     if (menu) {
         return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+            <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 <MilestoneLink_ milestone={milestone}>
                     {children}
                 </MilestoneLink_>
@@ -38,7 +38,7 @@ export const MilestoneLink = ({milestone, children, menu=true}) => {
 
 export const MilestoneCreateLink_ = ({project, children}) => {
     return (
-        <ProxyLink to={"/projects/project/milestones/" + project?.id}>Milníky pro {project?.name}</ProxyLink>
+        <ProxyLink to={"/projects/project/milestones/" + project?.id}>{project?.name}</ProxyLink>
     )
 }
 
@@ -51,7 +51,7 @@ export const MilestoneCreateLink = ({project, menu=true}) => {
 
     if (menu) {
         return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+            <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 <MilestoneCreateLink_ project={project}>
                 </MilestoneCreateLink_>
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">

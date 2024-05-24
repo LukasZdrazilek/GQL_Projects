@@ -24,7 +24,7 @@ export const GroupLink = ({group, children, menu=true}) => {
     // console.log(asDict)
     if (menu) {
         return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+            <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 <GroupLink_ group={group}>
                     {children}
                 </GroupLink_>

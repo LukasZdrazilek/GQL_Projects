@@ -19,7 +19,7 @@ export const MilestonesTableCard = ({project}) => {
     };
 
     return (
-        <CardCapsule title={<MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink>}>
+        <CardCapsule title={<>Milníky pro: <MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink></>}>
             <SortableTable
                 columns={columns}
                 data={project?.milestones}

@@ -21,7 +21,7 @@ export const FinancesTableCard = ({project}) => {
     };
 
     return (
-        <CardCapsule title={<FinanceCreateLink project={project} menu={true}></FinanceCreateLink>}>
+        <CardCapsule title={<>Finance pro: <FinanceCreateLink project={project} menu={true}></FinanceCreateLink></>}>
         <SortableTable
             columns={columns}
             data={project?.finances}
