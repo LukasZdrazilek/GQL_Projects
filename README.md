@@ -33,6 +33,7 @@ ________________________________________________________________________
 - [x] Přidání odkazu do dropdownu
 - [x] Odstranit pravý MediumCard
 - [ ] Udělat JSDOC komentáře
+- [ ] Přidat index.js do všech komponent (export *)
 
 ________________________________________________________________________
 
