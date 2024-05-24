@@ -32,7 +32,7 @@ ________________________________________________________________________
 - [x] Přidání milestone a finance view page
 - [x] Přidání odkazu do dropdownu
 - [x] Odstranit pravý MediumCard
-- [ ] Udělat JSOC komentáře
+- [ ] Udělat JSDOC komentáře
 
 ________________________________________________________________________
 
