@@ -39,6 +39,7 @@ export const ProjectsTableEditCard = ({projects}) => {
                     columns={columns}
                     data={projects}
                     renderRow={renderRow}
+                    edit={true}
                 />
                 <CreateButton data={data} asyncCreator={CreateProjectAsyncAction} />
         </CardCapsule>
