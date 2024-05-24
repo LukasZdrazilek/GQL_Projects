@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { formatDate } from "../Misc/FormatDate.jsx"; // Ensure you import the formatDate function
 
 export const SortableTable = ({ columns, data, renderRow }) => {
     const [sortBy, setSortBy] = useState(null);
@@ -34,6 +35,20 @@ export const SortableTable = ({ columns, data, renderRow }) => {
         }
     };
 
+    const getRowClass = (startdate, enddate) => {
+        const today = new Date();
+        const startDate = new Date(startdate);
+        const endDate = new Date(enddate);
+
+        if (endDate < today) {
+            return 'table-danger';
+        } else if (startDate <= today && endDate >= today) {
+            return 'table-success';
+        } else {
+            return '';
+        }
+    };
+
     return (
         <table className="table">
             <thead>
@@ -47,7 +62,7 @@ export const SortableTable = ({ columns, data, renderRow }) => {
             </thead>
             <tbody>
             {sortedData().map((row, index) => (
-                <tr key={index}>
+                <tr key={index} className={getRowClass(row.startdate, row.enddate)}>
                     {columns.map((column) => (
                         <td key={column.key}>{renderRow(row, column.key)}</td>
                     ))}

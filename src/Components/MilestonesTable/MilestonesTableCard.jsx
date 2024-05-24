@@ -1,13 +1,13 @@
-import {MilestoneCreateLink, MilestoneLink} from "../Milestone/MilestoneLink.jsx";
-import {formatDate} from "../Misc/FormatDate.jsx";
-import {CardCapsule} from "@hrbolek/uoisfrontend-shared/src";
-import {SortableTable} from "../Misc/SortableTable.jsx";
+import { MilestoneCreateLink, MilestoneLink } from "../Milestone/MilestoneLink.jsx";
+import { formatDate } from "../Misc/FormatDate.jsx";
+import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
+import { SortableTable } from "../Misc/SortableTable.jsx";
 
-export const MilestonesTableCard = ({project}) => {
+export const MilestonesTableCard = ({ project }) => {
     const columns = [
-        {key: 'name', label: 'Milníky'},
-        {key: 'startdate', label: 'Počátek'},
-        {key: 'enddate', label: 'Konec'},
+        { key: 'name', label: 'Milníky' },
+        { key: 'startdate', label: 'Počátek' },
+        { key: 'enddate', label: 'Konec' },
     ];
 
     const renderRow = (row, columnKey) => {
@@ -27,4 +27,4 @@ export const MilestonesTableCard = ({project}) => {
             />
         </CardCapsule>
     );
-}
+};
