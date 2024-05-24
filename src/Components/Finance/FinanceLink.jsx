@@ -13,7 +13,7 @@ export const FinanceLink = ({finance, children, menu=true}) => {
     console.log(JSON.stringify(finance))
     if (menu) {
         return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+            <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 <FinanceLink_ finance={finance}>
                     {children}
                 </FinanceLink_>
@@ -52,7 +52,7 @@ export const FinanceCreateLink = ({project, menu=true}) => {
 
     if (menu) {
         return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+            <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 <FinanceCreateLink_ project={project}>
                 </FinanceCreateLink_>
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
