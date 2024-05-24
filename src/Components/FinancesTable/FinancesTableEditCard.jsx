@@ -34,6 +34,7 @@ export const FinancesTableEditCard = ({project}) => {
                 columns={columns}
                 data={project?.finances}
                 renderRow={renderRow}
+                edit={true}
             />
             <CreateButton data={data} asyncCreator={CreateFinanceAsyncAction} />
         </CardCapsule>
