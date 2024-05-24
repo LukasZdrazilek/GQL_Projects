@@ -32,6 +32,7 @@ export const MilestonesTableEditCard = ({project}) => {
                 columns={columns}
                 data={project?.milestones}
                 renderRow={renderRow}
+                edit={true}
             />
             <CreateButton data={data} asyncCreator={CreateMilestoneAsyncAction} />
         </CardCapsule>

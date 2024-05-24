@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { formatDate } from "../Misc/FormatDate.jsx"; // Ensure you import the formatDate function
+import { DeleteButton } from '@hrbolek/uoisfrontend-shared/src/Components/DeleteButton.jsx'
 
-export const SortableTable = ({ columns, data, renderRow }) => {
+export const SortableTable = ({ columns, data, renderRow, edit = false }) => {
     const [sortBy, setSortBy] = useState(null);
     const [sortOrder, setSortOrder] = useState('asc');
 
@@ -58,6 +59,11 @@ export const SortableTable = ({ columns, data, renderRow }) => {
                         {column.label}
                     </th>
                 ))}
+                {edit && (
+                    <td>
+                        <DeleteButton onClick={"#"}>Smazat vše</DeleteButton>
+                    </td>
+                )}
             </tr>
             </thead>
             <tbody>
@@ -66,6 +72,12 @@ export const SortableTable = ({ columns, data, renderRow }) => {
                     {columns.map((column) => (
                         <td key={column.key}>{renderRow(row, column.key)}</td>
                     ))}
+                    {edit && (
+                        <td>
+                            <DeleteButton onClick={"#"}>Smazat</DeleteButton>
+                        </td>
+                    )}
+
                 </tr>
             ))}
             </tbody>
