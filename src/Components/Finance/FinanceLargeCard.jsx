@@ -5,6 +5,21 @@ import { FinanceMediumCard } from './FinanceMediumCard'
 import { ProjectLink } from "../Project/ProjectLink.jsx";
 import { FinancesTableCard } from "../FinancesTable/FinancesTableCard.jsx";
 
+/**
+ * FinanceLargeCard Component
+ * 
+ * Main place to display all informations about finance in the scope of project, 
+ * Basic informations are stored in the `FinanceMediumCard`,
+ * provides a table summarizing finances for the associated project via `FinancesTableCard`.
+ *
+ * @component
+ * 
+ * @param {Object} finance - The finance object to be displayed in detail.
+ * @param {Object} finance.project - The associated project object.
+ * @param {ReactNode} children - Additional content (e.g., charts, graphs, or extra details) to be rendered alongside the finance details and project finances table.
+ * 
+ * @returns {JSX.Element} The rendered FinanceLargeCard component.
+ */
 
 export const FinanceLargeCard = ({finance, children}) => {
     return (
