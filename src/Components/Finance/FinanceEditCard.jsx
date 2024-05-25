@@ -5,6 +5,26 @@ import { RawUpdateFinanceAsyncAction, ChangedUpdateFinanceAsyncAction } from '..
 import { FinanceEditType } from './FinanceEditType'
 import { DeleteButton } from '../Misc/DeleteButton'
 
+/**
+ * FinanceEditCard Component
+ * 
+ * Provides a web component/card to edit attributes of finance object
+ * This component includes editable fields for the name, amount, and type, and
+ * a delete button to remove the finance.
+ *
+ * @component
+ * 
+ * @param {Object} finance - finance object to be edited.
+ * @param {string} finance.id - ID of the finance object.
+ * @param {string} finance.name - name
+ * @param {float} finance.amount -  budget amount of the finance in czk
+ * @param {Object} finance.financeType - finance type object 
+ * 
+ * @remarks
+ * -  placeholder for the delete action. The actual
+ *   `deleteMilestoneAsyncAction` is MIA 
+ */
+
 export const FinanceEditCard = ({finance}) => {
 
     const handleDelete = async (financeId) => {               
