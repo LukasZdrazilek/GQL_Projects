@@ -5,6 +5,23 @@ import {SortableTable} from "../Misc/SortableTable.jsx";
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateMilestoneAsyncAction } from "../../Queries/Milestone/CreateMilestoneAsyncAction.js";
 
+/**
+ * MilestonesTableEditCard Component
+ *
+ * Displays a sortable and editable table of milestones associated with a project.
+ * Allows for creating, editing, and sorting milestones.
+ *
+ * @component
+ *
+ * @param {Object} project - project object from @query
+ * @param {Object[]} project.milestones - array of milestones 
+ * @param {string} project.milestones[].name - name of milestones
+ * @param {Date} project.milestones[].startdate - start dates
+ * @param {Date} project.milestones[].enddate - end dates
+ *
+ * @returns {JSX.Element} A CardCapsule component containing a SortableTable and a CreateButton
+ */
+
 export const MilestonesTableEditCard = ({project}) => {
     const data = {
         "project_id": project?.id,
