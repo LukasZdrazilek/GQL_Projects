@@ -5,6 +5,25 @@ import { SortableTable } from '../Misc/SortableTable.jsx'
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateFinanceAsyncAction } from "../../Queries/Finance/CreateFinanceAsyncAction.js";
 
+/**
+ * FinancesTableEditCard Component
+ *
+ * Displays a sortable table of finances associated with the given project,
+ * also includes button at the bottom to add another finance object to the project.
+ * Sorting works on each collumn.
+ * @component
+ *
+ * @param {Object} project - project object from @query containing connected finances
+ * @param {Object[]} project.finances - An array of finance objects 
+ * @param {string} project.finances[].name - name
+ * @param {float} project.finances[].amount - amount in czk
+ * @param {string} project.finances[].financeType[].name - finance type
+ *
+ * @returns {JSX.Element} component containing a SortableTable with additional create button
+ *
+ */
+
+
 export const FinancesTableEditCard = ({project}) => {
     const data = {
         "project_id" : project.id,
