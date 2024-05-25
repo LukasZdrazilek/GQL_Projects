@@ -6,6 +6,25 @@ import { RawUpdateMilestoneAsyncAction } from '../../Queries/Milestone/UpdateMil
 import { DeleteButton } from '../Misc/DeleteButton'
 import { MilestoneLink } from "./MilestoneLink.jsx";
 
+/**
+ * MilestoneEditCard Component
+ *
+ * Provides an interface for editing the key attributes of a project milestone. 
+ * It also has a placeholder delete button for removing the milestone.
+ *
+ * @component
+ *
+ * @param {Object} milestone - object to be edited obtained from @query
+ * @param {string} milestone.id - ID of the milestone object
+ * @param {string} milestone.name - name
+ * @param {Date} milestone.startdate - start date 
+ * @param {Date} milestone.enddate - end date
+ *
+ * @remarks
+ * -   `deleteMilestoneAsyncAction` function needs to be implemented and imported for delete button to work.
+ */
+
+
 export const MilestoneEditCard = ({milestone}) => {
 
     const handleDelete = async (milestoneId) => {               
