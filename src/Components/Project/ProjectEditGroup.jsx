@@ -4,6 +4,25 @@ import { FetchGroupsAsyncAction} from "../../Queries/FetchGroupsAsyncAction.js";
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';
 
+/**
+ * ProjectEditGroup Component
+ *
+ * Provides an editable dropdown (`EditableAttributeSelect`) to modify the group
+ * associated with a given project. 
+ * It fetches all available groups, populates the dropdown, 
+ * and handles updating the project's group on the server using asynchronous actions.
+ *
+ * @component
+ *
+ * @param {Object} project - project objected
+ * @param {string} project.id - its ID 
+ * @param {Object} project.group - current group
+ * @param {string} project.group.id - its id, if any 
+ *
+ * @returns {JSX.Element} The rendered ProjectEditGroup component, containing the editable dropdown.
+ * 
+ */
+
 const id = ""
 export const ProjectEditGroup = ({project}) => {
     const [groups, groupsPromise] = useFreshItem({id}, FetchGroupsAsyncAction)
