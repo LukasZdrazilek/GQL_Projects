@@ -3,12 +3,26 @@ import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink
 import { CreateMilestoneAsyncAction } from "../../Queries/Milestone/CreateMilestoneAsyncAction.js";
 import {onClickHandler} from "../Misc/onClickHandler.jsx";
 
+
+
 export const MilestoneLink_ = ({milestone, children}) => {
     return (
         <ProxyLink to={"/projects/milestone/view/" + milestone?.id}>{children?children:milestone?.name}</ProxyLink>
     )
 }
 
+/**
+ * MilestoneLink Component
+ *
+ * Renders a dropdown menu or a simple link for managing a milestone object. 
+ * The dropdown includes options to view, edit, and view all milestones for the associated project.
+ *
+ * @param {Object} milestone - The milestone object.
+ * @param {ReactNode} [children] - 
+ * @param {boolean} [menu=true] - 
+ *
+ * @returns {JSX.Element} A `Dropdown` component
+ */
 
 export const MilestoneLink = ({milestone, children, menu=true}) => {
     if (menu) {
@@ -41,6 +55,20 @@ export const MilestoneCreateLink_ = ({project, children}) => {
         <ProxyLink to={"/projects/project/milestones/" + project?.id}>{project?.name}</ProxyLink>
     )
 }
+
+/**
+ * MilestoneCreateLink Component
+ *
+ * Renders a dropdown menu or a simple link for managing a milestone object. 
+ * The dropdown includes options to view, edit, view all milestones for the associated project
+ * or create new milestone linked to the project
+ *
+ * @param {Object} milestone - The milestone object.
+ * @param {ReactNode} [children] - 
+ * @param {boolean} [menu=true] - 
+ *
+ * @returns {JSX.Element} A `Dropdown` component
+ */
 
 export const MilestoneCreateLink = ({project, menu=true}) => {
     const data = {
