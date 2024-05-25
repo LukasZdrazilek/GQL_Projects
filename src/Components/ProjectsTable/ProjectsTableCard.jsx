@@ -6,6 +6,23 @@ import { ProjectLink, ProjectCreateLink } from '../Project/ProjectLink.jsx';
 import { formatDate } from '../Misc/FormatDate.jsx';
 import { SortableTable } from '../Misc/SortableTable.jsx'; // Assuming you have the SortableTable component
 
+/**
+ * ProjectsTableCard Component
+ *
+ * Displays a sortable table of projects, providing information such as project name,
+ * type, team, and last change date and dropdown menu for creating new projects.
+ *
+ * @param {Object[]} projects - array of projects
+ * @param {string} projects[].id - their IDs
+ * @param {string} projects[].name - names
+ * @param {Object} projects[].projectType - types
+ * @param {Object} projects[].group - groups
+ * @param {Date} projects[].lastchange - date of last edit or change
+ *
+ * @returns {JSX.Element} A CardCapsule component containing a sortable table to display projects,
+ *                        with a "Create Project" functionality
+ */
+
 export const ProjectsTableCard = ({projects}) => {
     const columns = [
         { key: 'name', label: 'Projekt' },
