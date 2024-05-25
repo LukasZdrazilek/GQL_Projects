@@ -4,6 +4,24 @@ import { FetchProjectTypesAsyncAction } from '../../Queries/Project/FetchProject
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';
 
+/**
+ * ProjectEditType Component
+ *
+ * Provides an editable dropdown (`EditableAttributeSelect`) to modify the type
+ * of a given project. It fetches available project types, populates the dropdown,
+ * and handles updating the project's type on the server using asynchronous actions.
+ *
+ * @component
+ *
+ * @param {Object} project - project object
+ * @param {string} project.id - its id
+ * @param {Object} project.projectType - current type
+ * @param {string} project.projectType.id - id, if any
+ *
+ * @returns {JSX.Element} The rendered ProjectEditType component containing the editable dropdown.
+ *
+ */
+
 const id = ""
 export const ProjectEditType = ({project}) => {
     const [projecttypes, projecttypesPromise] = useFreshItem({id}, FetchProjectTypesAsyncAction)
