@@ -5,6 +5,25 @@ import { MilestoneMediumCard } from './MilestoneMediumCard'
 import { ProjectLink } from "../Project/ProjectLink.jsx";
 import { MilestonesTableCard } from "../MilestonesTable/MilestonesTableCard.jsx"
 
+/**
+ * MilestoneLargeCard Component
+ *
+ * For display of a comprehensive overview of a milestone within the context of its project.
+ *
+ * This component creates a large card with three main sections:
+ *   1. A detailed view of the milestone using `MilestoneMediumCard`.
+ *   2. A customizable content area specified by the `children` prop.
+ *   3. A table summarizing all milestones in the project using `MilestonesTableCard`.
+ *
+ * @component
+ *
+ * @param {Object} milestone - The milestone object to display in detail.
+ * @param {Object} milestone.project - The associated project (must contain an `id`).
+ * @param {ReactNode} children - Additional content 
+ *
+ * @returns {JSX.Element} The rendered MilestoneLargeCard component.
+ */
+
 export const MilestoneLargeCard = ({milestone, children}) => {
     return (
         <CardCapsule title={
