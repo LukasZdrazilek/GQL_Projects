@@ -1,3 +1,18 @@
+/**
+ * Formats a date-time string for display.
+ *
+ * Function takes a date-time string in ISO 8601 format (aka '2024-05-25T14:30:00Z')
+ * and converts it to a localized Czech format: "DD. MM. YYYY HH:MM:SS". 
+ * If an invalid or empty date-time string is provided, it returns an empty string.
+ *
+ * @function
+ * 
+ * @param {string} [dateString] -  date-time string in ISO 8601 format to be formatted.
+ *
+ * @returns {string} formatted date-time string in the format "DD. MM. YYYY HH:MM:SS"
+ *                   (e.g., "25. 05. 2024 14:30:00") or empty string if the input is invalid or empty.
+ */
+
 export const formatDateTime = (dateString) => {
     if (!dateString) return ""; // If dateString is null or undefined, return empty string
 
