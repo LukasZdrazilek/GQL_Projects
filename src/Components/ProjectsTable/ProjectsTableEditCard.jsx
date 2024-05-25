@@ -5,6 +5,26 @@ import { SortableTable } from '../Misc/SortableTable.jsx';
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateProjectAsyncAction } from "../../Queries/Project/CreateProjectAsyncAction.js";
 
+/**
+ * ProjectsTableEditCard Component
+ *
+ * Displays a sortable and editable table of projects, allowing for creation, viewing,
+ * editing, and deleting of projects. 
+ *
+ * @component
+ *
+ * @param {Object[]} projects - array of projects
+ * @param {string} projects[].id - their IDs
+ * @param {string} projects[].name - names
+ * @param {Object} projects[].projectType - types
+ * @param {Object} projects[].group - groups
+ * @param {Date} projects[].lastchange - date of last edit or change
+ *
+ * @returns {JSX.Element} A CardCapsule component containing a sortable table to display projects,
+ *                        with a "Create Project" functionality
+ *
+ */
+
 export const ProjectsTableEditCard = ({projects}) => {
     const data = {
         "projectType_id" : "a825d8e1-2e60-4884-afdb-25642db581d8",
