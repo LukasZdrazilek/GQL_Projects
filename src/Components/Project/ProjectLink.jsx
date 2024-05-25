@@ -9,6 +9,18 @@ export const ProjectLink_ = ({project, children}) => {
     )
 }
 
+/**
+ * ProjectLink Component
+ *
+ * Renders a dropdown menu which includes options to view, edit, view milestones, view finances, and view all projects.
+ *
+ * @param {Object} project - The project object.
+ * @param {object} [children] - Optional children to display as the main link/dropdown text.
+ * @param {boolean} [menu=true] - Determines whether to render a dropdown (true) or a simple link (false).
+ *
+ * @returns {JSX.Element} A `Dropdown` component (if `menu` is true) or a `ProjectLink_` component.
+ */
+
 export const ProjectLink = ({project, children, menu=true}) => {
     if (menu) {
         return (
@@ -38,6 +50,17 @@ export const ProjectLink = ({project, children, menu=true}) => {
         )
     }
 }
+/**
+ * ProjectCreateLink Component
+ *
+ * Renders a dropdown menu (if `menu` is true) for creating a new project. 
+ * Contains options to edit existing projects and create a new one using the `CreateProjectAsyncAction`, 
+ * 
+ *
+ * @param {boolean} [menu=true] - basically mandatory true, if false error occurs
+ *
+ * @returns {JSX.Element} A `Dropdown` component or an error message.
+ */
 
 export const ProjectCreateLink = ({menu=true}) => {
     const data = {
