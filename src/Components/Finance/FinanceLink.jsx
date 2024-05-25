@@ -3,11 +3,21 @@ import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink
 import { onClickHandler } from "../Misc/onClickHandler.jsx";
 import {CreateFinanceAsyncAction} from "../../Queries/Finance/CreateFinanceAsyncAction.js";
 
+
 export const FinanceLink_ = ({finance, children}) => {
     return (
         <ProxyLink to={"/projects/finance/view/" + finance?.id}>{children?children:finance?.name}</ProxyLink>
     )
 }
+
+/**
+ * FinanceLink Component
+ * Renders dropdown, which includes options to view, edit, and view all finances for the project with given ID
+ * @param {Object} finance - finance object, response from @query
+ * @param {ReactNode} [children] - Optional children to display as the main link/dropdown text.
+ *
+ * @returns {JSX.Element} dropdown component 
+ */
 
 export const FinanceLink = ({finance, children, menu=true}) => {
     console.log(JSON.stringify(finance))
@@ -41,6 +51,17 @@ export const FinanceCreateLink_ = ({project, children}) => {
         <ProxyLink to={"/projects/project/finances/" + project?.id}>{project?.name}</ProxyLink>
     )
 }
+
+/**
+ * FinanceCreateLink component
+ *
+ * Renders dropdown, which includes options to view, edit, and view all finances 
+ * for the project with given ID, or create a new one
+ * @param {Object} finance - finance object, response from @query
+ * @param {ReactNode} [children] - Optional children to display as the main link/dropdown text.
+
+ * @returns {JSX.Element} A Dropdown component  or also new finance object
+ */
 
 export const FinanceCreateLink = ({project, menu=true}) => {
     const data = {
