@@ -7,6 +7,25 @@ import { ProjectLink } from './ProjectLink'
 import { formatDateTime } from "../Misc/FormatDateTime.jsx";
 import { GroupLink } from "../Group/index.js";
 
+/**
+ * ProjectMediumCard Component
+ *
+ * Displays the basic card summarizing all informations about given project
+ *
+ * @component
+ *
+ * @param {Object} project - object from @query
+ * @param {string} project.name - name
+ * @param {Object} project.projectType - type
+ * @param {Object} project.group - group
+ * @param {Date} project.created - date of creation
+ * @param {Date} project.startdate - start date
+ * @param {Date} project.enddate - end date
+ * @param {Date} project.lastchange - last change
+ *
+ * @returns {JSX.Element} The rendered ProjectMediumCard component.
+ */
+
 export const ProjectMediumCard = ({project}) => {
     return (
         <CardCapsule title=
