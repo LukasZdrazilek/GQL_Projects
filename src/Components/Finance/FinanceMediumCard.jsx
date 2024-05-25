@@ -7,6 +7,23 @@ import { formatNumber } from "../Misc/FormatNumber.jsx";
 import { FinanceLink } from './FinanceLink.jsx'
 import { ProjectLink } from '../Project/ProjectLink'
 
+/**
+ * FinanceMediumCard Component
+ *
+ * Shows "basic" info card for finance
+ *
+ * @component
+ *
+ * @param {Object} finance -  object containing the data, response on @query 
+ * @param {string} finance.name - name 
+ * @param {float} finance.amount - budget in czk
+ * @param {Object} finance.project - parent project
+ * @param {Date} finance.lastchange - date of the last change
+ * @param {Object[]} finance.financeType - array of finance type objects
+ * @param {string} finance.financeType[].name - name of each finance type to be shown
+ *
+ * @returns {JSX.Element} the render of the finance card with basic attributes
+ */
 
 export const FinanceMediumCard = ({finance}) => {
     return (
