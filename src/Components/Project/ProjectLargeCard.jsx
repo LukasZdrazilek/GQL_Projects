@@ -6,6 +6,23 @@ import { FinancesTableCard } from '../FinancesTable/FinancesTableCard.jsx'
 import { MilestonesTableCard } from '../MilestonesTable/MilestonesTableCard.jsx'
 import { ProjectLink } from './ProjectLink'
 
+/**
+ * ProjectLargeCard Component
+ *
+ * Displays a comprehensive overview of a project and its assigned milestones and finances.
+ *
+ * @component
+ *
+ * @param {Object} project - The project object containing project details.
+ * @param {ReactNode} children - 
+ *
+ * @returns {JSX.Element} A CardCapsule component containing one row with three columns:
+ *   - ProjectMediumCard displaying project details.
+ *   - MilestonesTableCard displaying project milestones.
+ *   - FinancesTableCard displaying project finances.
+ *
+ */
+
 export const ProjectLargeCard = ({project, children}) => {
     return (
         <CardCapsule title={<div>
@@ -28,6 +45,21 @@ export const ProjectLargeCard = ({project, children}) => {
 
     )
 }
+
+/**
+ * ProjectEditLargeCard Component
+ *
+ * Provides a layout for editing a project, including project details and a customizable area for additional content.
+ *
+ * @component
+ *
+ * @param {Object} project - The project object containing project object
+ * @param {ReactNode} children - The content to be displayed within the editable area
+ *
+ * @returns {JSX.Element} A CardCapsule component containing one row with two columns:
+ *   - ProjectMediumCard displaying project details.
+ *   - Empty space for additional assets, mainly ProjectEditCard
+ */
 
 export const ProjectEditLargeCard = ({project, children}) => {
     return (
