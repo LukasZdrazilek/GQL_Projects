@@ -5,6 +5,18 @@ import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectB
 import { ProjectEditLargeCard } from "../../Components/Project/ProjectLargeCard.jsx"
 import { ProjectEditCard } from "../../Components/Project/ProjectEditCard.jsx"
 
+/**
+ * ProjectEditPage Component
+ *
+ * This component is responsible for:
+ * -Retrieving project data based on the project ID
+ * -Providing visual feedback to the user via pop ups
+ * - rendering`ProjectEditLargeCard` to display the project details 
+ * - rendering`ProjectEditCard` for editing 
+ *
+ * @component
+ */
+
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst projekt", success: "Načtení projektu se povedlo"})
 export const ProjectEditPage = ()  => {
     const {id} = useParams()
