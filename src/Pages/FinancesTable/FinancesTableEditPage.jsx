@@ -8,7 +8,7 @@ import { FinancesTableEditCard } from "../../Components/FinancesTable/FinancesTa
  * FinancesTableEditPage Component
  *
  * This component is responsible for:
- * - Retrieving finances belonging to the project and showing them in a sortable table
+ * - Retrieving finances belonging to the project and showing them in a sortable table with edit functionality
  *
  * @component
  *
