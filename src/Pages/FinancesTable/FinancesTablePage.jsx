@@ -4,6 +4,16 @@ import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectB
 import { FinancesTableLargeCard } from "../../Components/FinancesTable/FinancesTableLargeCard.jsx"
 import { FinancesTableCard } from "../../Components/FinancesTable/FinancesTableCard.jsx"
 
+/**
+ * FinancesTablePage Component
+ *
+ * This component is responsible for:
+ * - Retrieving finances belonging to the project and showing them in a sortable table
+ *
+ * @component
+ *
+ */
+
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milníky", success: "Načtení milníků se povedlo"})
 export const FinancesTablePage = ()  => {
     const {id} = useParams()
