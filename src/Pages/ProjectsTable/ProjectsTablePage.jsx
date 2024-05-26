@@ -3,6 +3,16 @@ import { ProjectsTableCard} from "../../Components/ProjectsTable/ProjectsTableCa
 import { FetchProjectsAsyncAction} from "../../Queries/Project/FetchProjectsAsynsAction.js";
 import {useFreshItem} from "@hrbolek/uoisfrontend-shared/src";
 
+/**
+ * ProjectsTablePage Component
+ *
+ * This component is responsible for:
+ * - Retrieving all available projects and showing them in a sortable table
+ *
+ * @component
+ *
+ */
+
 const id = ""
 export const ProjectsTablePage = () => {
     const [projecttypes, projecttypesPromise] = useFreshItem({id}, FetchProjectsAsyncAction)
