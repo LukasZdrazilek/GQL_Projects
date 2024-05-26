@@ -4,6 +4,16 @@ import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectB
 import { MilestonesTableLargeCard } from "../../Components/MilestonesTable/MilestonesTableLargeCard.jsx";
 import { MilestonesTableCard } from "../../Components/MilestonesTable/MilestonesTableCard.jsx";
 
+/**
+ * MilestonesTablePage Component
+ *
+ * This component is responsible for:
+ * - Retrieving milestones belonging to the project and showing them in a sortable table
+ *
+ * @component
+ *
+ */
+
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milníky", success: "Načtení milníků se povedlo"})
 export const MilestonesTablePage = ()  => {
     const {id} = useParams()
