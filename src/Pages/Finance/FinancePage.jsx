@@ -4,6 +4,20 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 import { FetchFinanceByIdAsyncAction } from "../../Queries/Finance/FetchFinanceByIdAsyncAction.js"
 import { FinanceLargeCard } from "../../Components/Finance/FinanceLargeCard.jsx"
 
+/**
+ * FinancePage Component
+ *
+ * Fetches and displays the details of a specific finance using its ID.
+ * @component
+ * Does the following
+ * -Retrievs the finance data using the `FetchFinanceByIdAsyncAction`.
+ * -Handles success or error feedback(pop ups)
+ * -Renders the `FinanceLargeCard` component to present the finance details.
+ *
+ * @component
+ *
+ */
+
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst finance", success: "Načtení financí se povedlo"})
 export const FinancePage = ()  => {
     const {id} = useParams()
