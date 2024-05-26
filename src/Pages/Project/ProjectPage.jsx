@@ -4,6 +4,17 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectByIdAsyncAction.js"
 import { ProjectLargeCard } from "../../Components/Project/ProjectLargeCard.jsx"
 
+/**
+ * ProjectPage Component
+ *
+ * This component is responsible for:
+ * -Retrieving project data based on the project ID
+ * -Providing visual feedback to the user via pop ups
+ * - rendering`ProjectLargeCard` to display the project details, milestone and finance tables
+ *
+ * @component
+ */
+
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst projekt", success: "Načtení projektu se povedlo"})
 export const ProjectPage = ()  => {
     const {id} = useParams()
