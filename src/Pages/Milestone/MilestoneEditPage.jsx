@@ -10,7 +10,7 @@ import { MilestoneEditCard } from "../../Components/Milestone/MilestoneEditCard.
  * MilestoneEditPage Component
  *
  * This component is responsible for:
- * - Retrieving milestone data using the `FetchFinanceByIdAsyncAction` based on the milestone ID extracted from the URL.
+ * - Retrieving milestone data using the `FetchMilestonesByIdAsyncAction` based on the milestone ID extracted from the URL.
  * - Showing basic information via MilestoneLargeCard
  * - A loading message while the milestone data is being fetched.
  * - A success or error message upon completion of the data fetching operation.
