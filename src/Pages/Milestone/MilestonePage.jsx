@@ -4,6 +4,20 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 import { FetchMilestoneByIdAsyncAction } from "../../Queries/Milestone/FetchMilestoneByIdAsyncAction.js"
 import { MilestoneLargeCard } from "../../Components/Milestone/MilestoneLargeCard.jsx"
 
+/**
+ * MilestonePage Component
+ *
+ * Fetches and displays the details of a specific milestone using its ID.
+ * @component
+ * Does the following
+ * -Retrievs the finance data using the `FetchMilestoneByIdAsyncAction`.
+ * -Handles success or error feedback(pop ups)
+ * -Renders the `MilestoneLargeCard` component to present the milestone details.
+ *
+ * @component
+ *
+ */
+
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milestone", success: "Načtení milestonu se povedlo"})
 export const MilestonePage = ()  => {
     const {id} = useParams()
