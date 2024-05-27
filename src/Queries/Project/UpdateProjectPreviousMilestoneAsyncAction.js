@@ -19,7 +19,7 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  *
  * @returns {Function} action that dispatches the mutation and handles success or error response
  *
- * };
+ */
 
 const mutation =
     `
