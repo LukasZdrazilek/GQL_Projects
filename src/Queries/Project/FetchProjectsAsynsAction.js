@@ -1,5 +1,16 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
+/**
+ * FetchProjectsAsyncAction
+ *
+ *  asynchronous action function to fetch a list of projects.
+ *
+ * This action dispatches a  query (`projectPage`) to retrieve a list of all projects
+ * @function FetchProjectsAsyncAction
+ * @returns {Function}  action that dispatches the query and handles success or error responses.
+ *                 
+ */
+
 const query = `{
     result: projectPage
     {
