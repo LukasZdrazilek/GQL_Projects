@@ -25,6 +25,7 @@ import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
  *.
  */
 
+
 export const ProjectEditCard = ({project}) => {
     return (
         <CardCapsule title={"Projekt: " + project?.name + " - atributy"}>
