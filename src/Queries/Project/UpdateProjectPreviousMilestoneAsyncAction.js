@@ -1,4 +1,26 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
+
+/**
+ * RawUpdateProjectAsyncAction
+ *
+ * Aasynchronous action function for updating a project's details.
+ *
+ * Used with edit components, through (`projectUpdate`)
+ *
+ * @function RawUpdateProjectAsyncAction
+ *
+ * @param {Object} data - input data
+ * @param {string} data.id - mandatory project id
+ * @param {string} data.lastchange -  DateTime string required for verification
+ * @param {string} [data.name] - changed name
+ * @param {string} [data.startdate] - changed start date
+ * @param {string} [data.enddate] - changed end date
+ * @param {string} [data.projectType_id] - changed type
+ *
+ * @returns {Function} action that dispatches the mutation and handles success or error response
+ *
+ * };
+
 const mutation =
     `
 mutation($id: UUID!, $lastchange: DateTime!, $name: String, 
