@@ -16,9 +16,9 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  * @param {string} [data.startdate] - new start date 
  * @param {string} [data.enddate] -  new end date 
  * @param {string} [data.projectType_id] -  new project type 
- * @param {string} [data.group_id] - Thew project group ID 
+ * @param {string} [data.group_id] - new project group ID 
  *
- * @returns {Function} A Redux-Thunk action that dispatches the GraphQL mutation and handles success or error responses.
+ * @returns {Function}  action that dispatches the mutation and handles success or error responses.
  */
 
 const mutation =
