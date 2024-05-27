@@ -24,9 +24,6 @@ import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
  * @param {Date} project.enddate - end date
  *.
  */
-export const ProjectEditCard = ({ project }) => {
-  // ... your component code
-};
 
 
 export const ProjectEditCard = ({project}) => {
