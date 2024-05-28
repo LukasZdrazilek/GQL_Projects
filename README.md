@@ -88,13 +88,13 @@ __23.5.2024__ dvacátá schůze/stretnutie => Práce na milestone next a previou
 
 __29.5.2024__ dvacátá-první schůze/stretnutie => Přidání funkce na sort tabulek dle datumu/názvu
 
-__30.5.2024__ dvacátá-druhá schůze/stretnutie => TBD
+__30.5.2024__ dvacátá-druhá schůze/stretnutie => Tvorba JSDOC komentářů #1
 
-__5.6.2024__ dvacátá-třetí schůze/stretnutie => TBD
+__5.6.2024__ dvacátá-třetí schůze/stretnutie => Tvorba JSDOC komentářů #2
 
-__6.6.2024__ dvacátá-čtvrtá schůze/stretnutie => TBD
+__6.6.2024__ dvacátá-čtvrtá schůze/stretnutie => Práce na interaktivní tabulce milestone next a previous
 
-__10.6.2024__ třetí projektový den
+__3.6.2024__ třetí projektový den
 
 <br />
 
