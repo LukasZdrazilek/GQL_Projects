@@ -98,7 +98,7 @@ __3.6.2024__ třetí projektový den
 
 <br />
 
-__12.6.2024__ dvacátá-pátá schůze/stretnutie => TBD
+__12.6.2024__ dvacátá-pátá schůze/stretnutie => Vygenerování dokumentace
 
 __13.6.2024__ dvacátá-šestá schůze/stretnutie => TBD
 
