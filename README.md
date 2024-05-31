@@ -32,8 +32,8 @@ ________________________________________________________________________
 - [x] Přidání milestone a finance view page
 - [x] Přidání odkazu do dropdownu
 - [x] Odstranit pravý MediumCard
-- [ ] Udělat JSDOC komentáře
-- [ ] Přidat index.js do všech komponent (export *)
+- [x] Udělat JSDOC komentáře
+- [x] Přidat index.js do všech komponent (export *)
 
 ________________________________________________________________________
 
