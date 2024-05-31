@@ -4,6 +4,7 @@ import { FetchProjectTypesAsyncAction } from '../../Queries/Project/FetchProject
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';
 
+// @module Projects
 /**
  * ProjectEditType Component
  *
@@ -19,7 +20,7 @@ import { useState } from 'react';
  * @param {string} project.projectType.id - id, if any
  *
  * @returns {JSX.Element} The rendered ProjectEditType component containing the editable dropdown.
- *
+ * @function
  */
 
 const id = ""

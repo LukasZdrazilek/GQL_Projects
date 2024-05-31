@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * CreateFinanceAsyncAction
  *
@@ -17,6 +18,7 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  *
  * @returns {Function} A Redux-Thunk asynchronous action that dispatches the GraphQL mutation
  *                     and handles success or error responses.
+ * @function
  */
 
 const mutation =

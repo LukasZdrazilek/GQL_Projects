@@ -3,6 +3,7 @@ import { formatDate } from "../Misc/FormatDate.jsx";
 import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
 import { SortableTable } from "../Misc/SortableTable.jsx";
 
+// @module Projects
 /**
  * MilestonesTableEditCard Component
  *
@@ -18,6 +19,7 @@ import { SortableTable } from "../Misc/SortableTable.jsx";
  * @param {Date} project.milestones[].enddate - end date
  *
  * @returns {JSX.Element} A CardCapsule component containing a SortableTable along with a CreateButton
+ * @function
  */
 
 export const MilestonesTableCard = ({ project }) => {

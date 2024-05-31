@@ -4,6 +4,7 @@ import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectB
 import { FinancesTableLargeCard } from "../../Components/FinancesTable/FinancesTableLargeCard.jsx"
 import { FinancesTableCard } from "../../Components/FinancesTable/FinancesTableCard.jsx"
 
+// @module Projects
 /**
  * FinancesTablePage Component
  *
@@ -11,7 +12,7 @@ import { FinancesTableCard } from "../../Components/FinancesTable/FinancesTableC
  * - Retrieving finances belonging to the project and showing them in a sortable table
  *
  * @component
- *
+ * @function
  */
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milníky", success: "Načtení milníků se povedlo"})

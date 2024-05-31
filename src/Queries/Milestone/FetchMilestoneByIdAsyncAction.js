@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * FetchMilestoneByIdAsyncAction
  *
@@ -13,6 +14,7 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
  * @param {string} params.id - The UUID of the milestone to fetch.
  *
  * @returns {Function} action that dispatches the GraphQL query and handles success or error responses.
+ * @function
  */
 
 const query = `query ($id: UUID!) 
@@ -49,21 +51,3 @@ const query = `query ($id: UUID!)
 }`
   
   export const FetchMilestoneByIdAsyncAction = CreateAsyncActionFromQuery(query)
-
-  /*
-  const query = `query ($id: UUID!) {
-    result:milestoneById(id: $id)
-  {
-    id
-    name
-    lastchange
-    startdate
-    enddate
-    created
-    createdby
-    {
-      name
-    }
-  }
-}'
-  */

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Components/MilestonesTable/MilestonesTableCard.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Components/MilestonesTable/MilestonesTableCard.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { MilestoneCreateLink, MilestoneLink } from "../Milestone/MilestoneLink.jsx";
+import { formatDate } from "../Misc/FormatDate.jsx";
+import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
+import { SortableTable } from "../Misc/SortableTable.jsx";
+
+// @module Projects
+/**
+ * MilestonesTableEditCard Component
+ *
+ * Displays a sortable and editable table of milestones associated with a project.
+ * Allows for creating, editing, and sorting milestones.
+ *
+ * @component
+ *
+ * @param {Object} project - The project object from @query
+ * @param {Object[]} project.milestones - list of milestones
+ * @param {string} project.milestones[].name - their name
+ * @param {Date} project.milestones[].startdate - start date
+ * @param {Date} project.milestones[].enddate - end date
+ *
+ * @returns {JSX.Element} A CardCapsule component containing a SortableTable along with a CreateButton
+ * @function
+ */
+
+export const MilestonesTableCard = ({ project }) => {
+    const columns = [
+        { key: 'name', label: 'Milníky' },
+        { key: 'startdate', label: 'Počátek' },
+        { key: 'enddate', label: 'Konec' },
+    ];
+
+    const renderRow = (row, columnKey) => {
+        if (columnKey === 'name') {
+            return &lt;MilestoneLink milestone={row} menu={true}>&lt;/MilestoneLink>;
+        } else {
+            return formatDate(row[columnKey]);
+        }
+    };
+
+    return (
+        &lt;CardCapsule title={&lt;>Milníky pro: &lt;MilestoneCreateLink project={project} menu={true}>&lt;/MilestoneCreateLink>&lt;/>}>
+            &lt;SortableTable
+                columns={columns}
+                data={project?.milestones}
+                renderRow={renderRow}
+            />
+        &lt;/CardCapsule>
+    );
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#CreateButton">CreateButton</a></li><li><a href="global.html#CreateFinanceAsyncAction">CreateFinanceAsyncAction</a></li><li><a href="global.html#CreateMilestoneAsyncAction">CreateMilestoneAsyncAction</a></li><li><a href="global.html#CreateProjectAsyncAction">CreateProjectAsyncAction</a></li><li><a href="global.html#DeleteButton">DeleteButton</a></li><li><a href="global.html#FetchFinanceByIdAsyncAction">FetchFinanceByIdAsyncAction</a></li><li><a href="global.html#FetchFinanceTypesAsyncAction">FetchFinanceTypesAsyncAction</a></li><li><a href="global.html#FetchMilestoneByIdAsyncAction">FetchMilestoneByIdAsyncAction</a></li><li><a href="global.html#FetchMilestonePage">FetchMilestonePage</a></li><li><a href="global.html#FetchProjectByIdAsyncAction">FetchProjectByIdAsyncAction</a></li><li><a href="global.html#FetchProjectMilestonesAsyncAction">FetchProjectMilestonesAsyncAction</a></li><li><a href="global.html#FetchProjectTypesAsyncAction">FetchProjectTypesAsyncAction</a></li><li><a href="global.html#FetchProjectsAsyncAction">FetchProjectsAsyncAction</a></li><li><a href="global.html#FinanceCreateLink">FinanceCreateLink</a></li><li><a href="global.html#FinanceEditCard">FinanceEditCard</a></li><li><a href="global.html#FinanceLargeCard">FinanceLargeCard</a></li><li><a href="global.html#FinanceLink">FinanceLink</a></li><li><a href="global.html#FinanceMediumCard">FinanceMediumCard</a></li><li><a href="global.html#FinancesTableCard">FinancesTableCard</a></li><li><a href="global.html#FinancesTableEditCard">FinancesTableEditCard</a></li><li><a href="global.html#FinancesTableLargeCard">FinancesTableLargeCard</a></li><li><a href="global.html#MilestoneCreateLink">MilestoneCreateLink</a></li><li><a href="global.html#MilestoneEditCard">MilestoneEditCard</a></li><li><a href="global.html#MilestoneLargeCard">MilestoneLargeCard</a></li><li><a href="global.html#MilestoneLink">MilestoneLink</a></li><li><a href="global.html#MilestoneMediumCard">MilestoneMediumCard</a></li><li><a href="global.html#MilestonesTableCard">MilestonesTableCard</a></li><li><a href="global.html#MilestonesTableEditCard">MilestonesTableEditCard</a></li><li><a href="global.html#ProjectCreateLink">ProjectCreateLink</a></li><li><a href="global.html#ProjectEditCard">ProjectEditCard</a></li><li><a href="global.html#ProjectEditLargeCard">ProjectEditLargeCard</a></li><li><a href="global.html#ProjectLargeCard">ProjectLargeCard</a></li><li><a href="global.html#ProjectLink">ProjectLink</a></li><li><a href="global.html#ProjectMediumCard">ProjectMediumCard</a></li><li><a href="global.html#ProjectsTableCard">ProjectsTableCard</a></li><li><a href="global.html#ProjectsTableEditCard">ProjectsTableEditCard</a></li><li><a href="global.html#RawUpdateFinanceAsyncAction">RawUpdateFinanceAsyncAction</a></li><li><a href="global.html#RawUpdateMilestoneAsyncAction">RawUpdateMilestoneAsyncAction</a></li><li><a href="global.html#RawUpdateProjectAsyncAction">RawUpdateProjectAsyncAction</a></li><li><a href="global.html#SortableTable">SortableTable</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#formatDateTime">formatDateTime</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#id">id</a></li><li><a href="global.html#validator">validator</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri May 31 2024 08:48:43 GMT+0200 (středoevropský letní čas)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

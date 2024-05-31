@@ -11,6 +11,7 @@ export const MilestoneLink_ = ({milestone, children}) => {
     )
 }
 
+// @module Projects
 /**
  * MilestoneLink Component
  *
@@ -22,6 +23,7 @@ export const MilestoneLink_ = ({milestone, children}) => {
  * @param {boolean} [menu=true] - 
  *
  * @returns {JSX.Element} A `Dropdown` component
+ * @function
  */
 
 export const MilestoneLink = ({milestone, children, menu=true}) => {

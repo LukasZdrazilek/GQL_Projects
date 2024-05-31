@@ -3,6 +3,7 @@ import {ProjectLink} from "../Project/ProjectLink.jsx";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+// @module Projects
 /**
  * FinancesTableLargeCard Component
  *
@@ -17,6 +18,7 @@ import Col from 'react-bootstrap/Col'
  *
  * @returns {JSX.Element} A CardCapsule component containing a row with a single column 
  *                       displaying the provided children.
+ * @function
  */
 
 export const FinancesTableLargeCard = ({project, children}) => {

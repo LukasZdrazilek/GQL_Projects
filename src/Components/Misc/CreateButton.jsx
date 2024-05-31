@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { PlusLg } from "react-bootstrap-icons";
 import { onClickHandler } from "./onClickHandler.jsx";
 
+// @module Projects
 /**
  * This is Create Button. Function is expecting two arguments: data and asyncCreator
  * Data are the expected variables in query
@@ -29,7 +30,7 @@ import { onClickHandler } from "./onClickHandler.jsx";
  *         <CreateButton data={data} asyncCreator={YourAsyncAction} />
  *     )
  * }
- *
+ * @function
  */
 
 // const validator = CreateAsyncQueryValidator({error: "Něco se nepovedlo", success: "Objekt vytvořen"})

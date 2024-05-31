@@ -7,6 +7,7 @@ import { ProjectLink } from './ProjectLink'
 import { formatDateTime } from "../Misc/FormatDateTime.jsx";
 import { GroupLink } from "../Group/index.js";
 
+// @module Projects
 /**
  * ProjectMediumCard Component
  *
@@ -24,6 +25,7 @@ import { GroupLink } from "../Group/index.js";
  * @param {Date} project.lastchange - last change
  *
  * @returns {JSX.Element} The rendered ProjectMediumCard component.
+ * @function
  */
 
 export const ProjectMediumCard = ({project}) => {

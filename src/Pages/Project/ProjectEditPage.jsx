@@ -1,10 +1,10 @@
-// import { useFreshItem } from "@hrbolek/uoisfrontend-shared/src"
 import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectByIdAsyncAction.js"
 import { ProjectEditLargeCard } from "../../Components/Project/ProjectLargeCard.jsx"
 import { ProjectEditCard } from "../../Components/Project/ProjectEditCard.jsx"
 
+// @module Projects
 /**
  * ProjectEditPage Component
  *
@@ -15,6 +15,7 @@ import { ProjectEditCard } from "../../Components/Project/ProjectEditCard.jsx"
  * - rendering`ProjectEditCard` for editing 
  *
  * @component
+ * @function
  */
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst projekt", success: "Načtení projektu se povedlo"})
@@ -24,13 +25,8 @@ export const ProjectEditPage = ()  => {
     const [projects, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
     userPromise.then(onResolve, onReject)
 
-    if (projects) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
+    if (projects) {
         return (
-            // // <UserLargeCard user={user} />           // ProjectLargeCard?
-            // <div>
-            //     Projekty nahrány
-            //     {JSON.stringify(projects)}       // debug informace
-            // </div>
 
             <ProjectEditLargeCard project={projects}>
                 <ProjectEditCard project={projects} />

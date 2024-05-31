@@ -10,6 +10,7 @@ export const FinanceLink_ = ({finance, children}) => {
     )
 }
 
+// @module Projects
 /**
  * FinanceLink Component
  * Renders dropdown, which includes options to view, edit, and view all finances for the project with given ID
@@ -17,6 +18,7 @@ export const FinanceLink_ = ({finance, children}) => {
  * @param {ReactNode} [children] - Optional children to display as the main link/dropdown text.
  *
  * @returns {JSX.Element} dropdown component 
+ * @function
  */
 
 export const FinanceLink = ({finance, children, menu=true}) => {

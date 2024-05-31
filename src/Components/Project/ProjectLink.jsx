@@ -9,6 +9,7 @@ export const ProjectLink_ = ({project, children}) => {
     )
 }
 
+// @module Projects
 /**
  * ProjectLink Component
  *
@@ -19,6 +20,7 @@ export const ProjectLink_ = ({project, children}) => {
  * @param {boolean} [menu=true] - Determines whether to render a dropdown (true) or a simple link (false).
  *
  * @returns {JSX.Element} A `Dropdown` component (if `menu` is true) or a `ProjectLink_` component.
+ * @function
  */
 
 export const ProjectLink = ({project, children, menu=true}) => {

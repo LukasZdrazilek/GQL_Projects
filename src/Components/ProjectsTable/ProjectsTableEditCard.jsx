@@ -5,6 +5,7 @@ import { SortableTable } from '../Misc/SortableTable.jsx';
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateProjectAsyncAction } from "../../Queries/Project/CreateProjectAsyncAction.js";
 
+// @module Projects
 /**
  * ProjectsTableEditCard Component
  *
@@ -22,7 +23,7 @@ import { CreateProjectAsyncAction } from "../../Queries/Project/CreateProjectAsy
  *
  * @returns {JSX.Element} A CardCapsule component containing a sortable table to display projects,
  *                        with a "Create Project" functionality
- *
+ * @function
  */
 
 export const ProjectsTableEditCard = ({projects}) => {

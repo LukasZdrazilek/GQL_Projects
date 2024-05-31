@@ -4,8 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { ProjectLink, ProjectCreateLink } from '../Project/ProjectLink.jsx';
 import { formatDate } from '../Misc/FormatDate.jsx';
-import { SortableTable } from '../Misc/SortableTable.jsx'; // Assuming you have the SortableTable component
+import { SortableTable } from '../Misc/SortableTable.jsx';
 
+// @module Projects
 /**
  * ProjectsTableCard Component
  *
@@ -21,6 +22,7 @@ import { SortableTable } from '../Misc/SortableTable.jsx'; // Assuming you have 
  *
  * @returns {JSX.Element} A CardCapsule component containing a sortable table to display projects,
  *                        with a "Create Project" functionality
+ * @function
  */
 
 export const ProjectsTableCard = ({projects}) => {
@@ -41,7 +43,7 @@ export const ProjectsTableCard = ({projects}) => {
         } else if (columnKey === 'group.name') {
             return project.group?.name;
         } else {
-            return ''; // Handle other columns if needed
+            return '';
         }
     };
 

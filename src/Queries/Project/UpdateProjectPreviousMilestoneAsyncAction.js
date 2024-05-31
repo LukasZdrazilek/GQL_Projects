@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * RawUpdateProjectAsyncAction
  *
@@ -18,7 +19,7 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  * @param {string} [data.projectType_id] - changed type
  *
  * @returns {Function} action that dispatches the mutation and handles success or error response
- *
+ * @function
  */
 
 const mutation =

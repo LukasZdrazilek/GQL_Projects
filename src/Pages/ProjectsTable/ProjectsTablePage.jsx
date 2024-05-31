@@ -3,6 +3,7 @@ import { ProjectsTableCard} from "../../Components/ProjectsTable/ProjectsTableCa
 import { FetchProjectsAsyncAction} from "../../Queries/Project/FetchProjectsAsynsAction.js";
 import {useFreshItem} from "@hrbolek/uoisfrontend-shared/src";
 
+// @module Projects
 /**
  * ProjectsTablePage Component
  *
@@ -10,7 +11,7 @@ import {useFreshItem} from "@hrbolek/uoisfrontend-shared/src";
  * - Retrieving all available projects and showing them in a sortable table
  *
  * @component
- *
+ * @function
  */
 
 const id = ""

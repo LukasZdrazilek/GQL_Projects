@@ -4,6 +4,7 @@ import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectB
 import { MilestonesTableLargeCard } from "../../Components/MilestonesTable/MilestonesTableLargeCard.jsx";
 import { MilestonesTableEditCard } from "../../Components/MilestonesTable/MilestonesTableEditCard.jsx";
 
+// @module Projects
 /**
  * MilestonesTableEditPage Component
  *
@@ -12,7 +13,7 @@ import { MilestonesTableEditCard } from "../../Components/MilestonesTable/Milest
  *  with delete and creation functionality
  *
  * @component
- *
+ * @function
  */
 
 
@@ -23,7 +24,7 @@ export const MilestonesTableEditPage = ()  => {
     const [project, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
     userPromise.then(onResolve, onReject)
 
-    if (project) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
+    if (project) {
         return (
 
             <MilestonesTableLargeCard project={project}>

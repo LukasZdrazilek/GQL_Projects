@@ -4,6 +4,7 @@ import { FetchFinanceTypesAsyncAction } from '../../Queries/Finance/FetchFinance
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';
 
+// @module Projects
 /**
  * FinanceEditType Component
  *
@@ -19,7 +20,7 @@ import { useState } from 'react';
  * @param {string} finance.financeType.id - The ID of the current finance type (optional).
  *
  * @returns {JSX.Element} The rendered FinanceEditType component 
- * 
+ * @function
  */
 
 

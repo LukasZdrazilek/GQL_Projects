@@ -4,6 +4,7 @@ import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectB
 import { MilestonesTableLargeCard } from "../../Components/MilestonesTable/MilestonesTableLargeCard.jsx";
 import { MilestonesTableCard } from "../../Components/MilestonesTable/MilestonesTableCard.jsx";
 
+// @module Projects
 /**
  * MilestonesTablePage Component
  *
@@ -11,7 +12,7 @@ import { MilestonesTableCard } from "../../Components/MilestonesTable/Milestones
  * - Retrieving milestones belonging to the project and showing them in a sortable table
  *
  * @component
- *
+ * @function
  */
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milníky", success: "Načtení milníků se povedlo"})
@@ -21,7 +22,7 @@ export const MilestonesTablePage = ()  => {
     const [projects, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
     userPromise.then(onResolve, onReject)
 
-    if (projects) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
+    if (projects) {
         return (
 
             <MilestonesTableLargeCard project={projects}>

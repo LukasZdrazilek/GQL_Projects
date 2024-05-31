@@ -6,6 +6,7 @@ import { RawUpdateProjectAsyncAction} from '../../Queries/Project/UpdateProjectA
 import { ProjectEditType } from './ProjectEditType'
 import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
 
+// @module Projects
 /**
  * ProjectEditCard Component
  *
@@ -22,7 +23,7 @@ import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
  * @param {string} [project.group.id] - group id
  * @param {Date} project.startdate - start date
  * @param {Date} project.enddate - end date
- *.
+ * @function
  */
 
 

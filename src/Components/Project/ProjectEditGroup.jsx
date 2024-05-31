@@ -4,6 +4,7 @@ import { FetchGroupsAsyncAction} from "../../Queries/FetchGroupsAsyncAction.js";
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
 import { useState } from 'react';
 
+// @module Projects
 /**
  * ProjectEditGroup Component
  *
@@ -20,7 +21,7 @@ import { useState } from 'react';
  * @param {string} project.group.id - its id, if any 
  *
  * @returns {JSX.Element} The rendered ProjectEditGroup component, containing the editable dropdown.
- * 
+ * @function
  */
 
 const id = ""

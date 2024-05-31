@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { CreateAsyncQueryValidator } from "@hrbolek/uoisfrontend-shared/src/Store/index.js";
 
+// @module Projects
 /**
  * onClickHandler Function
  *
@@ -15,7 +16,7 @@ import { CreateAsyncQueryValidator } from "@hrbolek/uoisfrontend-shared/src/Stor
  * @param {Function} asyncCreator - A function that takes the data and returns action to be dispatched
  *
  * @returns {Function} An event handler function that can be attached to an onClick event.
- *
+ * @function
  */
 
 const validator = CreateAsyncQueryValidator({error: "Něco se nepovedlo", success: "Objekt vytvořen"})

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Components/Misc/SortableTable.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Components/Misc/SortableTable.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useState } from 'react';
+import { formatDate } from "../Misc/FormatDate.jsx"; // Ensure you import the formatDate function
+import { DeleteButton } from '@hrbolek/uoisfrontend-shared/src/Components/DeleteButton.jsx'
+
+// @module Projects
+/**
+ * SortableTable Component
+ *
+ * Renders a table with sortable columns and optional row editing capabilities.
+ * table data is sorted based on the clicked column header, and
+ * rows are styled based on date comparisons (overdue = red, "active" eg current date before end of project = green
+ * inactive eg, current date otuside of bouns, white).
+ *
+ * @component
+ *
+ * @param {Object[]} columns - array of column objects
+ * @param {string} columns[].key - unique key for the column
+ * @param {string} columns[].label - column headers
+ * @param {Object[]} data - array of objects representing the table rows. The properties of 
+ *                         each object matches the `key` values in the `columns` array.
+ * @param {function} renderRow - function that takes a row object and a column key 
+ *                              and returns the JSX element to be rendered in that cell.
+ * @param {boolean} [edit=false] - if true, adds delete buttons to.
+ *
+ * @returns {JSX.Element} A table element with sortable headers and customizable row content.
+ * @function
+ */
+
+export const SortableTable = ({ columns, data, renderRow, edit = false }) => {
+    const [sortBy, setSortBy] = useState(null);
+    const [sortOrder, setSortOrder] = useState('asc');
+
+    const toggleSortOrder = () => {
+        setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+    };
+
+    const getValueByPath = (obj, path) => {
+        return path.split('.').reduce((acc, key) => acc[key], obj);
+    };
+
+    const sortedData = () => {
+        if (!sortBy) return data;
+
+        return data.slice().sort((a, b) => {
+            const aValue = getValueByPath(a, sortBy);
+            const bValue = getValueByPath(b, sortBy);
+
+            if (aValue &lt; bValue) return sortOrder === 'asc' ? -1 : 1;
+            if (aValue > bValue) return sortOrder === 'asc' ? 1 : -1;
+            return 0;
+        });
+    };
+
+    const handleSort = (column) => {
+        if (sortBy === column) {
+            toggleSortOrder();
+        } else {
+            setSortBy(column);
+            setSortOrder('asc');
+        }
+    };
+
+    const getRowClass = (startdate, enddate) => {
+        const today = new Date();
+        const startDate = new Date(startdate);
+        const endDate = new Date(enddate);
+
+        if (endDate &lt; today) {
+            return 'table-danger';
+        } else if (startDate &lt;= today &amp;&amp; endDate >= today) {
+            return 'table-success';
+        } else {
+            return '';
+        }
+    };
+
+    return (
+        &lt;table className="table">
+            &lt;thead>
+            &lt;tr>
+                {columns.map((column) => (
+                    &lt;th key={column.key} onClick={() => handleSort(column.key)} className="sortable-header">
+                        {column.label}
+                    &lt;/th>
+                ))}
+                {edit &amp;&amp; (
+                    &lt;td>
+                        &lt;DeleteButton onClick={"#"}>Smazat vše&lt;/DeleteButton>
+                    &lt;/td>
+                )}
+            &lt;/tr>
+            &lt;/thead>
+            &lt;tbody>
+            {sortedData().map((row, index) => (
+                &lt;tr key={index} className={getRowClass(row.startdate, row.enddate)}>
+                    {columns.map((column) => (
+                        &lt;td key={column.key}>{renderRow(row, column.key)}&lt;/td>
+                    ))}
+                    {edit &amp;&amp; (
+                        &lt;td>
+                            &lt;DeleteButton onClick={"#"}>Smazat&lt;/DeleteButton>
+                        &lt;/td>
+                    )}
+
+                &lt;/tr>
+            ))}
+            &lt;/tbody>
+        &lt;/table>
+    );
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#CreateButton">CreateButton</a></li><li><a href="global.html#CreateFinanceAsyncAction">CreateFinanceAsyncAction</a></li><li><a href="global.html#CreateMilestoneAsyncAction">CreateMilestoneAsyncAction</a></li><li><a href="global.html#CreateProjectAsyncAction">CreateProjectAsyncAction</a></li><li><a href="global.html#DeleteButton">DeleteButton</a></li><li><a href="global.html#FetchFinanceByIdAsyncAction">FetchFinanceByIdAsyncAction</a></li><li><a href="global.html#FetchFinanceTypesAsyncAction">FetchFinanceTypesAsyncAction</a></li><li><a href="global.html#FetchMilestoneByIdAsyncAction">FetchMilestoneByIdAsyncAction</a></li><li><a href="global.html#FetchMilestonePage">FetchMilestonePage</a></li><li><a href="global.html#FetchProjectByIdAsyncAction">FetchProjectByIdAsyncAction</a></li><li><a href="global.html#FetchProjectMilestonesAsyncAction">FetchProjectMilestonesAsyncAction</a></li><li><a href="global.html#FetchProjectTypesAsyncAction">FetchProjectTypesAsyncAction</a></li><li><a href="global.html#FetchProjectsAsyncAction">FetchProjectsAsyncAction</a></li><li><a href="global.html#FinanceCreateLink">FinanceCreateLink</a></li><li><a href="global.html#FinanceEditCard">FinanceEditCard</a></li><li><a href="global.html#FinanceLargeCard">FinanceLargeCard</a></li><li><a href="global.html#FinanceLink">FinanceLink</a></li><li><a href="global.html#FinanceMediumCard">FinanceMediumCard</a></li><li><a href="global.html#FinancesTableCard">FinancesTableCard</a></li><li><a href="global.html#FinancesTableEditCard">FinancesTableEditCard</a></li><li><a href="global.html#FinancesTableLargeCard">FinancesTableLargeCard</a></li><li><a href="global.html#MilestoneCreateLink">MilestoneCreateLink</a></li><li><a href="global.html#MilestoneEditCard">MilestoneEditCard</a></li><li><a href="global.html#MilestoneLargeCard">MilestoneLargeCard</a></li><li><a href="global.html#MilestoneLink">MilestoneLink</a></li><li><a href="global.html#MilestoneMediumCard">MilestoneMediumCard</a></li><li><a href="global.html#MilestonesTableCard">MilestonesTableCard</a></li><li><a href="global.html#MilestonesTableEditCard">MilestonesTableEditCard</a></li><li><a href="global.html#ProjectCreateLink">ProjectCreateLink</a></li><li><a href="global.html#ProjectEditCard">ProjectEditCard</a></li><li><a href="global.html#ProjectEditLargeCard">ProjectEditLargeCard</a></li><li><a href="global.html#ProjectLargeCard">ProjectLargeCard</a></li><li><a href="global.html#ProjectLink">ProjectLink</a></li><li><a href="global.html#ProjectMediumCard">ProjectMediumCard</a></li><li><a href="global.html#ProjectsTableCard">ProjectsTableCard</a></li><li><a href="global.html#ProjectsTableEditCard">ProjectsTableEditCard</a></li><li><a href="global.html#RawUpdateFinanceAsyncAction">RawUpdateFinanceAsyncAction</a></li><li><a href="global.html#RawUpdateMilestoneAsyncAction">RawUpdateMilestoneAsyncAction</a></li><li><a href="global.html#RawUpdateProjectAsyncAction">RawUpdateProjectAsyncAction</a></li><li><a href="global.html#SortableTable">SortableTable</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#formatDateTime">formatDateTime</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#id">id</a></li><li><a href="global.html#validator">validator</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri May 31 2024 08:48:43 GMT+0200 (středoevropský letní čas)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

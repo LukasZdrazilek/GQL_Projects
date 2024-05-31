@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * CreateProjectAsyncAction
  *
@@ -16,7 +17,7 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  *
  * @returns {Function} asynchronous action that dispatches the query
  *                     and handles success or error responses.
-
+ * @function
  */
 
 const mutation =

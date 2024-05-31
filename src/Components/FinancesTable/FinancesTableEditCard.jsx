@@ -5,6 +5,7 @@ import { SortableTable } from '../Misc/SortableTable.jsx'
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateFinanceAsyncAction } from "../../Queries/Finance/CreateFinanceAsyncAction.js";
 
+// @module Projects
 /**
  * FinancesTableEditCard Component
  *
@@ -20,7 +21,7 @@ import { CreateFinanceAsyncAction } from "../../Queries/Finance/CreateFinanceAsy
  * @param {string} project.finances[].financeType[].name - finance type
  *
  * @returns {JSX.Element} component containing a SortableTable with additional create button
- *
+ * @function
  */
 
 

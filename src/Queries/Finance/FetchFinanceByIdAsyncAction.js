@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * FetchFinanceByIdAsyncAction
  *
@@ -10,6 +11,7 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
  * @param {string} params.id - uuid to be fetched
  *
  * @returns {Function} action that dispatches the query and handles success or error response
+ * @function
 */
 
 const query = `query ($id: UUID!) 

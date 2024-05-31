@@ -3,6 +3,7 @@ import { ProjectsTableEditCard } from "../../Components/ProjectsTable/ProjectsTa
 import { FetchProjectsAsyncAction} from "../../Queries/Project/FetchProjectsAsynsAction.js";
 import {useFreshItem } from "@hrbolek/uoisfrontend-shared/src";
 
+// @module Projects
 /**
  * ProjectsTableEditPage Component
  *
@@ -11,7 +12,7 @@ import {useFreshItem } from "@hrbolek/uoisfrontend-shared/src";
  * with delete and creation functionality
  *
  * @component
- *
+ * @function
  */
 
 const id = ""

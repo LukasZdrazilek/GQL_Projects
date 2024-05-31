@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * FetchProjectByIdAsyncAction
  *
@@ -15,6 +16,7 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
  *
  * @returns {Function} action that dispatches query and handles success or error responses
  *                     action will contain the fetched project data in the `data.result` 
+ * @function
  */
 
 const query = `query ($id: UUID!) {

@@ -5,6 +5,7 @@ import { RawUpdateFinanceAsyncAction, ChangedUpdateFinanceAsyncAction } from '..
 import { FinanceEditType } from './FinanceEditType'
 import { DeleteButton } from '../Misc/DeleteButton'
 
+// @module Projects
 /**
  * FinanceEditCard Component
  * 
@@ -23,6 +24,7 @@ import { DeleteButton } from '../Misc/DeleteButton'
  * @remarks
  * -  placeholder for the delete action. The actual
  *   `deleteMilestoneAsyncAction` is MIA 
+ * @function
  */
 
 export const FinanceEditCard = ({finance}) => {
