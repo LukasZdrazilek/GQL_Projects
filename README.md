@@ -22,7 +22,7 @@ ________________________________________________________________________
 - [x] Seřazování u milníků a financí a projektů
 - [x] Zobrazení předchozího a následujícího milníku u milestones view
 - [x] Úprava data u milestones
-- [ ] Úprava násled. a předchoz. milníku u milestones edit viz MilestoneLinkAdd query
+- [x] Úprava násled. a předchoz. milníku u milestones edit viz MilestoneLinkAdd query
 - [x] Dodělat view u finances a milestones
 - [x] Vytvořeny queries na vytváření projektů, financí a milníků
 - [x] Roztřídit queries do složek podle zaměření (Project/, Finance/, Milestone/, ...)
@@ -32,7 +32,7 @@ ________________________________________________________________________
 - [x] Přidání milestone a finance view page
 - [x] Přidání odkazu do dropdownu
 - [x] Odstranit pravý MediumCard
-- [x] Udělat JSDOC komentáře
+- [ ] Udělat JSDOC komentáře
 - [x] Přidat index.js do všech komponent (export *)
 
 ________________________________________________________________________
