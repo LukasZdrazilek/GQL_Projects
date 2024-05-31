@@ -57,7 +57,7 @@ export const MilestonesTableEditCard = ({ project }) => {
 
     return (
         <div className="form-floating">
-            <CardCapsule title="Milníky">
+            <CardCapsule title={<>Milníky pro: <MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink></>}>
                 <SortableTable
                     columns={columns}
                     data={project?.milestones}
