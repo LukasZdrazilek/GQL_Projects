@@ -1,9 +1,14 @@
-import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
+import {CardCapsule, EditableAttributeText} from '@hrbolek/uoisfrontend-shared/src'
 import { formatNumber } from '../Misc/FormatNumber.jsx'
 import { FinanceLink, FinanceCreateLink} from '../Finance/FinanceLink.jsx'
 import { SortableTable } from '../Misc/SortableTable.jsx'
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateFinanceAsyncAction } from "../../Queries/Finance/CreateFinanceAsyncAction.js";
+import {
+    ChangedUpdateFinanceAsyncAction,
+    RawUpdateFinanceAsyncAction
+} from "../../Queries/Finance/UpdateFinanceAsyncAction.js";
+import {FinanceEditType} from "../Finance/FinanceEditType.jsx";
 
 /**
  * FinancesTableEditCard Component
@@ -38,11 +43,11 @@ export const FinancesTableEditCard = ({project}) => {
 
     const renderRow = (row, columnKey) => {
         if (columnKey === 'name') {
-            return <FinanceLink finance={row} menu={true}></FinanceLink>;
+            return <EditableAttributeText item={row} attributeName="name" label="Název" asyncUpdater={RawUpdateFinanceAsyncAction} />;
         } else if (columnKey === 'financeType') {
-            return row.financeType.map((type) => type.name).join(', ');
-        } else {
-            return formatNumber(row[columnKey]) + ' Kč';
+            return <FinanceEditType finance={row} />;
+        } else if (columnKey === 'amount') {
+            return <EditableAttributeText item={row} attributeName="amount" label="Rozpočet" asyncUpdater={ChangedUpdateFinanceAsyncAction} type="number" />;
         }
     };
 

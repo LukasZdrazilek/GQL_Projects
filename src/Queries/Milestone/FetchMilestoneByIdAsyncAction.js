@@ -33,6 +33,14 @@ const query = `query ($id: UUID!)
         name
         startdate
         enddate
+        previous
+        {
+        id
+        }
+        nexts
+        {
+        id
+        }
         }
       }
       previous

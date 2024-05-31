@@ -13,7 +13,7 @@ import { ProjectLink } from '../Project/ProjectLink'
  * 
  * @component
  *
- * @param {Object} milestone - milestone object from @query
+ * @param {T} milestone - milestone object from @query
  * @param {string} milestone.name - name
  * @param {Object} milestone.project - parent project to which the milestone belongs
  * @param {Date} milestone.startdate - start date

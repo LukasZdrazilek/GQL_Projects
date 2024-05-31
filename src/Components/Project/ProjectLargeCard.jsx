@@ -39,10 +39,8 @@ export const ProjectLargeCard = ({project, children}) => {
             <Col md={4}>
                 <FinancesTableCard project={project} />
             </Col>
-            
         </Row>
     </CardCapsule>
-
     )
 }
 

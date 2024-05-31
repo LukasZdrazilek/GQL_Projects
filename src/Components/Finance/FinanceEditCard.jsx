@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col'
 import { RawUpdateFinanceAsyncAction, ChangedUpdateFinanceAsyncAction } from '../../Queries/Finance/UpdateFinanceAsyncAction'
 import { FinanceEditType } from './FinanceEditType'
 import { DeleteButton } from '../Misc/DeleteButton'
+import { FinanceLink } from "./FinanceLink.jsx";
 
 /**
  * FinanceEditCard Component
@@ -38,7 +39,7 @@ export const FinanceEditCard = ({finance}) => {
     };
 
     return (
-        <CardCapsule title={"Finance " + finance?.name + " - atributy"}>
+        <CardCapsule title={<>Finance: <FinanceLink finance={finance} menu={true} /></>}>
             
             <Row>
                 <Col>

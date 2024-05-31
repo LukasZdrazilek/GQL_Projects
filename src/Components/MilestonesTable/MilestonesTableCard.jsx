@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { MilestoneCreateLink, MilestoneLink } from "../Milestone/MilestoneLink.jsx";
 import { formatDate } from "../Misc/FormatDate.jsx";
 import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
 import { SortableTable } from "../Misc/SortableTable.jsx";
+import { FrappeGantt } from "../Misc/FrappeGantt.jsx"
 
 /**
  * MilestonesTableEditCard Component
@@ -21,6 +23,7 @@ import { SortableTable } from "../Misc/SortableTable.jsx";
  */
 
 export const MilestonesTableCard = ({ project }) => {
+    const [viewMode, setViewMode] = useState('table');
     const columns = [
         { key: 'name', label: 'Milníky' },
         { key: 'startdate', label: 'Počátek' },
@@ -35,13 +38,31 @@ export const MilestonesTableCard = ({ project }) => {
         }
     };
 
+    const milestones = project.milestones.map(item => ({
+        id: item.id,
+        name: item.name,
+        start: item.startdate,
+        end: item.enddate,
+        dependencies: item.previous.map(dep => dep.id).join(", ") || ""
+    }));
+
     return (
-        <CardCapsule title={<>Milníky pro: <MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink></>}>
-            <SortableTable
-                columns={columns}
-                data={project?.milestones}
-                renderRow={renderRow}
-            />
+        <>
+        <CardCapsule title={<>Milníky pro: <MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink>
+            <button className='btn btn-light' onClick={() => setViewMode(viewMode === 'table' ? 'gantt' : 'table')}>
+                {viewMode === 'table' ? 'Přepnout na Ganttův diagram' : 'Přepnout na tabulku'}
+            </button>
+            </>}>
+            {viewMode === 'table' ? (
+                <SortableTable
+                    columns={columns}
+                    data={project?.milestones}
+                    renderRow={renderRow}
+                />
+            ) : (
+                <FrappeGantt tasks={milestones} />
+            )}
         </CardCapsule>
+        </>
     );
 };

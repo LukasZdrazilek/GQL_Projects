@@ -1,9 +1,12 @@
-import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src';
+import {CardCapsule, EditableAttributeText} from '@hrbolek/uoisfrontend-shared/src';
 import { ProjectLink, ProjectCreateLink } from '../Project/ProjectLink.jsx';
 import { formatDate } from '../Misc/FormatDate.jsx';
 import { SortableTable } from '../Misc/SortableTable.jsx';
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateProjectAsyncAction } from "../../Queries/Project/CreateProjectAsyncAction.js";
+import {RawUpdateProjectAsyncAction} from "../../Queries/Project/UpdateProjectAsyncAction.js";
+import {ProjectEditType} from "../Project/ProjectEditType.jsx";
+import {ProjectEditGroup} from "../Project/ProjectEditGroup.jsx";
 
 /**
  * ProjectsTableEditCard Component
@@ -34,18 +37,21 @@ export const ProjectsTableEditCard = ({projects}) => {
         { key: 'name', label: 'Projekt' },
         { key: 'projectType.name', label: 'Typ' },
         { key: 'group.name', label: 'Tým' },
-        { key: 'lastchange', label: 'Datum změny' }
+        { key: 'startdate', label: 'Začátek' },
+        { key: 'enddate', label: 'Konec' },
     ];
 
     const renderRow = (project, columnKey) => {
         if (columnKey === 'name') {
-            return <ProjectLink project={project} menu={true}></ProjectLink>;
-        } else if (columnKey === 'lastchange') {
-            return formatDate(project.lastchange);
+            return <EditableAttributeText item={project} attributeName="name" label="Název" asyncUpdater={RawUpdateProjectAsyncAction} />;
+        } else if (columnKey === 'startdate') {
+            return <EditableAttributeText item={project} attributeName="startdate" label="Datum zahájení" asyncUpdater={RawUpdateProjectAsyncAction} type="datetime-local" />;
+        } else if (columnKey === 'enddate') {
+            return <EditableAttributeText item={project} attributeName="enddate" label="Datum ukončení" asyncUpdater={RawUpdateProjectAsyncAction} type="datetime-local" />;
         } else if (columnKey === 'projectType.name') {
-            return project.projectType.name;
+            return <ProjectEditType project={project} />;
         } else if (columnKey === 'group.name') {
-            return project.group?.name;
+            return <ProjectEditGroup project={project} />;
         } else {
             return '';
         }
