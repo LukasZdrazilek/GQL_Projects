@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 
+// @module Projects
 /**
  * DeleteButton Component
  *
@@ -19,6 +20,7 @@ import React, { useState, useCallback } from 'react';
  *                  red/danger button to confirm onClick event to occur
  * 3.1 Second Click (Cancel):  Returns to the initial state with single button
  * 3.2 Second Click (Confirm): Executes the `onClick` function
+ * @function
  */
 
 export const DeleteButton = ({children, onClick}) => 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Queries/Finance/CreateFinanceAsyncAction.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Queries/Finance/CreateFinanceAsyncAction.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
+
+// @module Projects
+/**
+ * CreateFinanceAsyncAction
+ *
+ * asynchronous action creator function for creating a new finance object
+ *
+ * `financeInsert` creates a new finance associated with the
+ * specified project and finance type, and returns the details of new object as message
+ *
+ * @function CreateFinanceAsyncAction
+ *
+ * @param {Object} data -  data object 
+ * @param {string} data.project_id - UUID of the project
+ * @param {string} data.name - name of the new finance object
+ * @param {string} data.financeType_id - UUID of the finance type for the new finance
+ *
+ * @returns {Function} A Redux-Thunk asynchronous action that dispatches the GraphQL mutation
+ *                     and handles success or error responses.
+ * @function
+ */
+
+const mutation =
+    `
+mutation($project_id: UUID!, $name: String!, $financeType_id: UUID!) {
+  result: financeInsert(finance: {
+    projectId: $project_id,
+    name: $name,
+    financetypeId: $financeType_id
+  }) {
+    id
+    msg
+    result: finance {
+      name
+      financeType {
+        id
+      }
+      project
+      {
+        id
+      }
+    }
+  }
+}
+`
+
+export const CreateFinanceAsyncAction = CreateAsyncActionFromMutation(mutation)
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#CreateButton">CreateButton</a></li><li><a href="global.html#CreateFinanceAsyncAction">CreateFinanceAsyncAction</a></li><li><a href="global.html#CreateMilestoneAsyncAction">CreateMilestoneAsyncAction</a></li><li><a href="global.html#CreateProjectAsyncAction">CreateProjectAsyncAction</a></li><li><a href="global.html#DeleteButton">DeleteButton</a></li><li><a href="global.html#FetchFinanceByIdAsyncAction">FetchFinanceByIdAsyncAction</a></li><li><a href="global.html#FetchFinanceTypesAsyncAction">FetchFinanceTypesAsyncAction</a></li><li><a href="global.html#FetchMilestoneByIdAsyncAction">FetchMilestoneByIdAsyncAction</a></li><li><a href="global.html#FetchMilestonePage">FetchMilestonePage</a></li><li><a href="global.html#FetchProjectByIdAsyncAction">FetchProjectByIdAsyncAction</a></li><li><a href="global.html#FetchProjectMilestonesAsyncAction">FetchProjectMilestonesAsyncAction</a></li><li><a href="global.html#FetchProjectTypesAsyncAction">FetchProjectTypesAsyncAction</a></li><li><a href="global.html#FetchProjectsAsyncAction">FetchProjectsAsyncAction</a></li><li><a href="global.html#FinanceCreateLink">FinanceCreateLink</a></li><li><a href="global.html#FinanceEditCard">FinanceEditCard</a></li><li><a href="global.html#FinanceLargeCard">FinanceLargeCard</a></li><li><a href="global.html#FinanceLink">FinanceLink</a></li><li><a href="global.html#FinanceMediumCard">FinanceMediumCard</a></li><li><a href="global.html#FinancesTableCard">FinancesTableCard</a></li><li><a href="global.html#FinancesTableEditCard">FinancesTableEditCard</a></li><li><a href="global.html#FinancesTableLargeCard">FinancesTableLargeCard</a></li><li><a href="global.html#MilestoneCreateLink">MilestoneCreateLink</a></li><li><a href="global.html#MilestoneEditCard">MilestoneEditCard</a></li><li><a href="global.html#MilestoneLargeCard">MilestoneLargeCard</a></li><li><a href="global.html#MilestoneLink">MilestoneLink</a></li><li><a href="global.html#MilestoneMediumCard">MilestoneMediumCard</a></li><li><a href="global.html#MilestonesTableCard">MilestonesTableCard</a></li><li><a href="global.html#MilestonesTableEditCard">MilestonesTableEditCard</a></li><li><a href="global.html#ProjectCreateLink">ProjectCreateLink</a></li><li><a href="global.html#ProjectEditCard">ProjectEditCard</a></li><li><a href="global.html#ProjectEditLargeCard">ProjectEditLargeCard</a></li><li><a href="global.html#ProjectLargeCard">ProjectLargeCard</a></li><li><a href="global.html#ProjectLink">ProjectLink</a></li><li><a href="global.html#ProjectMediumCard">ProjectMediumCard</a></li><li><a href="global.html#ProjectsTableCard">ProjectsTableCard</a></li><li><a href="global.html#ProjectsTableEditCard">ProjectsTableEditCard</a></li><li><a href="global.html#RawUpdateFinanceAsyncAction">RawUpdateFinanceAsyncAction</a></li><li><a href="global.html#RawUpdateMilestoneAsyncAction">RawUpdateMilestoneAsyncAction</a></li><li><a href="global.html#RawUpdateProjectAsyncAction">RawUpdateProjectAsyncAction</a></li><li><a href="global.html#SortableTable">SortableTable</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#formatDateTime">formatDateTime</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#id">id</a></li><li><a href="global.html#validator">validator</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri May 31 2024 08:48:43 GMT+0200 (středoevropský letní čas)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

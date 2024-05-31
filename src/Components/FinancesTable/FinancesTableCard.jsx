@@ -3,6 +3,8 @@ import { formatNumber } from '../Misc/FormatNumber.jsx'
 import { FinanceLink, FinanceCreateLink} from '../Finance/FinanceLink.jsx'
 import { SortableTable } from '../Misc/SortableTable.jsx'
 
+
+ // @module Projects
 /**
  * FinancesTableCard Component
  *
@@ -17,7 +19,7 @@ import { SortableTable } from '../Misc/SortableTable.jsx'
  * @param {string} project.finances[].financeType[].name - finance type
  *
  * @returns {JSX.Element} component containing a SortableTable for displaying the finances.
- *
+ * @function
  */
 
 export const FinancesTableCard = ({project}) => {

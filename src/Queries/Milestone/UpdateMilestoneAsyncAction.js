@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * RawUpdateMilestoneAsyncAction
  *
@@ -21,6 +22,7 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  *
  * @returns {Function} action that dispatches the GraphQL mutation 
  *                     and handles success or error responses.
+ * @function
  */
 
 const mutation =

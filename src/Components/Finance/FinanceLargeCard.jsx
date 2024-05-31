@@ -5,6 +5,7 @@ import { FinanceMediumCard } from './FinanceMediumCard'
 import { ProjectLink } from "../Project/ProjectLink.jsx";
 import { FinancesTableCard } from "../FinancesTable/FinancesTableCard.jsx";
 
+// @module Projects
 /**
  * FinanceLargeCard Component
  * 
@@ -19,6 +20,7 @@ import { FinancesTableCard } from "../FinancesTable/FinancesTableCard.jsx";
  * @param {ReactNode} children - Additional content (e.g., charts, graphs, or extra details) to be rendered alongside the finance details and project finances table.
  * 
  * @returns {JSX.Element} The rendered FinanceLargeCard component.
+ * @function
  */
 
 export const FinanceLargeCard = ({finance, children}) => {

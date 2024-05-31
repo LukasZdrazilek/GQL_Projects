@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Components/Project/ProjectEditGroup.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Components/Project/ProjectEditGroup.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {EditableAttributeSelect } from '@hrbolek/uoisfrontend-shared/src';
+import {RawUpdateProjectAsyncAction } from '../../Queries/Project/UpdateProjectAsyncAction'
+import { FetchGroupsAsyncAction} from "../../Queries/FetchGroupsAsyncAction.js";
+import { useFreshItem, CreateAsyncQueryValidator, useDispatch  } from '@hrbolek/uoisfrontend-shared/src';
+import { useState } from 'react';
+
+// @module Projects
+/**
+ * ProjectEditGroup Component
+ *
+ * Provides an editable dropdown (`EditableAttributeSelect`) to modify the group
+ * associated with a given project. 
+ * It fetches all available groups, populates the dropdown, 
+ * and handles updating the project's group on the server using asynchronous actions.
+ *
+ * @component
+ *
+ * @param {Object} project - project objected
+ * @param {string} project.id - its ID 
+ * @param {Object} project.group - current group
+ * @param {string} project.group.id - its id, if any 
+ *
+ * @returns {JSX.Element} The rendered ProjectEditGroup component, containing the editable dropdown.
+ * @function
+ */
+
+const id = ""
+export const ProjectEditGroup = ({project}) => {
+    const [groups, groupsPromise] = useFreshItem({id}, FetchGroupsAsyncAction)
+    const [groupsdata, setThem] = useState([])
+    groupsPromise.then(json =>
+    {
+        console.log(json)
+        const r = json?.data?.result
+        if (r)
+        {
+            setThem(r)
+            console.log(r)
+        }
+    })
+    const projectEx = { ...project, group_id: project?.group?.id};
+
+    return (
+        &lt;div>
+            &lt;EditableAttributeSelect item={projectEx} attributeName="group_id" label="Tým" asyncUpdater={RawUpdateProjectAsyncAction}>
+                {groupsdata.map(et => &lt;option key= {et.id} value={et.id}>{et.name}&lt;/option>)}
+            &lt;/EditableAttributeSelect>
+        &lt;/div>
+    );
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#CreateButton">CreateButton</a></li><li><a href="global.html#CreateFinanceAsyncAction">CreateFinanceAsyncAction</a></li><li><a href="global.html#CreateMilestoneAsyncAction">CreateMilestoneAsyncAction</a></li><li><a href="global.html#CreateProjectAsyncAction">CreateProjectAsyncAction</a></li><li><a href="global.html#DeleteButton">DeleteButton</a></li><li><a href="global.html#FetchFinanceByIdAsyncAction">FetchFinanceByIdAsyncAction</a></li><li><a href="global.html#FetchFinanceTypesAsyncAction">FetchFinanceTypesAsyncAction</a></li><li><a href="global.html#FetchMilestoneByIdAsyncAction">FetchMilestoneByIdAsyncAction</a></li><li><a href="global.html#FetchMilestonePage">FetchMilestonePage</a></li><li><a href="global.html#FetchProjectByIdAsyncAction">FetchProjectByIdAsyncAction</a></li><li><a href="global.html#FetchProjectMilestonesAsyncAction">FetchProjectMilestonesAsyncAction</a></li><li><a href="global.html#FetchProjectTypesAsyncAction">FetchProjectTypesAsyncAction</a></li><li><a href="global.html#FetchProjectsAsyncAction">FetchProjectsAsyncAction</a></li><li><a href="global.html#FinanceCreateLink">FinanceCreateLink</a></li><li><a href="global.html#FinanceEditCard">FinanceEditCard</a></li><li><a href="global.html#FinanceLargeCard">FinanceLargeCard</a></li><li><a href="global.html#FinanceLink">FinanceLink</a></li><li><a href="global.html#FinanceMediumCard">FinanceMediumCard</a></li><li><a href="global.html#FinancesTableCard">FinancesTableCard</a></li><li><a href="global.html#FinancesTableEditCard">FinancesTableEditCard</a></li><li><a href="global.html#FinancesTableLargeCard">FinancesTableLargeCard</a></li><li><a href="global.html#MilestoneCreateLink">MilestoneCreateLink</a></li><li><a href="global.html#MilestoneEditCard">MilestoneEditCard</a></li><li><a href="global.html#MilestoneLargeCard">MilestoneLargeCard</a></li><li><a href="global.html#MilestoneLink">MilestoneLink</a></li><li><a href="global.html#MilestoneMediumCard">MilestoneMediumCard</a></li><li><a href="global.html#MilestonesTableCard">MilestonesTableCard</a></li><li><a href="global.html#MilestonesTableEditCard">MilestonesTableEditCard</a></li><li><a href="global.html#ProjectCreateLink">ProjectCreateLink</a></li><li><a href="global.html#ProjectEditCard">ProjectEditCard</a></li><li><a href="global.html#ProjectEditLargeCard">ProjectEditLargeCard</a></li><li><a href="global.html#ProjectLargeCard">ProjectLargeCard</a></li><li><a href="global.html#ProjectLink">ProjectLink</a></li><li><a href="global.html#ProjectMediumCard">ProjectMediumCard</a></li><li><a href="global.html#ProjectsTableCard">ProjectsTableCard</a></li><li><a href="global.html#ProjectsTableEditCard">ProjectsTableEditCard</a></li><li><a href="global.html#RawUpdateFinanceAsyncAction">RawUpdateFinanceAsyncAction</a></li><li><a href="global.html#RawUpdateMilestoneAsyncAction">RawUpdateMilestoneAsyncAction</a></li><li><a href="global.html#RawUpdateProjectAsyncAction">RawUpdateProjectAsyncAction</a></li><li><a href="global.html#SortableTable">SortableTable</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#formatDateTime">formatDateTime</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#id">id</a></li><li><a href="global.html#validator">validator</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri May 31 2024 08:48:43 GMT+0200 (středoevropský letní čas)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

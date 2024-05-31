@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { formatDate } from "../Misc/FormatDate.jsx"; // Ensure you import the formatDate function
 import { DeleteButton } from '@hrbolek/uoisfrontend-shared/src/Components/DeleteButton.jsx'
 
+// @module Projects
 /**
  * SortableTable Component
  *
@@ -22,6 +23,7 @@ import { DeleteButton } from '@hrbolek/uoisfrontend-shared/src/Components/Delete
  * @param {boolean} [edit=false] - if true, adds delete buttons to.
  *
  * @returns {JSX.Element} A table element with sortable headers and customizable row content.
+ * @function
  */
 
 export const SortableTable = ({ columns, data, renderRow, edit = false }) => {

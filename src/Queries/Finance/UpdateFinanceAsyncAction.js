@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * RawUpdateFinanceAsyncAction
  *
@@ -22,6 +23,7 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  * @returns {Function}  action that dispatches the query
  */
 
+// @module Projects
 /**
  * ChangedUpdateFinanceAsyncAction
  *
@@ -43,6 +45,7 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  * @param {number} [data.amount] - new amount
  *
  * @returns {Function}  action that dispatches the query
+ * @function
  */
 
 const mutation =

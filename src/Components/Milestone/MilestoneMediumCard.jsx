@@ -6,6 +6,7 @@ import { formatDate } from '../Misc/FormatDate'
 import { MilestoneLink } from '../Milestone/MilestoneLink'
 import { ProjectLink } from '../Project/ProjectLink'
 
+// @module Projects
 /**
  * MilestoneMediumCard Component
  *
@@ -22,6 +23,7 @@ import { ProjectLink } from '../Project/ProjectLink'
  * @param {Object[]} milestone.nexts - following milestones as list
  * 
  * @returns {JSX.Element} The rendered MilestoneMediumCard component.
+ * @function
  */
 
 export const MilestoneMediumCard = ({milestone}) => {

@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * FetchFinanceTypesAsyncAction
  *
@@ -10,6 +11,7 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
  *
  * @returns {Function} Aaction that dispatches the GraphQL query and handles 
  *                     success or error responses
+ * @function
  */
 
 const query = `{

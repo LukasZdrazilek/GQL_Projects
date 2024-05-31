@@ -1,3 +1,4 @@
+// @module Projects
 /**
  * Formats a date-time string for display.
  *
@@ -11,6 +12,7 @@
  *
  * @returns {string} formatted date-time string in the format "DD. MM. YYYY HH:MM:SS"
  *                   (e.g., "25. 05. 2024 14:30:00") or empty string if the input is invalid or empty.
+ * @function
  */
 
 export const formatDateTime = (dateString) => {

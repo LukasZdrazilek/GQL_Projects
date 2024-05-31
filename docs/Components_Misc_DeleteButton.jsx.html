@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Components/Misc/DeleteButton.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Components/Misc/DeleteButton.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState, useCallback } from 'react';
+
+// @module Projects
+/**
+ * DeleteButton Component
+ *
+ * A button that implements a double-confirmation mechanism before triggering the
+ * provided `onClick` action. Failsafe against accidental deletion
+ *
+ * @component
+ *
+ * @param {ReactNode} children - The text or content to display within the button
+ * @param {function} onClick - The function to be called when the delete action is confirmed
+ *
+ * @returns {JSX.Element} A button element that implements double confirmation.
+ *
+ * @behavior
+ * 1. Initial State:  Displays a single yellow/warning button with the `children` text, for example delete
+ * 2. First Click:  Replaces the button with two buttons: yellow/warning button to cancel and a 
+ *                  red/danger button to confirm onClick event to occur
+ * 3.1 Second Click (Cancel):  Returns to the initial state with single button
+ * 3.2 Second Click (Confirm): Executes the `onClick` function
+ * @function
+ */
+
+export const DeleteButton = ({children, onClick}) => 
+    {
+        // vnitrni stavova promenna definujici. zda je cervene tlacitko zobrazene nebo neni
+        const [state, setState] = useState(0);
+
+        // nastavi, ze se cervene tlacitko nezobrazuje
+        const setState0 = useCallback(() => setState(0), [])
+
+        // nastavi, ze se cervene tlacitko zobrazuje
+        const setState1 = useCallback(() => setState(1), []) // nebo bez []
+
+        if (state === 0)
+            { // cervene tlacitko nema byt zobrazeno
+                return (&lt;button className = 'btn btn-sm btn-warning' onClick = {setState1}>{children}&lt;/button>)
+            }
+        else
+        { // cervene tlacitko ma byt zobrazeno
+            return (
+                &lt;>
+                    &lt;button className = 'btn btn-sm btn-warning' onClick = {setState0}>{children}&lt;/button>
+                    &lt;button className = 'btn btn-sm btn-danger' onClick = {onClick}>{children}&lt;/button>
+                &lt;/>
+            )
+        }
+    }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#CreateButton">CreateButton</a></li><li><a href="global.html#CreateFinanceAsyncAction">CreateFinanceAsyncAction</a></li><li><a href="global.html#CreateMilestoneAsyncAction">CreateMilestoneAsyncAction</a></li><li><a href="global.html#CreateProjectAsyncAction">CreateProjectAsyncAction</a></li><li><a href="global.html#DeleteButton">DeleteButton</a></li><li><a href="global.html#FetchFinanceByIdAsyncAction">FetchFinanceByIdAsyncAction</a></li><li><a href="global.html#FetchFinanceTypesAsyncAction">FetchFinanceTypesAsyncAction</a></li><li><a href="global.html#FetchMilestoneByIdAsyncAction">FetchMilestoneByIdAsyncAction</a></li><li><a href="global.html#FetchMilestonePage">FetchMilestonePage</a></li><li><a href="global.html#FetchProjectByIdAsyncAction">FetchProjectByIdAsyncAction</a></li><li><a href="global.html#FetchProjectMilestonesAsyncAction">FetchProjectMilestonesAsyncAction</a></li><li><a href="global.html#FetchProjectTypesAsyncAction">FetchProjectTypesAsyncAction</a></li><li><a href="global.html#FetchProjectsAsyncAction">FetchProjectsAsyncAction</a></li><li><a href="global.html#FinanceCreateLink">FinanceCreateLink</a></li><li><a href="global.html#FinanceEditCard">FinanceEditCard</a></li><li><a href="global.html#FinanceLargeCard">FinanceLargeCard</a></li><li><a href="global.html#FinanceLink">FinanceLink</a></li><li><a href="global.html#FinanceMediumCard">FinanceMediumCard</a></li><li><a href="global.html#FinancesTableCard">FinancesTableCard</a></li><li><a href="global.html#FinancesTableEditCard">FinancesTableEditCard</a></li><li><a href="global.html#FinancesTableLargeCard">FinancesTableLargeCard</a></li><li><a href="global.html#MilestoneCreateLink">MilestoneCreateLink</a></li><li><a href="global.html#MilestoneEditCard">MilestoneEditCard</a></li><li><a href="global.html#MilestoneLargeCard">MilestoneLargeCard</a></li><li><a href="global.html#MilestoneLink">MilestoneLink</a></li><li><a href="global.html#MilestoneMediumCard">MilestoneMediumCard</a></li><li><a href="global.html#MilestonesTableCard">MilestonesTableCard</a></li><li><a href="global.html#MilestonesTableEditCard">MilestonesTableEditCard</a></li><li><a href="global.html#ProjectCreateLink">ProjectCreateLink</a></li><li><a href="global.html#ProjectEditCard">ProjectEditCard</a></li><li><a href="global.html#ProjectEditLargeCard">ProjectEditLargeCard</a></li><li><a href="global.html#ProjectLargeCard">ProjectLargeCard</a></li><li><a href="global.html#ProjectLink">ProjectLink</a></li><li><a href="global.html#ProjectMediumCard">ProjectMediumCard</a></li><li><a href="global.html#ProjectsTableCard">ProjectsTableCard</a></li><li><a href="global.html#ProjectsTableEditCard">ProjectsTableEditCard</a></li><li><a href="global.html#RawUpdateFinanceAsyncAction">RawUpdateFinanceAsyncAction</a></li><li><a href="global.html#RawUpdateMilestoneAsyncAction">RawUpdateMilestoneAsyncAction</a></li><li><a href="global.html#RawUpdateProjectAsyncAction">RawUpdateProjectAsyncAction</a></li><li><a href="global.html#SortableTable">SortableTable</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#formatDateTime">formatDateTime</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#id">id</a></li><li><a href="global.html#validator">validator</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri May 31 2024 08:48:43 GMT+0200 (středoevropský letní čas)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -4,6 +4,7 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 import { FetchFinanceByIdAsyncAction } from "../../Queries/Finance/FetchFinanceByIdAsyncAction.js"
 import { FinanceLargeCard } from "../../Components/Finance/FinanceLargeCard.jsx"
 
+// @module Projects
 /**
  * FinancePage Component
  *
@@ -15,7 +16,7 @@ import { FinanceLargeCard } from "../../Components/Finance/FinanceLargeCard.jsx"
  * -Renders the `FinanceLargeCard` component to present the finance details.
  *
  * @component
- *
+ * @function
  */
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst finance", success: "Načtení financí se povedlo"})
@@ -27,11 +28,6 @@ export const FinancePage = ()  => {
 
     if (finance) {             //      f911230f-7e1f-4e9b-90a9-b921996ceb87            Finance ID
         return (
-            // // <UserLargeCard user={user} />           // ProjectLargeCard?
-            // <div>
-            //     Projekty nahrány
-            //     {JSON.stringify(projects)}       // debug informace
-            // </div>
 
             <FinanceLargeCard finance={finance} />
         )

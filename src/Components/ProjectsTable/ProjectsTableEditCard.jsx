@@ -8,6 +8,7 @@ import {RawUpdateProjectAsyncAction} from "../../Queries/Project/UpdateProjectAs
 import {ProjectEditType} from "../Project/ProjectEditType.jsx";
 import {ProjectEditGroup} from "../Project/ProjectEditGroup.jsx";
 
+// @module Projects
 /**
  * ProjectsTableEditCard Component
  *
@@ -25,7 +26,7 @@ import {ProjectEditGroup} from "../Project/ProjectEditGroup.jsx";
  *
  * @returns {JSX.Element} A CardCapsule component containing a sortable table to display projects,
  *                        with a "Create Project" functionality
- *
+ * @function
  */
 
 export const ProjectsTableEditCard = ({projects}) => {

@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * RawUpdateProjectAsyncAction
  *
@@ -19,6 +20,7 @@ import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
  * @param {string} [data.group_id] - new project group ID 
  *
  * @returns {Function}  action that dispatches the mutation and handles success or error responses.
+ * @function
  */
 
 const mutation =

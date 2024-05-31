@@ -7,6 +7,7 @@ import { formatNumber } from "../Misc/FormatNumber.jsx";
 import { FinanceLink } from './FinanceLink.jsx'
 import { ProjectLink } from '../Project/ProjectLink'
 
+// @module Projects
 /**
  * FinanceMediumCard Component
  *
@@ -23,6 +24,7 @@ import { ProjectLink } from '../Project/ProjectLink'
  * @param {string} finance.financeType[].name - name of each finance type to be shown
  *
  * @returns {JSX.Element} the render of the finance card with basic attributes
+ * @function
  */
 
 export const FinanceMediumCard = ({finance}) => {

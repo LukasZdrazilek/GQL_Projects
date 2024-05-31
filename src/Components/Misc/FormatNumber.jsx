@@ -1,3 +1,4 @@
+// @module Projects
 /**
  * Formats a floating-point number for display.
  *
@@ -11,6 +12,7 @@
  * undefined, null, or not provided => empty string
  * 
  * @returns {string} The formatted number as a string with two decimal places and grouping separators or empty string
+ * @function
  */
 
 export const formatNumber = (numberFloat) => {

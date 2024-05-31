@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Components/Milestone/MilestoneLink.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Components/Milestone/MilestoneLink.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Dropdown } from "react-bootstrap";
+import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
+import { CreateMilestoneAsyncAction } from "../../Queries/Milestone/CreateMilestoneAsyncAction.js";
+import {onClickHandler} from "../Misc/onClickHandler.jsx";
+
+
+
+export const MilestoneLink_ = ({milestone, children}) => {
+    return (
+        &lt;ProxyLink to={"/projects/milestone/view/" + milestone?.id}>{children?children:milestone?.name}&lt;/ProxyLink>
+    )
+}
+
+// @module Projects
+/**
+ * MilestoneLink Component
+ *
+ * Renders a dropdown menu or a simple link for managing a milestone object. 
+ * The dropdown includes options to view, edit, and view all milestones for the associated project.
+ *
+ * @param {Object} milestone - The milestone object.
+ * @param {ReactNode} [children] - 
+ * @param {boolean} [menu=true] - 
+ *
+ * @returns {JSX.Element} A `Dropdown` component
+ * @function
+ */
+
+export const MilestoneLink = ({milestone, children, menu=true}) => {
+    if (menu) {
+        return (
+            &lt;Dropdown  className="d-inline" autoClose="outside" size="sm">
+                &lt;MilestoneLink_ milestone={milestone}>
+                    {children}
+                &lt;/MilestoneLink_>
+                &lt;Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
+                &lt;/Dropdown.Toggle>
+
+                &lt;Dropdown.Menu>
+                    &lt;Dropdown.Item as="div">&lt;ProxyLink to={"/projects/milestone/view/" + milestone?.id} >Zobrazit&lt;/ProxyLink>&lt;/Dropdown.Item>
+                    &lt;Dropdown.Item as="div">&lt;ProxyLink to={"/projects/milestone/edit/" + milestone?.id} >Editovat&lt;/ProxyLink>&lt;/Dropdown.Item>
+                    &lt;Dropdown.Item as="div">&lt;ProxyLink to={"/projects/project/milestones/" + milestone?.project?.id} >Zobrazit milníky&lt;/ProxyLink>&lt;/Dropdown.Item>
+                &lt;/Dropdown.Menu>
+            &lt;/Dropdown>                
+            
+
+            )
+    } else {
+        return (
+            &lt;MilestoneLink_ milestone={milestone}>{children}&lt;/MilestoneLink_>
+        )
+    }
+}
+
+export const MilestoneCreateLink_ = ({project, children}) => {
+    return (
+        &lt;ProxyLink to={"/projects/project/milestones/" + project?.id}>{project?.name}&lt;/ProxyLink>
+    )
+}
+
+/**
+ * MilestoneCreateLink Component
+ *
+ * Renders a dropdown menu or a simple link for managing a milestone object. 
+ * The dropdown includes options to view, edit, view all milestones for the associated project
+ * or create new milestone linked to the project
+ *
+ * @param {Object} milestone - The milestone object.
+ * @param {ReactNode} [children] - 
+ * @param {boolean} [menu=true] - 
+ *
+ * @returns {JSX.Element} A `Dropdown` component
+ */
+
+export const MilestoneCreateLink = ({project, menu=true}) => {
+    const data = {
+        "project_id": project?.id,
+        "name": "Nový milník"
+    }
+    const onClick = onClickHandler(data, CreateMilestoneAsyncAction);
+
+    if (menu) {
+        return (
+            &lt;Dropdown  className="d-inline" autoClose="outside" size="sm">
+                &lt;MilestoneCreateLink_ project={project}>
+                &lt;/MilestoneCreateLink_>
+                &lt;Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
+                &lt;/Dropdown.Toggle>
+
+                &lt;Dropdown.Menu>
+                    &lt;Dropdown.Item as={"div"}>&lt;ProxyLink to={"/projects/project/milestones/" + project?.id} >Zobrazit milníky&lt;/ProxyLink>&lt;/Dropdown.Item>
+                    &lt;Dropdown.Item as={"div"}>&lt;ProxyLink to={"/projects/project/milestones/edit/" + project?.id} >Editovat milníky&lt;/ProxyLink>&lt;/Dropdown.Item>
+                    &lt;Dropdown.Item as={"div"} onClick={onClick}>&lt;ProxyLink to={"#"} >Vytvořit milník&lt;/ProxyLink>&lt;/Dropdown.Item>
+
+                &lt;/Dropdown.Menu>
+            &lt;/Dropdown>
+
+
+        )
+    } else {
+        return (
+            &lt;MilestoneLink_ project={project}>{children}&lt;/MilestoneLink_>
+        )
+    }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#CreateButton">CreateButton</a></li><li><a href="global.html#CreateFinanceAsyncAction">CreateFinanceAsyncAction</a></li><li><a href="global.html#CreateMilestoneAsyncAction">CreateMilestoneAsyncAction</a></li><li><a href="global.html#CreateProjectAsyncAction">CreateProjectAsyncAction</a></li><li><a href="global.html#DeleteButton">DeleteButton</a></li><li><a href="global.html#FetchFinanceByIdAsyncAction">FetchFinanceByIdAsyncAction</a></li><li><a href="global.html#FetchFinanceTypesAsyncAction">FetchFinanceTypesAsyncAction</a></li><li><a href="global.html#FetchMilestoneByIdAsyncAction">FetchMilestoneByIdAsyncAction</a></li><li><a href="global.html#FetchMilestonePage">FetchMilestonePage</a></li><li><a href="global.html#FetchProjectByIdAsyncAction">FetchProjectByIdAsyncAction</a></li><li><a href="global.html#FetchProjectMilestonesAsyncAction">FetchProjectMilestonesAsyncAction</a></li><li><a href="global.html#FetchProjectTypesAsyncAction">FetchProjectTypesAsyncAction</a></li><li><a href="global.html#FetchProjectsAsyncAction">FetchProjectsAsyncAction</a></li><li><a href="global.html#FinanceCreateLink">FinanceCreateLink</a></li><li><a href="global.html#FinanceEditCard">FinanceEditCard</a></li><li><a href="global.html#FinanceLargeCard">FinanceLargeCard</a></li><li><a href="global.html#FinanceLink">FinanceLink</a></li><li><a href="global.html#FinanceMediumCard">FinanceMediumCard</a></li><li><a href="global.html#FinancesTableCard">FinancesTableCard</a></li><li><a href="global.html#FinancesTableEditCard">FinancesTableEditCard</a></li><li><a href="global.html#FinancesTableLargeCard">FinancesTableLargeCard</a></li><li><a href="global.html#MilestoneCreateLink">MilestoneCreateLink</a></li><li><a href="global.html#MilestoneEditCard">MilestoneEditCard</a></li><li><a href="global.html#MilestoneLargeCard">MilestoneLargeCard</a></li><li><a href="global.html#MilestoneLink">MilestoneLink</a></li><li><a href="global.html#MilestoneMediumCard">MilestoneMediumCard</a></li><li><a href="global.html#MilestonesTableCard">MilestonesTableCard</a></li><li><a href="global.html#MilestonesTableEditCard">MilestonesTableEditCard</a></li><li><a href="global.html#ProjectCreateLink">ProjectCreateLink</a></li><li><a href="global.html#ProjectEditCard">ProjectEditCard</a></li><li><a href="global.html#ProjectEditLargeCard">ProjectEditLargeCard</a></li><li><a href="global.html#ProjectLargeCard">ProjectLargeCard</a></li><li><a href="global.html#ProjectLink">ProjectLink</a></li><li><a href="global.html#ProjectMediumCard">ProjectMediumCard</a></li><li><a href="global.html#ProjectsTableCard">ProjectsTableCard</a></li><li><a href="global.html#ProjectsTableEditCard">ProjectsTableEditCard</a></li><li><a href="global.html#RawUpdateFinanceAsyncAction">RawUpdateFinanceAsyncAction</a></li><li><a href="global.html#RawUpdateMilestoneAsyncAction">RawUpdateMilestoneAsyncAction</a></li><li><a href="global.html#RawUpdateProjectAsyncAction">RawUpdateProjectAsyncAction</a></li><li><a href="global.html#SortableTable">SortableTable</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#formatDateTime">formatDateTime</a></li><li><a href="global.html#formatNumber">formatNumber</a></li><li><a href="global.html#id">id</a></li><li><a href="global.html#validator">validator</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Fri May 31 2024 08:48:43 GMT+0200 (středoevropský letní čas)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

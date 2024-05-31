@@ -6,6 +6,7 @@ import { FinancesTableCard } from '../FinancesTable/FinancesTableCard.jsx'
 import { MilestonesTableCard } from '../MilestonesTable/MilestonesTableCard.jsx'
 import { ProjectLink } from './ProjectLink'
 
+// @module Projects
 /**
  * ProjectLargeCard Component
  *
@@ -20,7 +21,7 @@ import { ProjectLink } from './ProjectLink'
  *   - ProjectMediumCard displaying project details.
  *   - MilestonesTableCard displaying project milestones.
  *   - FinancesTableCard displaying project finances.
- *
+ * @function
  */
 
 export const ProjectLargeCard = ({project, children}) => {

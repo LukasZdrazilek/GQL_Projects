@@ -5,6 +5,7 @@ import { MilestoneMediumCard } from './MilestoneMediumCard'
 import { ProjectLink } from "../Project/ProjectLink.jsx";
 import { MilestonesTableCard } from "../MilestonesTable/MilestonesTableCard.jsx"
 
+// @module Projects
 /**
  * MilestoneLargeCard Component
  *
@@ -22,6 +23,7 @@ import { MilestonesTableCard } from "../MilestonesTable/MilestonesTableCard.jsx"
  * @param {ReactNode} children - Additional content 
  *
  * @returns {JSX.Element} The rendered MilestoneLargeCard component.
+ * @function
  */
 
 export const MilestoneLargeCard = ({milestone, children}) => {

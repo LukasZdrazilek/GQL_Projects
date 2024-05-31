@@ -1,5 +1,6 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
+// @module Projects
 /**
  * FetchMilestonePage
  *
@@ -10,7 +11,7 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
  *
  * @returns {Function} action that dispatches the GraphQL query and handles 
  *                     success or error responses.
- *
+ * @function
  */
 
 const query = `{

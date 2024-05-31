@@ -10,6 +10,7 @@ import {
 } from "../../Queries/Finance/UpdateFinanceAsyncAction.js";
 import {FinanceEditType} from "../Finance/FinanceEditType.jsx";
 
+// @module Projects
 /**
  * FinancesTableEditCard Component
  *
@@ -25,7 +26,7 @@ import {FinanceEditType} from "../Finance/FinanceEditType.jsx";
  * @param {string} project.finances[].financeType[].name - finance type
  *
  * @returns {JSX.Element} component containing a SortableTable with additional create button
- *
+ * @function
  */
 
 

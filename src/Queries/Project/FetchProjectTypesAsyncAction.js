@@ -1,5 +1,6 @@
   import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
+  // @module Projects
 /**
  * FetchProjectTypesAsyncAction
  *
@@ -13,7 +14,7 @@
  * @returns {Function} action that dispatches the query and handles 
  *                     success or error responses. The action payload will contain the 
  *                     fetched project types in the `data.result` property upon success.
-
+ * @function
  */
 
 const query = `{

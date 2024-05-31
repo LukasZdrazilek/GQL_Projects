@@ -5,6 +5,7 @@ import { FetchFinanceByIdAsyncAction } from "../../Queries/Finance/FetchFinanceB
 import { FinanceLargeCard } from "../../Components/Finance/FinanceLargeCard.jsx"
 import { FinanceEditCard } from "../../Components/Finance/FinanceEditCard.jsx"
 
+// @module Projects
 /**
  * FinanceEditPage Component
  *
@@ -16,7 +17,7 @@ import { FinanceEditCard } from "../../Components/Finance/FinanceEditCard.jsx"
  * - `FinanceEditCard` is embedded within the `FinanceLargeCard` to allow users to edit the attributes
  *
  * @component
- *
+ * @function
  */
 
 const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst finance", success: "Načtení financí se povedlo"})

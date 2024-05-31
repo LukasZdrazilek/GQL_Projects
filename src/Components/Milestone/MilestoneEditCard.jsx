@@ -7,6 +7,7 @@ import { DeleteButton } from '../Misc/DeleteButton'
 import { MilestoneLink } from "./MilestoneLink.jsx";
 import { SelectInputRework } from "../Misc/SelectInputRework.jsx";
 
+// @module Projects
 /**
  * MilestoneEditCard Component
  *
@@ -23,6 +24,7 @@ import { SelectInputRework } from "../Misc/SelectInputRework.jsx";
  *
  * @remarks
  * -   `deleteMilestoneAsyncAction` function needs to be implemented and imported for delete button to work.
+ * @function
  */
 
 
