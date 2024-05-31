@@ -21,16 +21,26 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
 const query = `query($id: UUID!)
 {
-  result: milestoneById(id: $id)
+  result: projectById(id: $id)
   {
-    project
-    {
       milestones
+      {
+        id
+      name
+      startdate
+      enddate
+      lastchange
+      previous
       {
         id
         name
       }
-    }
+      nexts
+      {
+        id
+        name
+      }
+      }
   }
 }
 `

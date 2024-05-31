@@ -15,38 +15,68 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 const query = `{
     result: projectPage
     {
-      __typename
-      id
-      name
-      lastchange
-      startdate
-      enddate
-      milestones
-      {
-        id
+      id 
+        lastchange
         name
-      }
-      finances
-      {
-        id
-        amount
-        financeType
+        startdate
+        enddate
+        created
+        group
+        {
+          id
+          name
+        }
+        finances
+        {
+          id
+          name
+          amount
+          financeType
+          {
+            id
+            name
+          }
+          project
+          {
+          id
+          name
+          }
+        }
+        milestones
+        {
+          id
+          name
+          startdate
+          enddate
+          lastchange
+          project
+          {
+            id
+            name
+            milestones {
+            id
+            name
+            startdate
+            enddate
+            }
+          }
+          previous
+          {
+            id
+            name
+          }
+          nexts
+          {
+            id
+            name
+          }
+        }
+        projectType
         {
           id
           name
         }
       }
-      projectType
-      {
-        id
-        name
-      }
-      group
-      {
-        id
-        name
-      }
-    }
   }`
 
 export const FetchProjectsAsyncAction = CreateAsyncActionFromQuery(query)

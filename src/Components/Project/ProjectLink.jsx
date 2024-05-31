@@ -74,11 +74,12 @@ export const ProjectCreateLink = ({menu=true}) => {
     if (menu) {
         return (
             <Dropdown  className="d-inline" autoClose="outside" size="sm">
-                Projekty:
+                <ProxyLink to={"/projects/view"} >Projekty: </ProxyLink>
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
+                    <Dropdown.Item as={"div"} ><ProxyLink to={"/projects/view"} >Zobrazit projekty</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"} ><ProxyLink to={"/projects/edit"} >Editovat projekty</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"} onClick={onClick} ><ProxyLink to={"#"} >Vytvořit projekt</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>

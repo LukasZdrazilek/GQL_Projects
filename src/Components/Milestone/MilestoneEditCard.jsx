@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
-import { CardCapsule, EditableAttributeText } from '@hrbolek/uoisfrontend-shared/src'
+import {CardCapsule, EditableAttributeText} from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { RawUpdateMilestoneAsyncAction } from '../../Queries/Milestone/UpdateMilestoneAsyncAction'
 import { DeleteButton } from '../Misc/DeleteButton'
 import { MilestoneLink } from "./MilestoneLink.jsx";
+import { SelectInputRework } from "../Misc/SelectInputRework.jsx";
 
 // @module Projects
 /**
@@ -54,6 +55,11 @@ export const MilestoneEditCard = ({milestone}) => {
                 <Col>
                     <EditableAttributeText item={milestone} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
                 </Col>      
+            </Row>
+            <Row>
+                <Col>
+                    <SelectInputRework milestone={milestone} />
+                </Col>
             </Row>
             <Row>
                 <Col>

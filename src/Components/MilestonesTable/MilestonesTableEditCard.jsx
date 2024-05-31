@@ -1,9 +1,12 @@
-import { MilestoneCreateLink, MilestoneLink } from "../Milestone/MilestoneLink.jsx";
-import { formatDate } from "../Misc/FormatDate.jsx";
-import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
-import { SortableTable } from "../Misc/SortableTable.jsx";
+import {MilestoneCreateLink, MilestoneLink} from "../Milestone/MilestoneLink.jsx";
+import {CardCapsule} from "@hrbolek/uoisfrontend-shared/src";
+import {SortableTable} from "../Misc/SortableTable.jsx";
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateMilestoneAsyncAction } from "../../Queries/Milestone/CreateMilestoneAsyncAction.js";
+import { SelectInputRework } from "../Misc/SelectInputRework.jsx";
+import { EditableAttributeText } from "@hrbolek/uoisfrontend-shared/src";
+import {RawUpdateMilestoneAsyncAction} from "../../Queries/Milestone/UpdateMilestoneAsyncAction.js";
+import { formatDate } from "../Misc/FormatDate.jsx";
 import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
 
 // @module Projects
@@ -32,16 +35,23 @@ export const MilestonesTableEditCard = ({ project }) => {
     };
 
     const columns = [
-        { key: 'name', label: 'Milníky' },
-        { key: 'startdate', label: 'Počátek' },
-        { key: 'enddate', label: 'Konec' },
+        {key: 'name', label: 'Milníky'},
+        {key: 'startdate', label: 'Počátek'},
+        {key: 'enddate', label: 'Konec'},
+        {key: 'action', label: 'Předcházející'},
     ];
 
     const renderRow = (row, columnKey) => {
+        console.log(row)
         if (columnKey === 'name') {
-            return <MilestoneLink milestone={row} menu={true}></MilestoneLink>;
-        } else {
-            return formatDate(row[columnKey]);
+            return <EditableAttributeText item={row} attributeName="name" label="Název" asyncUpdater={RawUpdateMilestoneAsyncAction} />
+        } else if (columnKey === 'action') {
+            return <SelectInputRework milestone={row} />;
+        } else if (columnKey === 'startdate') {
+            return <EditableAttributeText item={row} attributeName="startdate" label="Datum zahajeni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />;
+        } else if (columnKey === 'enddate') {
+            return <EditableAttributeText item={row} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
+
         }
     };
 

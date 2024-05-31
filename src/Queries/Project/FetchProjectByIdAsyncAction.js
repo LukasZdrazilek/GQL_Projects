@@ -55,10 +55,27 @@ const query = `query ($id: UUID!) {
           name
           startdate
           enddate
+          lastchange
           project
           {
-          id
-          name
+            id
+            name
+            milestones {
+            id
+            name
+            startdate
+            enddate
+            }
+          }
+          previous
+          {
+            id
+            name
+          }
+          nexts
+          {
+            id
+            name
           }
         }
         projectType
