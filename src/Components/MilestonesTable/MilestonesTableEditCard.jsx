@@ -57,16 +57,7 @@ export const MilestonesTableEditCard = ({ project }) => {
 
     return (
         <div className="form-floating">
-            <CardCapsule title={
-                <div className="d-flex justify-content-between align-items-center">
-                    <div>
-                        Milníky pro: <MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink>
-                    </div>
-                    <ProxyLink to={`/projects/project/milestones/edit/links/${project?.id}`}>
-                        <button type="button" className="btn btn-primary btn-lg">Gantův diagram</button>
-                    </ProxyLink>
-                </div>
-            }>
+            <CardCapsule title="Milníky">
                 <SortableTable
                     columns={columns}
                     data={project?.milestones}
