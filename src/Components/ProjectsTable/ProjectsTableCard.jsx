@@ -28,6 +28,8 @@ import { SortableTable } from '../Misc/SortableTable.jsx';
 export const ProjectsTableCard = ({projects}) => {
     const columns = [
         { key: 'name', label: 'Projekt' },
+        { key: 'startdate', label: 'Začátek' },
+        { key: 'enddate', label: 'Konec' },
         { key: 'projectType.name', label: 'Typ' },
         { key: 'group.name', label: 'Tým' },
         { key: 'lastchange', label: 'Datum změny' }
@@ -36,6 +38,10 @@ export const ProjectsTableCard = ({projects}) => {
     const renderRow = (project, columnKey) => {
         if (columnKey === 'name') {
             return <ProjectLink project={project} menu={true}></ProjectLink>;
+        } else if (columnKey === 'startdate') {
+            return formatDate(project.startdate);
+        } else if (columnKey === 'enddate') {
+            return formatDate(project.enddate);
         } else if (columnKey === 'lastchange') {
             return formatDate(project.lastchange);
         } else if (columnKey === 'projectType.name') {

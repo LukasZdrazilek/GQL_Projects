@@ -1,5 +1,5 @@
 import {CardCapsule, EditableAttributeText} from '@hrbolek/uoisfrontend-shared/src';
-import { ProjectLink, ProjectCreateLink } from '../Project/ProjectLink.jsx';
+import { ProjectCreateLink } from '../Project/ProjectLink.jsx';
 import { formatDate } from '../Misc/FormatDate.jsx';
 import { SortableTable } from '../Misc/SortableTable.jsx';
 import { CreateButton } from "../Misc/CreateButton.jsx";
@@ -36,10 +36,11 @@ export const ProjectsTableEditCard = ({projects}) => {
     }
     const columns = [
         { key: 'name', label: 'Projekt' },
-        { key: 'projectType.name', label: 'Typ' },
-        { key: 'group.name', label: 'Tým' },
         { key: 'startdate', label: 'Začátek' },
         { key: 'enddate', label: 'Konec' },
+        { key: 'projectType.name', label: 'Typ' },
+        { key: 'group.name', label: 'Tým' },
+        { key: 'lastchange', label: 'Datum změny' }
     ];
 
     const renderRow = (project, columnKey) => {
@@ -53,8 +54,8 @@ export const ProjectsTableEditCard = ({projects}) => {
             return <ProjectEditType project={project} />;
         } else if (columnKey === 'group.name') {
             return <ProjectEditGroup project={project} />;
-        } else {
-            return '';
+        } else if (columnKey === 'lastchange') {
+            return formatDate(project.lastchange);
         }
     };
 
