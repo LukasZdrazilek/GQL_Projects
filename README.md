@@ -5,6 +5,8 @@ __Jakub Vágner,__
 __Lukáš Zdražílek,__ 
 ________________________________________________________________________
 
+Dokumentace dle standardu JSDOC k vytvořeným a upraveným komponentám dostupná zde: https://github.com/LukasZdrazilek/GQL_Projects/blob/main/docs/index.html
+
 <div style="display: flex;">
   <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.qkme.me%2FDT1.jpg&f=1&nofb=1&ipt=29524da4934a16ecce3113def5671ffa17ed0ca2f03b1ec6272343a198b6d0cb&ipo=images" style="width: 30%">
   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FDcXYPtOVAAAoOKa.jpg&f=1&nofb=1&ipt=0fc47f721244bc99d0a6437e702c8b96f4e700beec4126987c92975e234f23e9&ipo=images" style="width: 30%">
@@ -27,12 +29,12 @@ ________________________________________________________________________
 - [x] Vytvořeny queries na vytváření projektů, financí a milníků
 - [x] Roztřídit queries do složek podle zaměření (Project/, Finance/, Milestone/, ...)
 - [x] Pridať vytváranie projektov, financií a milestones
-- [ ] touch some grass
+- [x] touch some grass
 - [x] ProjectEditPage sautomatizovať queri na dropboxi
 - [x] Přidání milestone a finance view page
 - [x] Přidání odkazu do dropdownu
 - [x] Odstranit pravý MediumCard
-- [ ] Udělat JSDOC komentáře
+- [x] Udělat JSDOC komentáře
 - [x] Přidat index.js do všech komponent (export *)
 
 ________________________________________________________________________
@@ -74,7 +76,7 @@ _1.5.2024_ třináctá schůze/stretnutie => Automatizace type query v dropdown 
 
 _2.5.2024_ čtrnáctá schůze/stretnutie => Implementace dropdown menu na view/edit u finance a milestones
 
-__10.5.2024__ druhý projektový den
+__10.5.2024__ druhý projektový den => úspěšné odprezentování současných edit-card všech komponent
 
 <br />
 
@@ -82,25 +84,18 @@ __15.5.2024__ sedmnáctá schůze/stretnutie => Přidání page na zobrazení v�
 
 __16.5.2024__ osmnáctá schůze/stretnutie => Update finance a milestone link na novou URL strukturu
 
-__22.5.2024__ devatenáctá schůze/stretnutie => Práce na milestone next a previous funkci #1
+__21.5.2024__ devatenáctá schůze/stretnutie =>Práce na milestone next a previous funkci #1
 
-__23.5.2024__ dvacátá schůze/stretnutie => Práce na milestone next a previous funkci #2
+__22.5.2024__ dvacátá schůze/stretnutie => Práce na milestone next a previous funkci #2
 
-__29.5.2024__ dvacátá-první schůze/stretnutie => Přidání funkce na sort tabulek dle datumu/názvu
+__24.5.2024__ dvacátá-první schůze/stretnutie => Přidání funkce na sort tabulek dle datumu/názvu
 
-__30.5.2024__ dvacátá-druhá schůze/stretnutie => Tvorba JSDOC komentářů #1
+__25.5.2024__ dvacátá-druhá schůze/stretnutie => Práce na interaktivní tabulce milestone next a previous
 
-__5.6.2024__ dvacátá-třetí schůze/stretnutie => Tvorba JSDOC komentářů #2
+__26.5.2024__ dvacátá-třetá schůze/stretnutie => Vytvoření Ganttova diagramu na zobrazení milníků 
 
-__6.6.2024__ dvacátá-čtvrtá schůze/stretnutie => Práce na interaktivní tabulce milestone next a previous
+__27.5.2024__ dvacátá-čtvrtá schůze/stretnutie => Práce na JSDOC komentářách #1
 
-__3.6.2024__ třetí projektový den
+__29.5.2024__ dvacátá-pátá schůze/stretnutie => Dokončení JSDOC komentářů #2 a vygenerování dokumentace
 
-<br />
-
-__12.6.2024__ dvacátá-pátá schůze/stretnutie => Vygenerování dokumentace
-
-__13.6.2024__ dvacátá-šestá schůze/stretnutie => TBD
-
-__17.6.2024__ uzavření projektu
-
+__3.6.2024__ třetí projektový den - uzavření projektu
