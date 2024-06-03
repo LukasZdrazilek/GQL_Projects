@@ -6,6 +6,20 @@ import { FetchProjectMilestonesAsyncAction } from "../../Queries/Project/FetchPr
 import { MilestoneLinkAddAsyncAction } from "../../Queries/Milestone/MilestoneLinkAddAsyncAction.js";
 import { MilestoneLinkRemoveAsyncAction } from "../../Queries/Milestone/MilestoneLinkRemoveAsyncAction.js";
 
+// @module Projects
+/**
+ * component for selecting and managing preceding milestones for a given milestone.
+ * Uses `react-select` and search field for quick search of needed items
+ *
+ * @component
+ * @param {Object} milestone - milestone object for which to manage predecessors
+ * @param {number} milestone.project.id - The ID of the project the milestone belongs to
+ * @param {Object[]} milestone.previous - array of previously linked milestone objects
+ *
+ * @returns {JSX.Element} The SelectInputRework component rendered in a div.
+ * @function
+ */
+
 export const SelectInputRework = ({ milestone }) => {
     const id = milestone.project.id;
     const [milestones, milestonePromise] = useFreshItem({ id }, FetchProjectMilestonesAsyncAction);
