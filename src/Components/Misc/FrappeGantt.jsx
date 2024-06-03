@@ -1,6 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 import Gantt from 'frappe-gantt';
 
+// @module Projects
+/**
+ * A React component that renders a Gantt chart using the frappe-gantt library.
+ * Provides interactive features for visualizing milestone links within project
+ *
+ * @component
+ * @param {Object[]} tasks - An array of task objects to be displayed, contains following:
+ *   - id
+ *   - name
+ *   - start: 
+ *   - end: 
+ *   - progress: 
+ *   - dependencies: 
+ * @returns {JSX.Element} The Gantt chart component rendered in a div.
+ * @function
+ */
+
 export const FrappeGantt = ({ tasks }) => {
     const ganttRef = useRef(null);
     const [viewMode, setViewMode] = useState("Day");
