@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Pages/FinancesTable/FinancesTableEditPage.jsx</title>
+    <title>JSDoc: Source: Components/Misc/FrappeGantt.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Pages/FinancesTable/FinancesTableEditPage.jsx</h1>
+    <h1 class="page-title">Source: Components/Misc/FrappeGantt.jsx</h1>
 
     
 
@@ -26,45 +26,61 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { useParams } from "react-router-dom"
-import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
-import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectByIdAsyncAction.js"
-import { FinancesTableLargeCard } from "../../Components/FinancesTable/FinancesTableLargeCard.jsx"
-import { FinancesTableEditCard } from "../../Components/FinancesTable/FinancesTableEditCard.jsx";
+            <pre class="prettyprint source linenums"><code>import { useEffect, useRef, useState } from 'react';
+import Gantt from 'frappe-gantt';
 
 // @module Projects
 /**
- * FinancesTableEditPage Component
- *
- * This component is responsible for:
- * - Retrieving finances belonging to the project and showing them in a sortable table
- * with delete and creation functionality
+ * A React component that renders a Gantt chart using the frappe-gantt library.
+ * Provides interactive features for visualizing milestone links within project
  *
  * @component
+ * @param {Object[]} tasks - An array of task objects to be displayed, contains following:
+ *   - id
+ *   - name
+ *   - start: 
+ *   - end: 
+ *   - progress: 
+ *   - dependencies: 
+ * @returns {JSX.Element} The Gantt chart component rendered in a div.
  * @function
  */
 
-const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milníky", success: "Načtení milníků se povedlo"})
-export const FinancesTableEditPage = ()  => {
-    const {id} = useParams()
-    const [onResolve, onReject] = validator(useDispatch())
-    const [projects, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
-    userPromise.then(onResolve, onReject)
+export const FrappeGantt = ({ tasks }) => {
+    const ganttRef = useRef(null);
+    const [viewMode, setViewMode] = useState("Day");
 
-    if (projects) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
-        return (
+    // Sort tasks by start date
+    const sortedTasks = tasks.slice().sort((a, b) => new Date(a.start) - new Date(b.start));
 
-            &lt;FinancesTableLargeCard project={projects}>
-                &lt;FinancesTableEditCard project={projects} />
-            &lt;/FinancesTableLargeCard>
-        )
-    } else {
-        return (
-            &lt;div>Nahrávám projekty...&lt;/div>
-        )
+    useEffect(() => {
+        if (ganttRef.current) {
+            new Gantt(ganttRef.current, sortedTasks, {
+                view_mode: viewMode,
+                on_click: task => console.log(task),
+                on_date_change: (task, start, end) => console.log(task, start, end),
+                on_progress_change: (task, progress) => console.log(task, progress),
+                on_view_change: mode => console.log(mode)
+            });
+        }
+    }, [sortedTasks, viewMode]); // Update dependency to include sortedTasks
+
+    const onClick = (range) => () => {
+        setViewMode(range);
     }
 
-}
+    return (
+        &lt;div>
+            &lt;div ref={ganttRef}>&lt;/div>
+            &lt;div className="mx-auto mt-3 btn-group" role="group">
+                &lt;button type="button" className="btn btn-sm btn-light" onClick={onClick("Day")}>Dny&lt;/button>
+                &lt;button type="button" className="btn btn-sm btn-light" onClick={onClick("Week")}>Týdny&lt;/button>
+                &lt;button type="button" className="btn btn-sm btn-light" onClick={onClick("Month")}>Měsíce&lt;/button>
+                &lt;button type="button" className="btn btn-sm btn-light" onClick={onClick("Year")}>Roky&lt;/button>
+            &lt;/div>
+        &lt;/div>
+    )
+};
 </code></pre>
         </article>
     </section>

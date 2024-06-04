@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Pages/FinancesTable/FinancesTableEditPage.jsx</title>
+    <title>JSDoc: Source: Components/Misc/SelectInputRework.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Pages/FinancesTable/FinancesTableEditPage.jsx</h1>
+    <h1 class="page-title">Source: Components/Misc/SelectInputRework.jsx</h1>
 
     
 
@@ -26,45 +26,106 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { useParams } from "react-router-dom"
-import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
-import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectByIdAsyncAction.js"
-import { FinancesTableLargeCard } from "../../Components/FinancesTable/FinancesTableLargeCard.jsx"
-import { FinancesTableEditCard } from "../../Components/FinancesTable/FinancesTableEditCard.jsx";
+            <pre class="prettyprint source linenums"><code>import { useState, useEffect } from "react";
+import Select from "react-select";
+import { useFreshItem} from "@hrbolek/uoisfrontend-shared/src";
+import { useDispatch } from "react-redux";
+import { FetchProjectMilestonesAsyncAction } from "../../Queries/Project/FetchProjectMilestonesAsyncAction.js";
+import { MilestoneLinkAddAsyncAction } from "../../Queries/Milestone/MilestoneLinkAddAsyncAction.js";
+import { MilestoneLinkRemoveAsyncAction } from "../../Queries/Milestone/MilestoneLinkRemoveAsyncAction.js";
 
 // @module Projects
 /**
- * FinancesTableEditPage Component
- *
- * This component is responsible for:
- * - Retrieving finances belonging to the project and showing them in a sortable table
- * with delete and creation functionality
+ * component for selecting and managing preceding milestones for a given milestone.
+ * Uses `react-select` and search field for quick search of needed items
  *
  * @component
+ * @param {Object} milestone - milestone object for which to manage predecessors
+ * @param {number} milestone.project.id - The ID of the project the milestone belongs to
+ * @param {Object[]} milestone.previous - array of previously linked milestone objects
+ *
+ * @returns {JSX.Element} The SelectInputRework component rendered in a div.
  * @function
  */
 
-const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst milníky", success: "Načtení milníků se povedlo"})
-export const FinancesTableEditPage = ()  => {
-    const {id} = useParams()
-    const [onResolve, onReject] = validator(useDispatch())
-    const [projects, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
-    userPromise.then(onResolve, onReject)
+export const SelectInputRework = ({ milestone }) => {
+    const id = milestone.project.id;
+    const [milestones, milestonePromise] = useFreshItem({ id }, FetchProjectMilestonesAsyncAction);
+    const [milestonesData, setMilestonesData] = useState([]);
+    const [selectedOptions, setSelectedOptions] = useState([]);
+    const dispatch = useDispatch();
 
-    if (projects) {             //      43dd2ff1-5c17-42a5-ba36-8b30e2a243bb            Project ID
-        return (
+    useEffect(() => {
+        milestonePromise.then(json => {
+            console.log("json", json);
+            const milestones = json?.data?.result?.milestones;
+            if (milestones) {
+                const formattedMilestones = milestones
+                    .filter(ms => ms.id !== milestone.id) // Filter out the current milestone
+                    .map(ms => ({
+                        value: ms.id,
+                        label: ms.name
+                    }));
+                setMilestonesData(formattedMilestones);
 
-            &lt;FinancesTableLargeCard project={projects}>
-                &lt;FinancesTableEditCard project={projects} />
-            &lt;/FinancesTableLargeCard>
-        )
-    } else {
-        return (
-            &lt;div>Nahrávám projekty...&lt;/div>
-        )
-    }
+                const initialSelectedOptions = formattedMilestones.filter(ms =>
+                    milestone.previous.some(prev => prev.id === ms.value)
+                );
+                setSelectedOptions(initialSelectedOptions);
+            }
+        });
+    }, [milestonePromise, milestone.previous]);
 
-}
+    const handleSelect = (newSelectedOptions) => {
+        const previousOptions = selectedOptions;
+
+        const addedOptions = newSelectedOptions.filter(option =>
+            !previousOptions.some(prevOption => prevOption.value === option.value)
+        );
+
+        const removedOptions = previousOptions.filter(option =>
+            !newSelectedOptions.some(newOption => newOption.value === option.value)
+        );
+
+        addedOptions.forEach(option => onAdd(option));
+        removedOptions.forEach(option => onRemove(option));
+
+        setSelectedOptions(newSelectedOptions);
+    };
+
+    const onAdd = (option) => {
+        const updatedValue = {
+            previousId: option.value,
+            nextId: milestone.id,
+        }
+        const action = MilestoneLinkAddAsyncAction(updatedValue);
+        console.log("Milestone added:", option);
+        dispatch(action)
+    };
+
+    const onRemove = (option) => {
+        const updatedValue = {
+            previousId: option.value,
+            nextId: milestone.id,
+        }
+        const action = MilestoneLinkRemoveAsyncAction(updatedValue);
+        console.log("Milestone removed:", option);
+        dispatch(action)
+    };
+
+    return (
+            &lt;div className="dropdown-container">
+                &lt;Select
+                    options={milestonesData}
+                    placeholder="Předcházející milníky"
+                    value={selectedOptions}
+                    onChange={handleSelect}
+                    isSearchable={true}
+                    isMulti
+                />
+            &lt;/div>
+    );
+};
 </code></pre>
         </article>
     </section>
