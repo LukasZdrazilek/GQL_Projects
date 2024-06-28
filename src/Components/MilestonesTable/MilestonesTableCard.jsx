@@ -45,7 +45,7 @@ export const MilestonesTableCard = ({ project }) => {
         name: item.name,
         start: item.startdate,
         end: item.enddate,
-        dependencies: item.previous.map(dep => dep.id).join(", ") || ""
+        dependencies: item?.previous?.map(dep => dep.id).join(", ") || ""
     }));
 
     return (
