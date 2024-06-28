@@ -40,7 +40,7 @@ export const MilestonesTableCard = ({ project }) => {
         }
     };
 
-    const milestones = project.milestones.map(item => ({
+    const milestones = project?.milestones?.map(item => ({
         id: item.id,
         name: item.name,
         start: item.startdate,
