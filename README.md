@@ -40,7 +40,7 @@ Dokumentace dle standardu JSDOC k vytvořeným a upraveným komponentám dostupn
 - [ ] XYLink a CreateXYLink jedna komponenta
 - [ ] ProjectViewPage vizializace týmu/groupy
 - [ ] Problém s Gantt - import stylů
-- [ ] Milestones edit chyba v češtině - Label
+- [x] Milestones edit chyba v češtině - Label
 - [ ] Upravit link u finance - tři položky?
 
 ________________________________________________________________________
