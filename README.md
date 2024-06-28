@@ -36,6 +36,12 @@ Dokumentace dle standardu JSDOC k vytvořeným a upraveným komponentám dostupn
 - [x] Odstranit pravý MediumCard
 - [x] Udělat JSDOC komentáře
 - [x] Přidat index.js do všech komponent (export *)
+- [ ] Sjednotit ProjectPage a ProjectEditPage - Large cards
+- [ ] XYLink a CreateXYLink jedna komponenta
+- [ ] ProjectViewPage vizializace týmu/groupy
+- [ ] Problém s Gantt - import stylů
+- [ ] Milestones edit chyba v češtině - Label
+- [ ] Upravit link u finance - tři položky?
 
 ________________________________________________________________________
 
