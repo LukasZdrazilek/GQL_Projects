@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom"
 import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/uoisfrontend-shared/src"
 import { FetchProjectByIdAsyncAction } from "../../Queries/Project/FetchProjectByIdAsyncAction.js"
 import { ProjectLargeCard } from "../../Components/Project/ProjectLargeCard.jsx"
+import { MilestonesTableCard } from '../../Components/MilestonesTable/MilestonesTableCard.jsx'
+import { FinancesTableCard } from '../../Components/FinancesTable/FinancesTableCard.jsx'
 
 // @module Projects
 /**
@@ -20,13 +22,15 @@ const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst proje
 export const ProjectPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
-    const [projects, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
+    const [project, userPromise] = useFreshItem({id}, FetchProjectByIdAsyncAction)
     userPromise.then(onResolve, onReject)
 
-    if (projects) {
+    if (project) {
         return (
 
-            <ProjectLargeCard project={projects} />
+            <ProjectLargeCard project={project} extraChildren={<FinancesTableCard project={project} />}>
+                <MilestonesTableCard project={project} />
+            </ProjectLargeCard>
         )
     } else {
         return (

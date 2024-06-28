@@ -37,7 +37,6 @@ export const MilestoneLargeCard = ({milestone, children}) => {
         <Row>
             <Col md={4}>
                 <MilestoneMediumCard milestone={milestone} />
-                {/* <UserMediumCard user={user}/> */}
             </Col>
             <Col md={4}>
                 {children}
