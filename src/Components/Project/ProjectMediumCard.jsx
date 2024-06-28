@@ -33,7 +33,7 @@ export const ProjectMediumCard = ({project}) => {
         <CardCapsule title=
             {
             <div>
-                <span>Projekt: </span>
+                <span>Atributy pro: </span>
                 <ProjectLink project={project} menu={true}></ProjectLink>
             </div>
             }>
