@@ -29,7 +29,9 @@ import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
 
 export const ProjectEditCard = ({project}) => {
     return (
-        <CardCapsule title={"Projekt: " + project?.name + " - atributy"}>
+        <CardCapsule title={
+            <span>Editace atributů:</span>
+        }>
             <Row>
                 <Col>
                     <EditableAttributeText item={project} attributeName="name" label="Název" asyncUpdater={RawUpdateProjectAsyncAction} />

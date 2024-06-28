@@ -3,7 +3,6 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { formatDate } from '../Misc/FormatDate'
-import { ProjectLink } from './ProjectLink'
 import { formatDateTime } from "../Misc/FormatDateTime.jsx";
 import { GroupLink } from "../Group/index.js";
 
@@ -32,10 +31,9 @@ export const ProjectMediumCard = ({project}) => {
     return (
         <CardCapsule title=
             {
-            <div>
-                <span>Atributy pro: </span>
-                <ProjectLink project={project} menu={true}></ProjectLink>
-            </div>
+            <>
+                <span>Atributy projektu:</span>
+            </>
             }>
             
             <Row>

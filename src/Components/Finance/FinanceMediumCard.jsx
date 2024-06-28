@@ -31,7 +31,7 @@ export const FinanceMediumCard = ({finance}) => {
     return (
         <CardCapsule title={
             <div>
-                <span>Finance: </span>
+                <span>Atributy finance: </span>
                 <FinanceLink finance={finance} menu={true}></FinanceLink>
             </div>
         }>

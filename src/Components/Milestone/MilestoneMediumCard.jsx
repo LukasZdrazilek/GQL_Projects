@@ -30,7 +30,7 @@ export const MilestoneMediumCard = ({milestone}) => {
     return (
         <CardCapsule title={
             <div>
-                <span>Milník:  </span>
+                <span>Atributy milníku:  </span>
                 <MilestoneLink milestone={milestone} menu={true}></MilestoneLink>
             </div>
         }>

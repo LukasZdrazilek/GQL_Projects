@@ -41,7 +41,7 @@ export const MilestoneEditCard = ({milestone}) => {
     };
 
     return (
-        <CardCapsule title={<>Milník: <MilestoneLink milestone={milestone} menu={true} /></>}>
+        <CardCapsule title={<span>Editace atributů:</span>}>
 
             <Row>
                 <EditableAttributeText item={milestone} attributeName="name" label="Název" asyncUpdater={RawUpdateMilestoneAsyncAction} />

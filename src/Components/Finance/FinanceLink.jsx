@@ -49,7 +49,7 @@ export const FinanceLink = ({finance, children, menu=true}) => {
 
 export const FinanceCreateLink_ = ({project, children}) => {
     return (
-        <ProxyLink to={"/projects/project/finances/" + project?.id}>{project?.name}</ProxyLink>
+        <ProxyLink to={"/projects/project/finances/" + project?.id}>{children?children:project?.name}</ProxyLink>
     )
 }
 
@@ -64,7 +64,7 @@ export const FinanceCreateLink_ = ({project, children}) => {
  * @returns {JSX.Element} A Dropdown component  or also new finance object
  */
 
-export const FinanceCreateLink = ({project, menu=true}) => {
+export const FinanceCreateLink = ({project, children, menu=true}) => {
     const data = {
         "project_id" : project.id,
         "name" : "Nové finance",
@@ -76,6 +76,7 @@ export const FinanceCreateLink = ({project, menu=true}) => {
         return (
             <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 <FinanceCreateLink_ project={project}>
+                    {children}
                 </FinanceCreateLink_>
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
                 </Dropdown.Toggle>

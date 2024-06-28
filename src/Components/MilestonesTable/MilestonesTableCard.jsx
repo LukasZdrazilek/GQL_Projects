@@ -53,7 +53,9 @@ export const MilestonesTableCard = ({ project }) => {
         <CardCapsule title={
             <div className="d-flex justify-content-between align-items-center">
                 <div>
-                    Milníky pro: <MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink>
+                    <MilestoneCreateLink project={project} menu={true}>
+                        <span>Milníky:</span>
+                    </MilestoneCreateLink>
                 </div>
                 <button className='btn btn-light' onClick={() => setViewMode(viewMode === 'table' ? 'gantt' : 'table')}>
                     {viewMode === 'table' ? 'Přepnout na Ganttův diagram' : 'Přepnout na tabulku'}

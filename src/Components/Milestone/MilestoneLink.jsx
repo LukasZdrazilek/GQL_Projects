@@ -53,7 +53,7 @@ export const MilestoneLink = ({milestone, children, menu=true}) => {
 
 export const MilestoneCreateLink_ = ({project, children}) => {
     return (
-        <ProxyLink to={"/projects/project/milestones/" + project?.id}>{project?.name}</ProxyLink>
+        <ProxyLink to={"/projects/project/milestones/" + project?.id}>{children?children:project?.name}</ProxyLink>
     )
 }
 
@@ -71,7 +71,7 @@ export const MilestoneCreateLink_ = ({project, children}) => {
  * @returns {JSX.Element} A `Dropdown` component
  */
 
-export const MilestoneCreateLink = ({project, menu=true}) => {
+export const MilestoneCreateLink = ({project, children, menu=true}) => {
     const data = {
         "project_id": project?.id,
         "name": "Nový milník"
@@ -82,6 +82,7 @@ export const MilestoneCreateLink = ({project, menu=true}) => {
         return (
             <Dropdown  className="d-inline" autoClose="outside" size="sm">
                 <MilestoneCreateLink_ project={project}>
+                    {children}
                 </MilestoneCreateLink_>
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
                 </Dropdown.Toggle>

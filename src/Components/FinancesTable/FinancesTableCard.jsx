@@ -40,7 +40,13 @@ export const FinancesTableCard = ({project}) => {
     };
 
     return (
-        <CardCapsule title={<>Finance pro: <FinanceCreateLink project={project} menu={true}></FinanceCreateLink></>}>
+        <CardCapsule title={
+            <>
+                <FinanceCreateLink project={project} menu={true}>
+                    <span>Finance:</span>
+                </FinanceCreateLink>
+            </>
+        }>
         <SortableTable
             columns={columns}
             data={project?.finances}
