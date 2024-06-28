@@ -38,7 +38,7 @@ Dokumentace dle standardu JSDOC k vytvořeným a upraveným komponentám dostupn
 - [x] Přidat index.js do všech komponent (export *)
 - [x] Sjednotit ProjectPage a ProjectEditPage - Large cards
 - [ ] XYLink a CreateXYLink jedna komponenta
-- [ ] ProjectViewPage vizializace týmu/groupy
+- [x] ProjectViewPage vizializace týmu/groupy
 - [ ] Problém s Gantt - import stylů
 - [x] Milestones edit chyba v češtině - Label
 - [ ] Upravit link u finance - tři položky?
