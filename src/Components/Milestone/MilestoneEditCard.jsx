@@ -48,12 +48,12 @@ export const MilestoneEditCard = ({milestone}) => {
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeText item={milestone} attributeName="startdate" label="Datum zahajeni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
+                    <EditableAttributeText item={milestone} attributeName="startdate" label="Datum zahájení" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
                 </Col>      
             </Row>
             <Row>
                 <Col>
-                    <EditableAttributeText item={milestone} attributeName="enddate" label="Datum ukonceni" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
+                    <EditableAttributeText item={milestone} attributeName="enddate" label="Datum ukončení" asyncUpdater={RawUpdateMilestoneAsyncAction} type="datetime-local" />
                 </Col>      
             </Row>
             <Row>

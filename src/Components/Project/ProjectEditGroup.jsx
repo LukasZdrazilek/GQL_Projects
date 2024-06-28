@@ -42,7 +42,7 @@ export const ProjectEditGroup = ({project}) => {
 
     return (
         <div>
-            <EditableAttributeSelect item={projectEx} attributeName="group_id" label="Tým" asyncUpdater={RawUpdateProjectAsyncAction}>
+            <EditableAttributeSelect item={projectEx} attributeName="group_id" label="Skupina" asyncUpdater={RawUpdateProjectAsyncAction}>
                 {groupsdata.map(et => <option key= {et.id} value={et.id}>{et.name}</option>)}
             </EditableAttributeSelect>
         </div>

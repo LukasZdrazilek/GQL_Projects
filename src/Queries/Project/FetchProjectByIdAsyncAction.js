@@ -28,6 +28,11 @@ const query = `query ($id: UUID!) {
         startdate
         enddate
         created
+        team
+        {
+          id
+          name
+        }
         group
         {
           id
