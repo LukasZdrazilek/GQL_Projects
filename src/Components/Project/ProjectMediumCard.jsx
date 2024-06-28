@@ -53,7 +53,7 @@ export const ProjectMediumCard = ({project}) => {
             </Row>
             <Row>
                 <Col>Řešitelský tým</Col>
-                <Col><GroupLink group={project.team} menu={true} /></Col>
+                <Col>{project?.team?.name}</Col>
             </Row>
             <Row>
                 <Col>Vytvořeno</Col>
