@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Gantt from 'frappe-gantt';
+import 'frappe-gantt/dist/frappe-gantt.css'
 
 // @module Projects
 /**
