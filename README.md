@@ -39,7 +39,7 @@ Dokumentace dle standardu JSDOC k vytvořeným a upraveným komponentám dostupn
 - [x] Sjednotit ProjectPage a ProjectEditPage - Large cards
 - [ ] XYLink a CreateXYLink jedna komponenta
 - [x] ProjectViewPage vizializace týmu/groupy
-- [ ] Problém s Gantt - import stylů
+- [x] Problém s Gantt - import stylů (hopefully working)
 - [x] Milestones edit chyba v češtině - Label
 - [ ] Upravit link u finance - tři položky?
 
