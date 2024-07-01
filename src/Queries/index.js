@@ -1,7 +1,6 @@
 export * from "./FetchGroupByIdAsyncAction"
 export * from "./FetchUserByIdAsyncAction"
 
-export * from "./Project/CreateProjectAsyncAction"
 export * from "./Project/FetchProjectByIdAsyncAction"
 export * from "./Project/FetchProjectMilestonesAsyncAction"
 export * from "./Project/FetchProjectsAsynsAction"

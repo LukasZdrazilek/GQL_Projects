@@ -7,11 +7,9 @@ import { SearchPage } from "./Pages/SearchPage";
 import { ProjectEditPage } from "./Pages/Project/ProjectEditPage.jsx";
 import { MilestoneEditPage } from "./Pages/Milestone/MilestoneEditPage.jsx";
 import { FinanceEditPage } from "./Pages/Finance/FinanceEditPage.jsx";
-import { ProjectsTablePage} from "./Pages/ProjectsTable/ProjectsTablePage.jsx";
 import { MilestonesTablePage} from "./Pages/MilestonesTable/MilestonesTablePage.jsx";
 import { FinancesTablePage } from "./Pages/FinancesTable/FinancesTablePage.jsx";
 import { MilestonesTableEditPage } from "./Pages/MilestonesTable/MilestonesTableEditPage.jsx";
-import { ProjectsTableEditPage} from "./Pages/ProjectsTable/ProjectsTableEditPage.jsx";
 import { FinancesTableEditPage } from "./Pages/FinancesTable/FinancesTableEditPage.jsx";
 // import { UserPage, GroupPage } from "./Pages";
 
@@ -31,16 +29,6 @@ export const Routes = [
       path: prefix + "/search/:phrase",
       element: <SearchPage />,
       errorElement: <SearchPage />,
-    },
-    {
-        path: prefix + "/view",
-        element: <ProjectsTablePage />,
-        errorElement: <SearchPage />,
-    },
-    {
-        path: prefix + "/edit",
-        element: <ProjectsTableEditPage />,
-        errorElement: <SearchPage />,
     },
     {
       path: prefix + "/project/view/:id",

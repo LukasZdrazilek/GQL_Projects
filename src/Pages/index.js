@@ -5,4 +5,3 @@ export * from './Milestone/MilestonePage.jsx'
 export * from './Finance/FinancePage.jsx'
 export * from "./FinancesTable/FinancesTablePage.jsx"
 export * from "./MilestonesTable/MilestonesTablePage.jsx"
-export * from "./ProjectsTable/ProjectsTablePage.jsx"
