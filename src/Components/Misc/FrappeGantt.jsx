@@ -33,7 +33,6 @@ export const FrappeGantt = ({ tasks }) => {
                 on_click: task => console.log(task),
                 on_date_change: (task, start, end) => console.log(task, start, end),
                 on_progress_change: (task, progress) => console.log(task, progress),
-                on_view_change: mode => console.log(mode)
             });
         }
     }, [sortedTasks, viewMode]); // Update dependency to include sortedTasks
