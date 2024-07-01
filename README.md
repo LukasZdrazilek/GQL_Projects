@@ -37,11 +37,13 @@ Dokumentace dle standardu JSDOC k vytvořeným a upraveným komponentám dostupn
 - [x] Udělat JSDOC komentáře
 - [x] Přidat index.js do všech komponent (export *)
 - [x] Sjednotit ProjectPage a ProjectEditPage - Large cards
-- [ ] XYLink a CreateXYLink jedna komponenta
 - [x] ProjectViewPage vizializace týmu/groupy
 - [x] Problém s Gantt - import stylů (hopefully working)
 - [x] Milestones edit chyba v češtině - Label
-- [ ] Upravit link u finance - tři položky?
+- [ ] Odstranit Projekty a vše spojené ze zobrazení, nechat pouze kompnenty "for future use"
+- [ ] Přidání Editovat milníky a finance do ProjectLink
+- [ ] Odstranit MilestoneCreateLink a FinanceCreateLink
+- [ ] Upravení labelu MediumTableCards na "*Milníky/Finance* pro *Projekt [Projectlink]*"
 
 ________________________________________________________________________
 
