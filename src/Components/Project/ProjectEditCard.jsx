@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { CardCapsule, EditableAttributeText } from '@hrbolek/uoisfrontend-shared/src'
+import { ProjectLink } from "./ProjectLink.jsx";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { RawUpdateProjectAsyncAction} from '../../Queries/Project/UpdateProjectAsyncAction'
@@ -30,7 +31,10 @@ import { ProjectEditGroup} from "./ProjectEditGroup.jsx";
 export const ProjectEditCard = ({project}) => {
     return (
         <CardCapsule title={
-            <span>Editace atributů:</span>
+            <>
+            <span>Editace atributů projektu: </span>
+            <ProjectLink project={project} menu={true} />
+            </>
         }>
             <Row>
                 <Col>

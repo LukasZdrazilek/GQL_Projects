@@ -41,7 +41,12 @@ export const FinanceEditCard = ({finance}) => {
     };
 
     return (
-        <CardCapsule title={<>Editace atributů:</>}>
+        <CardCapsule title={
+            <>
+            <span>Editace atributů finance: </span>
+            <FinanceLink finance={finance} menu={true} />
+            </>
+        }>
             
             <Row>
                 <Col>
