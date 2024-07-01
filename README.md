@@ -41,7 +41,7 @@ Dokumentace dle standardu JSDOC k vytvořeným a upraveným komponentám dostupn
 - [x] Problém s Gantt - import stylů (hopefully working)
 - [x] Milestones edit chyba v češtině - Label
 - [x] Odstranit Projekty a vše spojené ze zobrazení, nechat pouze kompnenty "for future use"
-- [ ] Přidání Editovat milníky a finance do ProjectLink
+- [x] Přidání Editovat milníky a finance do ProjectLink
 - [ ] Odstranit MilestoneCreateLink a FinanceCreateLink
 - [ ] Upravení labelu MediumTableCards na "*Milníky/Finance* pro *Projekt [Projectlink]*"
 
