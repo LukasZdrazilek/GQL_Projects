@@ -1,10 +1,11 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import { formatNumber } from '../Misc/FormatNumber.jsx'
-import { FinanceLink, FinanceCreateLink} from '../Finance/FinanceLink.jsx'
+import { FinanceLink } from '../Finance/FinanceLink.jsx'
 import { SortableTable } from '../Misc/SortableTable.jsx'
+import { ProjectLink } from "../Project/index.js";
 
 
- // @module Projects
+// @module Projects
 /**
  * FinancesTableCard Component
  *
@@ -42,9 +43,8 @@ export const FinancesTableCard = ({project}) => {
     return (
         <CardCapsule title={
             <>
-                <FinanceCreateLink project={project} menu={true}>
-                    <span>Finance:</span>
-                </FinanceCreateLink>
+                <span>Finance pro: </span>
+                <ProjectLink project={project} menu={true} />
             </>
         }>
         <SortableTable

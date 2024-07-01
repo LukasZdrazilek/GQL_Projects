@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col'
 import { formatDate } from '../Misc/FormatDate'
 import { formatDateTime } from "../Misc/FormatDateTime.jsx";
 import { GroupLink } from "../Group/index.js";
+import {ProjectLink} from "./ProjectLink.jsx";
 
 // @module Projects
 /**
@@ -32,7 +33,8 @@ export const ProjectMediumCard = ({project}) => {
         <CardCapsule title=
             {
             <>
-                <span>Atributy projektu:</span>
+                <span>Atributy projektu: </span>
+                <ProjectLink project={project} menu={true} />
             </>
             }>
             

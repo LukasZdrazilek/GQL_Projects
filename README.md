@@ -42,8 +42,8 @@ Dokumentace dle standardu JSDOC k vytvořeným a upraveným komponentám dostupn
 - [x] Milestones edit chyba v češtině - Label
 - [x] Odstranit Projekty a vše spojené ze zobrazení, nechat pouze kompnenty "for future use"
 - [x] Přidání Editovat milníky a finance do ProjectLink
-- [ ] Odstranit MilestoneCreateLink a FinanceCreateLink
-- [ ] Upravení labelu MediumTableCards na "*Milníky/Finance* pro *Projekt [Projectlink]*"
+- [x] Odstranit MilestoneCreateLink a FinanceCreateLink
+- [x] Upravení labelu MediumTableCards na "*Milníky/Finance* pro *Projekt [Projectlink]*"
 
 ________________________________________________________________________
 

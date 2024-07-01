@@ -1,6 +1,5 @@
 import {CardCapsule, EditableAttributeText} from '@hrbolek/uoisfrontend-shared/src'
-import { formatNumber } from '../Misc/FormatNumber.jsx'
-import { FinanceLink, FinanceCreateLink} from '../Finance/FinanceLink.jsx'
+import { ProjectLink } from "../Project/index.js";
 import { SortableTable } from '../Misc/SortableTable.jsx'
 import { CreateButton } from "../Misc/CreateButton.jsx";
 import { CreateFinanceAsyncAction } from "../../Queries/Finance/CreateFinanceAsyncAction.js";
@@ -54,7 +53,7 @@ export const FinancesTableEditCard = ({project}) => {
 
     return (
         <div className="form-floating">
-        <CardCapsule title={<>Finance pro: <FinanceCreateLink project={project} menu={true}></FinanceCreateLink></>}>
+        <CardCapsule title={<>Finance pro: <ProjectLink project={project} menu={true} /></>}>
             <SortableTable
                 columns={columns}
                 data={project?.finances}

@@ -1,4 +1,4 @@
-import {MilestoneCreateLink, MilestoneLink} from "../Milestone/MilestoneLink.jsx";
+import { ProjectLink } from "../Project/index.js";
 import {CardCapsule} from "@hrbolek/uoisfrontend-shared/src";
 import {SortableTable} from "../Misc/SortableTable.jsx";
 import { CreateButton } from "../Misc/CreateButton.jsx";
@@ -6,8 +6,6 @@ import { CreateMilestoneAsyncAction } from "../../Queries/Milestone/CreateMilest
 import { SelectInputRework } from "../Misc/SelectInputRework.jsx";
 import { EditableAttributeText } from "@hrbolek/uoisfrontend-shared/src";
 import {RawUpdateMilestoneAsyncAction} from "../../Queries/Milestone/UpdateMilestoneAsyncAction.js";
-import { formatDate } from "../Misc/FormatDate.jsx";
-import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx";
 
 // @module Projects
 /**
@@ -57,7 +55,7 @@ export const MilestonesTableEditCard = ({ project }) => {
 
     return (
         <div className="form-floating">
-            <CardCapsule title={<>Milníky pro: <MilestoneCreateLink project={project} menu={true}></MilestoneCreateLink></>}>
+            <CardCapsule title={<>Milníky pro: <ProjectLink project={project} menu={true} /></>}>
                 <SortableTable
                     columns={columns}
                     data={project?.milestones}

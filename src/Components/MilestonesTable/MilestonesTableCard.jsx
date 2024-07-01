@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { MilestoneCreateLink, MilestoneLink } from "../Milestone/MilestoneLink.jsx";
+import { MilestoneLink } from "../Milestone/MilestoneLink.jsx";
+import { ProjectLink } from "../Project/index.js";
 import { formatDate } from "../Misc/FormatDate.jsx";
 import { CardCapsule } from "@hrbolek/uoisfrontend-shared/src";
 import { SortableTable } from "../Misc/SortableTable.jsx";
@@ -53,9 +54,8 @@ export const MilestonesTableCard = ({ project }) => {
         <CardCapsule title={
             <div className="d-flex justify-content-between align-items-center">
                 <div>
-                    <MilestoneCreateLink project={project} menu={true}>
-                        <span>Milníky:</span>
-                    </MilestoneCreateLink>
+                    <span>Milníky pro: </span>
+                    <ProjectLink project={project} menu={true} />
                 </div>
                 <button className='btn btn-light' onClick={() => setViewMode(viewMode === 'table' ? 'gantt' : 'table')}>
                     {viewMode === 'table' ? 'Přepnout na Ganttův diagram' : 'Přepnout na tabulku'}
